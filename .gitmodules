@@ -1,0 +1,3 @@
+[submodule "mkroot"]
+	path = mkroot
+	url = https://github.com/landley/mkroot.git
