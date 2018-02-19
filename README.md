@@ -1,5 +1,9 @@
 # hacking_VerneeActive
 
+[X] ADB access.
+[X] Cross compile.
+[] Exec cross compiled binaries.
+
 The [Vernee Active](http://archive.is/seo8B) is a cheap "rugged" phone being sold on Aliexpress.
 
 
