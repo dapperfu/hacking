@@ -3,9 +3,18 @@
 - [X] ADB access.
 - [X] Cross compile.
 - [ ] Exec cross compiled binaries.
-- [ ] Fastboot
-- [ ] Bootloader
+- [X] Fastboot
+- [X] Bootloader
 - [ ] Root
+
+## TWRP
+
+1. Developer Options -> Allow Bootloader Unlock
+1. ```adb reboot-bootloader```
+1. ```fastboot oem unlock```
+1. ```fastboot flash recovery recovery.img```
+1. ```fastboot continue```
+1. ```
 
 The [Vernee Active](http://archive.is/seo8B) is a cheap "rugged" phone being sold on Aliexpress.
 
