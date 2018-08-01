@@ -1,7 +1,9 @@
+# Config
 
-debian-arm64:
-	sudo qemu-debootstrap --arch=arm64 --keyring /usr/share/keyrings/debian-archive-keyring.gpg --variant=buildd --exclude=debfoster testing debian-arm64 http://apt-cacher-ng.local:3142/debian/
+# Environments to setup for this project
+# Available options: python arduino
+ENVS:=python
 
-.PHONY: clean
-clean:
-	sudo git clean -xfd
+## make_sandwich includes
+# https://github.com/jed-frey/make_sandwich
+include .mk_inc/env.mk
