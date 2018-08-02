@@ -14,7 +14,7 @@ Found this at a local hardware store. It's cheap and small for a 1080p camera.
 
 - Chips:
     - [Hi3518](Hi3518%20DataSheet.compressed.pdf)
-    - 
+    - MediaTek MT7601UN (Wifi)
 
 
 
