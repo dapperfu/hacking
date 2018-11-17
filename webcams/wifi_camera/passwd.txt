@@ -1,0 +1,4 @@
+L: root
+P: cat1029
+
+https://ipcamtalk.com/threads/escam-rt-ipc-telnet-login.6253/#post-63959
