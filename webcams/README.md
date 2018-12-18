@@ -18,6 +18,9 @@ A random collection of IP webcams purchased from Amazon and [Aliexpress](https:/
 ## Lessons Learned.
 
 - Make sure a reset button is available. Even if it's on the PCB. Thankfully Hikvision has enough security holes to allow for a reset.
-- 
-# Webcam Inventory
 
+## Misc
+
+Find RTSP webcams on the lan:
+
+    nmap -oG - -p 554 10.0.0.0/22 | grep open
