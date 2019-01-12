@@ -1,0 +1,2149 @@
+
+# reset
+c(B[0m[J[?25h# reboot
+# The system is going down NOW!
+[E] VID-(av_videCFG80211-ERROR) wl_cfg80211_disconnect : o_server.c:80) av_serverReason 3
+ caught signal 15. cnt:1
+[I] VID-(av_video_server.c:402) 
+-----------------------------------------
+STOP TASK
+------------------------------CFG80211-ERROR) wl_cfg80211_event : -----------
+
+---------ignore event 16, not interested
+--------------------------------
+STOP Twl_iw_event: Link Down with BSSID=16:18:00:00:EB:01
+ASK
+-------------------CFG80211-ERROR) wl_is_linkdown : cfg80211: Calling CRDA to update world regulatory domain
+----------------------
+Link down Reason : WLC_E_LINK
+audioEng caught signal 1link down if wlan0 may call cfg80211_disconnected. event : 16, reason=2 from 16:18:d6:69:eb:01
+5.
+netcapture[1250]: SIGTERM---camif driver run here:camif_stop_streaming
+--------------------    camif driver run here:imapx_camif_close
+
+
+Sent SIGTERM to all processes
+[I] PIP-(av_osa_task.c:207) task(enc) terminated
+[I] PIP-(av_osa_task.c:207) task(stm) terminated
+[I] PIP-(av_osa_task.c:207) task(cap) terminated
+wlan0: CTRL-EVENT-DISCONNECTED bssid=16:18:d6:69:eb:01 reason=3 locally_generated=1
+
+	tsk:1
+[I] PIP-(av_osa_task.c:207) task(pp) terminated
+free task name:cap
+[I] VID-(av_video_capture.c:77) video_capture_delete
+[I] V4L-(v4l2_interface.c:488) camDev[0] v4l2_stop
+[I] PIP-(av_osa_task.c:207) task(video_detect) terminated
+[I] V4L-(v4l2_interface.c:165) release buffer for v4l2
+
+	tsk:7
+free task name:pp
+[I] VID-(av_video_pp.c:278) video_pp_delete
+audioEng[750]: "@@@@@ audio_capture_thread quit....\n"
+[I] SHM-(kmem_alloc.c:351) alc_free_common Fail !!, dev ionFd=3, fd=0, ret=-1
+video_pp_delete: release disdhd_stop: Enter cb017000
+play buffer fd:0 failed
+[I] SHM-(kmem_alloc.c:351) alc_free_common Fail !!, dev ionFd=3CFG80211-ERROR) wl_is_linkdown : dhd_stop: Exit
+, fd=0, ret=-1
+video_ppLink down Reason : WLC_E_LINK
+_delete: release display buffer fd:0 failed
+
+	tsk:8
+free task name:enc
+[I] VID-(encoder/av_video_encode.c:985) video_encode_delete
+H264EncRelease: OK
+[I] VID-(encoder/av_video_encode.c:640) video_encode_close done, stream 0
+H264EncRelease: OK
+[I] VID-(encoder/av_video_encode.c:640) video_encode_close done, stream 1
+audioEng[750]: "audioEng stop!!!!"
+H264EncRelease: OK
+[I] VID-(encoder/av_video_encode.c:640) video_encode_close done, stream 2
+H264EncRelease: OK
+[I] VID-(encoder/av_video_encode.c:640) video_encode_close done, stream 3
+
+	tsk:10
+free task name:jpgenc
+[I] VID-(encoder/av_video_burst.c:203) burst_encode_delete
+######burst_encode_delete-g_enc_fd:8
+
+	tsk:11
+free task name:stm
+[I] VID-(av_video_stream.c:30) video_stream_delete
+
+	tsk:13
+free task name:video_detect
+wlan0: CTRL-EVENT-TERMINATING 
+rmdir[ctrl_interface]: Read-only file system
+Sent SIGKILL to all prouart_close: (3) called
+cesses
+Requesting systuart_close: (3) called
+em reboot
+[CPU] imap_restart
+
+__
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:08:43 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:08:44 --
+
+spl: start
+rtcbits_v2: initializing ...
+rtcbits: resetflag, 8@0
+rtcbits: holdbase, 24@8
+rtcbits: batterycap, 8@32
+rtcbits: retry_reboot, 8@40
+rtcbits: fastboot, 1@48
+rtcbits: forceshut, 1@49
+rtcbits: sleeping, 1@0
+spl: ----------------------------------------
+spl: devType:0x4
+spl: ----------------------------------------
+spl: bdevice_id:0x7
+cmd1 intsts=0x104 err!
+Card did not respond to voltage select!
+MMC: block number 0x8001 exceeds max(0x0)
+magic do not match2. 0x23232323
+PCLK: 134000000, PS: 2, SCR: 12, Fout: 5153846
+board arch is set to: a5pv10
+cpu is imapx15
+rtcbits: get bits for resetflag: 0x01
+boot state(1)
+rtcbits: get rtcinfo: 0, 0x01
+rtcbits: update rtcinfo: 0, 0x00
+---------------bootst: 1
+spl: dramc---DDR V6.0: mDDR support 16:58:51
+spl: dramc---
+dramc init start
+spl: dramc---dram.type found in items, the value is mDDR
+spl: dramc---dram.freq found in items, its value is 200
+spl: dramc---memory.cl found in items, its value is 3
+spl: dramc---dram.count found in items, its value is 1
+spl: dramc---dram.width found in items, its value is 32
+spl: dramc---dram.capacity found in items, its value is 256
+spl: dramc---memory.driver not found in items, use its default value -2021605376
+spl: dramc---memory.trfc found in items, its value is 64
+spl: dramc---memory.tras found in items, its value is 15
+spl: dramc---memory.highres not found in items, use its default value 0
+spl: dramc---dram.rank_sel 1, dram.count 0, dram.reduce_flag 0
+spl: dramc---count width capacity: 0, 3, 5, size 0x100
+spl: dramc---rcb: 14 10 2
+spl: dramc---ADDR_PHY_PGSR = 0xa
+spl: dramc---dramc init succeed and finished
+rballoc: 0x1000@0x87808000 allocated for bootstats
+rballoc: 0x1000@0x87809000 allocated for devType
+spl: dramc---dram.size not found in items, use default value 256
+rballoc: 0x1000@0x8780a000 allocated for dramsize
+rballoc: 0x1000@0x8780b000 allocated for bootxom
+spl: boot item exist: board.disk, flash
+PCLK: 134000000, PS: 2, SCR: 12, Fout: 5153846
+hash_data
+i: type (1)
+i: signature (0)
+rballoc: 0x4000@0x8780c000 allocated for itemrrtb
+spl: jump
+rballoc: 0x4000@0x
+
+U-Boot 2009.08 (Jul 27 2016 - 16:58:07)
+Shanghai InfoTM Microelectronics Co., Ltd.
+
+Memory type: DDRII 128 MB
+rballoc: 0x1000@0x87814000 allocated for rtcbits
+rtcbits_v2: initializing ...
+rtcbits: resetflag, 8@0
+rtcbits: holdbase, 24@8
+rtcbits: batterycap, 8@32
+rtcbits: retry_reboot, 8@40
+rtcbits: fastboot, 1@48
+rtcbits: forceshut, 1@49
+rtcbits: sleeping, 1@0
+rbget item_mem = 8780c000
+IR led is not opened 
+$$$$$$$$$$$$$$$$$LED ON$$$$$$$$$$$$$$$$$$$$$$$$$
+board arch is set to: a5pv10
+cpu is imapx15
+env_relocate[228] offset = 0x0
+*** Warning - bad CRC or NAND, using default environment
+
+Console devices(i/o/e): serial, serial, serial
+rtcbits: get bits for resetflag: 0x00
+---------------bootst: 1
+rtcbits: get bits for resetflag: 0x00
+bootst exist: 1
+---------------bootst: 1
+rtcbits: get bits for resetflag: 0x00
+bootst exist: 1
+---------------bootst: 1
+Hit any key to stop autoboot:  0 
+keys.fastboot not exist
+ display_logo screenDeviceType:1, burn_status:1, timest:1079
+ display_logo no for begin, timest:1083
+rballoc: 0x1000@0x87815000 allocated for rclk
+rballoc: 0x1000@0x87816000 allocated for rfpsx1000
+rballoc: 0x1000@0x87817000 allocated for div2
+rballoc: shared owner (rclk) 0x1000@0x87815000
+rballoc: shared owner (rfpsx1000) 0x1000@0x87816000
+rballoc: shared owner (div2) 0x1000@0x87817000
+rballoc: 0x1000@0x87818000 allocated for ubootlogo
+rtcbits: get bits for resetflag: 0x00
+bootst exist: 1
+---------------bootst: 1
+cmd1 intsts=0x104 err!
+Card did not respond to voltage select!
+assign device(mmc1) failed (-17)
+cmd1 intsts=0x104 err!
+Card did not respond to voltage select!
+assign device(mmc1) failed (-17)
+No media_src for seperate images detected
+batt_main() 
+batt_item_init() run 
+PMU_NULL 
+batt_item.batt_v_start = 3450 
+charger_pwron = 0, charger_enable = 0 
+PMU isn't AXP202, AXP202_MODE_NULL 
+CPU IS IMAPX15 NEW V2.1
+batt_item_init() end 
+rtcbits: get bits for resetflag: 0x00
+bootst exist: 1
+---------------bootst: 1
+not cold boot, do not check battery!
+begain infotm_check_recovery
+keys.recovery not exist
+PCLK: 134000000, PS: 2, SCR: 2, Fout: 22333333
+warning: not spi boot
+xom=2
+boottype == 0
+bootl from NORMAL.
+fetch kernel0@0xa0000 ...
+PCLK: 134000000, PS: 2, SCR: 2, Fout: 22333333
+warning: not spi boot
+xom=2
+2510ms
+line:248,bootl->board.disk item_equal flash,is spi
+ BOOT CMD: bootm 80007fc0
+## Booting kernel from Legacy Image at 80007fc0 ...
+   Image Name:   Imogen-X860-I
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    6718816 Bytes =  6.4 MB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+àå†…¥æ…Â‡æç„çÄ¤çÄ§„†ä¤‡æbBooting Linux on physical CPU 0x0
+Linux version 3.10.0-InfoTMIC+ (qa1@localhost.localdomain) (gcc version 4.7.3 (Buildroot 2014.02-git) ) #654 SMP PREEMPT Tue Apr 25 15:32:51 CST 2017
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=50c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: iMAPx15
+cma: CMA: reserved 64 MiB at 8b800000
+Memory policy: ECC disabled, Data cache writealloc
+items length: 8015
+pmm reserved size=0MB
+Set cpu case to: 0
+PERCPU: Embedded 7 pages/cpu @c0a95000 s8064 r8192 d12416 u32768
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64770
+Kernel command line: console=ttyAMA3,115200 vmalloc=304M androidboot.platform=imapx800 mem=255M androidboot.serialno=iMAPb1c2a1a3 rootfstype=cramfs root=/dev/ram0 androidboot.hardware=Q8v30
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 255MB = 255MB total
+Memory: 184356k/184356k available, 76764k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0xd0000000 - 0xff000000   ( 752 MB)
+    lowmem  : 0xc0000000 - 0xcff00000   ( 255 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf800000 - 0xbfe00000   (   6 MB)
+      .text : 0xc0008000 - 0xc032dbf8   (3223 kB)
+      .init : 0xc032e000 - 0xc07e1f80   (4816 kB)
+      .data : 0xc07e2000 - 0xc083cb00   ( 363 kB)
+       .bss : 0xc083d2f8 - 0xc088d95c   ( 322 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:512
+3imapx: timer-ca5 registered
+Got cmn-timer rate: 94000000
+common timer is disabled. 1
+3imapx: timer-cmn registered.
+sched_clock: 32 bits at 200 Hz, resolution 5000000ns, wraps every 4294967291ms
+Console: colour dummy device 80x30
+Calibrating delay loop... 373.55 BogoMIPS (lpj=933888)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+start_kernel -> rest_init jiff:ffff15a7, timest:0-35000
+kernel_init ->kernel_init_freeable , jiff:ffff15a7, timest:0-35000
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+common timer is disabled. 0
+common timer is disabled. 1
+Setting up static identity map for 0xc0276590 - 0xc02765dc
+do_one_initcall[1] fn:0xc0331b91, jiff:ffff15a7, timest:0-35000, diff:0
+boot secondaty
+CPU1: Booted secondary processor
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+Brought up 2 CPUs
+SMP: Total of 2 processors activated (749.15 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+kernel_init_freeable -> do_basic_setup jiff:ffff15af, timest:0-75000
+devtmpfs: initialized
+do_initcall_level[0], cnt=4
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+do_initcall_level[1], cnt=22
+DMA: preallocated 2048 KiB pool for atomic coherent allocations
+do_initcall_level[2], cnt=11
+L310 cache controller enabled
+l2x0: 16 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x72730000, Cache size: 262144 B
+imapx15_init_devices  no changer. jiff:ffff15bb, timest:0-135000, cnt:35
+platform_add_devices Device[0]:imap-gpio
+platform_add_devices Device[34]:display
+imapx15_init_gpio: ngpio = 137
+hw-breakpoint: found 2 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+put pl011_init to thread., jiff:ffff15bc, timest:0-140000
+Serial: AMBA PL011 UART driver
+tty_register_driver entry. timest: jiffis:ffff15bd
+tty_register_driver done. timest: jiffis:ffff15bd
+imapx15_gpiochip_probe: in
+pl011_probe entry. jiff:ffff15bd, timest:0-145000
+imap-uart.0: ttyAMA0 at MMIO 0x20800000 (irq = 53) is a PL011 rev0
+pl011_probe finsish. jiff:ffff15bd(dif:0), timest:0-145000
+pl011_probe entry. jiff:ffff15bd, timest:0-145000
+imap-uart.1: ttyAMA1 at MMIO 0x20801000 (irq = 54) is a PL011 rev0
+imapx15_gpiochip_probe: done!
+imapx800 emif init.   
+imapx800 emif init done.    
+pl011_probe finsish. jiff:ffff15bd(dif:0), timest:0-145000
+pl011_probe entry. jiff:ffff15bd, timest:0-145000
+imapx_i2c_probe-channel : 0 
+imap-uart.2: ttyAMA2 at MMIO 0x20802000 (irq = 55) is a PL011 rev0
+imapx_i2c_probe-channel : 1 
+pl011_probe finsish. jiff:ffff15bd(dif:0), timest:0-145000
+pl011_probe entry. jiff:ffff15bd, timest:0-145000
+imap-uart.3: ttyAMA3 at MMIO 0x20803000 (irq = 56) is a PL011 rev0
+imapx_i2c_probe-channel : 2 
+imapx_i2c_probe-channel : 3 
+imapx_i2c_probe-channel : 4 
+imapx_i2c_probe-channel : 5 
+do_initcall_level[3], cnt=11
+do_one_initcall[58] fn:0xc0334a11, jiff:ffff15ca, timest:0-210000, diff:60
+bio: create slab <bio-0> at 0
+dma-pl330 dma-pl330: Loaded driver for PL330 DMAC-267056
+dma-pl330 dma-pl330: 	DBUFF-128x8bytes Num_Chans-7 Num_Peri-24 Num_Events-12
+do_one_initcall[69] fn:0xc033a819, jiff:ffff15de, timest:0-310000, diff:95
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pmu is not axp202!
+****** tps65910_i2c_init run ! ******
+tps65910_i2c_init: pmu model is not exist
+****** tps65910_init run ! ******
+tps65910_init: pmu model is not exist
+Advanced Linux Sound Architecture Driver Initialized.
+------------[ cut here ]------------
+WARNING: at net/wireless/reg.c:434 0xc0340b39()
+db.txt is empty, you should update it...
+Modules linked in:
+CPU: 0 PID: 1 Comm: swapper/0 Not tainted 3.10.0-InfoTMIC+ #654
+Function entered at [<c0010535>] from [<c000ebd7>]
+Function entered at [<c000ebd7>] from [<c001b34b>]
+Function entered at [<c001b34b>] from [<c001b3b5>]
+Function entered at [<c001b3b5>] from [<c0340b39>]
+Function entered at [<c0340b39>] from [<c0340ab3>]
+Function entered at [<c0340ab3>] from [<c000853f>]
+Function entered at [<c000853f>] from [<c032e62d>]
+Function entered at [<c032e62d>] from [<c032e6f5>]
+Function entered at [<c032e6f5>] from [<c026f83d>]
+Function entered at [<c026f83d>] from [<c000c73d>]
+---[ end trace 50ac537fe0e0a602 ]---
+cfg80211: Calling CRDA to update world regulatory domain
+imap-ssp imap-ssp.0: ARM PL022 driver, device ID: 0x00041022
+pl022: mapped registers from 0x20500000 to d001c000
+DMA_ADDR_ALIGN addr 0xcba01000, 0x8ba01000
+imap-ssp imap-ssp.0: setup for DMA on RX dma0chan1, TX dma0chan0
+imap-ssp imap-ssp.0: !!!!!!!!!!!! pl022_probe: probe OK
+imap-ssp imap-ssp.1: ARM PL022 driver, device ID: 0x00041022
+pl022: mapped registers from 0x20501000 to d001e000
+imap-ssp imap-ssp.1: !!!!!!!!!!!! pl022_probe: probe OK
+do_initcall_level[4], cnt=49
+Switching to clocksource timer-ca5
+tty_register_driver entry. timest: jiffis:ffff15e3
+tty_register_driver done. timest: jiffis:ffff15e8
+dwc_otg_init_entry sleep
+console [ttyAMA3] enabled
+pl011_probe finsish. jiff:ffff1636(dif:79), timest:0-752486
+pl011_init_entry jiff:ffff1637(7b), timest:0-758061, diff:618
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:08:53 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:08:57 --
+dwc_otg_init_entry awake
+dwc_otg: version 2.92a 15-NOV-2010
+Core Release: 2.93a
+Setting default values for core params
+==== dma_enable is 1 dma_desc_enable is 1 ==== 
+Using Descriptor DMA mode
+Periodic Transfer Interrupt Enhancement - disabled
+OTG VER PARAM: 1, OTG VER FLAG: 1
+Dedicated Tx FIFOs mode
+dwc_otg_driver_init jiff:ffff19a2, timest:5-130679, diff:264
+do_one_initcall[117] fn:0xc033dc1d, jiff:ffff19a3, timest:5-136130, diff:4775
+NET: Registered protocol family 2
+TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP: reno registered
+UDP hash table entries: 256 (order: 1, 8192 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+initrd_end=0, initrd_start=0, __initramfs_start=c0345f54, __initramfs_size=4998fc
+do_one_initcall[123] fn:0xc032f9b9, jiff:ffff1c91, timest:8-889167, diff:3693
+do_initcall_level[5], cnt=18
+CPU PMU: probing PMU on CPU 0
+hw perfevents: enabled with ARMv7 Cortex-A5 PMU driver, 3 counters available
+iMAP PWM Driver Init.
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+NTFS driver 2.1.30 [Flags: R/O].
+jffs2: version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+msgmni has been set to 488
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+tty_register_driver entry. timest: jiffis:ffff1ca1
+tty_register_driver done. timest: jiffis:ffff1ca2
+tty_register_driver entry. timest: jiffis:ffff1ca3
+tty_register_driver done. timest: jiffis:ffff1ca4
+uart-pl011 imap-uart.0: no DMA platform data
+uart-pl011 imap-uart.1: no DMA platform data
+uart-pl011 imap-uart.2: no DMA platform data
+uart-pl011 imap-uart.3: no DMA platform data
+brd: module loaded
+loop: module loaded
+m25p80 spi0.0: found w25q256, expected mx25l12805d
+m25p80 spi0.0: w25q256 (32768 Kbytes)
+Creating 7 MTD partitions on "spi0.0":
+0x000000000000-0x000000080000 : "boot"
+0x000000080000-0x000000090000 : "oem"
+0x000000090000-0x0000000a0000 : "config"
+0x0000000a0000-0x000000aa0000 : "kernel0"
+0x000000aa0000-0x0000014a0000 : "kernel1"
+0x0000014a0000-0x000001520000 : "jffs"
+0x000001520000-0x000002000000 : "media"
+done reading camera oem info, size: 32
+do_one_initcall[220] fn:0xc033c219, jiff:ffff1cbb, timest:9-97183, diff:61
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+imap-ehci imap-ehci: Infotm Ehci Controller
+imap-ehci imap-ehci: new USB bus registered, assigned bus number 1
+imap-ehci imap-ehci: irq 160, io mem 0x27001000
+imap-ehci imap-ehci: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: Infotm Ehci Controller
+usb usb1: Manufacturer: Linux 3.10.0-InfoTMIC+ ehci_hcd
+usb usb1: SerialNumber: imap-ehci
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 3 ports detected
+do_one_initcall[222] fn:0xc033c465, jiff:ffff1cca, timest:9-170151, diff:66
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+imap-ohci imap-ohci: Infotm Ohci Controller
+imap-ohci imap-ohci: new USB bus registered, assigned bus number 2
+imap-ohci imap-ohci: irq 161, io mem 0x27000000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Infotm Ohci Controller
+usb usb2: Manufacturer: Linux 3.10.0-InfoTMIC+ ohci_hcd
+usb usb2: SerialNumber: imap-ohci
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 3 ports detected
+do_one_initcall[223] fn:0xc033c4c1, jiff:ffff1ce0, timest:9-284908, diff:108
+tty_register_driver entry. timest: jiffis:ffff1ce2
+tty_register_driver done. timest: jiffis:ffff1ce3
+i2c /dev entries driver
+uvcvideo: Unable to create debugfs directory
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+tty_register_driver entry. timest: jiffis:ffff1ce7
+tty_register_driver done. timest: jiffis:ffff1ce8
+zram: Created 1 device(s) ...
+Init Infotm ION driver v2014.02.08
+infotm ion creat No.0 heap: c0824a24, type=0
+infotm ion creat No.1 heap: c0824a40, type=4
+ION device create OK!
+Infotm ION driver v2014.02.08 register done!
+pwm_regulator_probe: id=1
+pwm1: 900 <--> 1390 mV at 1388 mV 
+Synopsys Designware Multimedia Card Interface Driver
+imap-mmc1 imap-mmc1.1: Using internal DMA controller.
+imap-mmc1 imap-mmc1.1: Version ID is 241a
+imap-mmc1 imap-mmc1.1: DW MMC controller at irq 163, 32 bit host data width, 512 deep fifo
+mmc0: no vmmc regulator found
+mmc_host mmc0: Bus speed (slot 0) = 96000000Hz (slot req 400000Hz, actual 400000HZ div = 120)
+imap-mmc1 imap-mmc1.1: 1 slots initialized
+imap-mmc1 imap-mmc1.2: Using internal DMA controller.
+imap-mmc1 imap-mmc1.2: Version ID is 241a
+imap-mmc1 imap-mmc1.2: DW MMC controller at irq 164, 32 bit host data width, 512 deep fifo
+mmc1: no vmmc regulator found
+mmc_host mmc1: Bus speed (slot 0) = 96000000Hz (slot req 400000Hz, actual 400000HZ div = 120)
+imap-mmc1 imap-mmc1.2: 1 slots initialized
+imap-mmc1 imap-mmc1.2: Internal DMAC interrupt fix enabled.
+do_one_initcall[251] fn:0xc033d33d, jiff:ffff1d0f, timest:9-519865, diff:158
+items driver (c) 2009, 2014 InfoTM
+put imapx_rtc_init to thread.
+pcf8563 probe error,hw rtc is imapx
+pcf8563-rtc: probe of pcf8563-rtc failed with error -1
+iMAP_RTC: +++imapx_rtc_probe: probe=c0809cd8+++
+imap-rtc imap-rtc: rtc core: registered imap-rtc as rtc0
+do_one_initcall[255] fn:0xc033dce5, jiff:ffff1d21, timest:9-609578, diff:59
+venc probe
+venc get clock real_rate -> 278437500(set to 280000000) 
+fr1023: Codec dirver is fr1023.
+
+hpdetect: maybe need another mode
+gpio type wifi power, gpio_index is 58
+do not config wifi.reset in board.itms
+sensor infomation: 
+exist: 1
+name : mt9d111
+ctrl_bus: i2c
+ interface : camif
+face:  front
+pw_iovdd: 
+pw_dvdd: 
+bus_chn:	1
+pdown_pin:	135
+reset_pin:	134
+orientation:	270
+addr:		0
+mclk:		0
+Let's ignore regulor check process
+==========> I am in The Drive of mt9d111 <==========
+~~~~~~~~~~ camif driver in mt9d111 probe end ok
+mmc_host mmc1: Bus speed (slot 0) = 96000000Hz (slot req 300000Hz, actual 300000HZ div = 160)
+camif driver power off rear sensor
+==============> i am in The Init of drinver for mt9d111 <===============
+ mt9d111 read id
+[mt9d111] Sensor ID[0x00]:0x1519
+camif sensor1 not exist
+do_one_initcall[272] fn:0xc033df41, jiff:ffff1d3f, timest:9-757416, diff:78
+imapx_dvfs:failed to connect dc1 rail
+imapx_dvfs:imapx_dvfs_init error -22
+CPU frequency gain from item: -200.-9999
+CPU scaling frequency: 24.0
+soc-audio soc-audio: ASoC: machine fr1023 should use snd_soc_register_card()
+fr1023_codec_init: reg=90, val=2
+fr1023_codec_init: reg=c0, val=b
+fr1023_codec_init: reg=e0, val=de
+fr1023_codec_init: reg=110, val=22
+fr1023_codec_init: reg=120, val=0
+fr1023_codec_init: reg=130, val=f
+fr1023_codec_init: reg=150, val=0
+fr1023_codec_init: reg=160, val=7f
+fr1023_codec_init: reg=230, val=9
+imapx-i2s imapx-i2s.0: Entered imapx_i2s_probe
+soc-audio soc-audio:  fr1023_dai <-> imapx-i2s.0 mapping ok
+do_one_initcall[280] fn:0xc033e3f1, jiff:ffff1d51, timest:9-846155, diff:87
+Key type dns_resolver registered
+do_initcall_level[6], cnt=165
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+++ imapx15_init_pm ++
+wifi_usb_rfkill_init
+wifi_usb_rfkill_init done
+wifi_usb_rfkill_probe
+wifi_set_power set blocked=1
+BRCM USB MODULE RESET LOW!!file system registered
+android_usb gadget: Mass Storage Function, version: 2009/09/11
+android_usb gadget: Number of LUNs=1
+ lun0: LUN: removable file: (no medium)
+mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+android_usb gadget: android_usb ready
+do_one_initcall[300] fn:0xc033c565, jiff:ffff1d67, timest:9-956211, diff:61
+imap-rtc imap-rtc: setting system clock to 2007-01-01 03:48:41 UTC (1167623321)
+do_one_initcall[301] fn:0xc033c7ed, jiff:ffff1d6a, timest:1167623321-507105, diff:-607792967
+item adc.model Not exist
+ALSA device list:
+  #0: fr1023
+do_initcall_level[7], cnt=20
+kernel_init_freeable -> do_basic_setup done. jiff:ffff1d6d, timest:1167623321-524171
+Warning: unable to open an initial console.
+set ramdisk flash type
+ramdisk spi flash
+ramdisk /init exist!
+kernel_init_freeable -> load_default_modules done. jiff:ffff1d70, timest:1167623321-541378
+Freeing unused kernel memory: 4812K (c032e000 - c07e1000)
+ramdisk_execute_command:/init
+run_init_process: /init
+0:HOME=/
+1:TERM=linux
+uart_open: tty->index=3
+uart_open: tty->index=3
+uart_open: tty->index=3
+--->mmc_sdio_get_max_clock:24000000n
+mmc_host mmc1: Bus speed (slot 0) = 96000000Hz (slot req 24000000Hz, actual 24000000HZ div = 2)
+mmc1: new SDIO card at address 0001
+init: begin start only avsvr/ on lpddr
+enable_32k_rtc init.
+enable_32k_rtc 
+do_one_initcall[309] fn:0xbf802001, jiff:ffff1da1, timest:1167623321-783512, diff:107
+^^^^^ g_structOEMINFO.ucInited = 1
+11, ucInited=1, brandname=StuartCam
+   ccccccccc
+param_verify_counNET: Registered protocol family 17
+trycode_ushort cc=101 109
+==== build_SSID =====> OEM MAC=44:2C:05:53:2A:84
+ssid=StuartCam2A84
+dhd_module_init: in
+======== bcm_wlan_set_plat_data ========
+GPIO(WL_HOST_WAKE) = GPIO23
+------------[ cut here ]------------
+WARNING: at drivers/gpio/gpiolib.c:160 0xc0119049()
+autorequest GPIO-23
+Modules linked in: bcmdhd(+) af_packet enable_32k_rtc
+CPU: 0 PID: 721 Comm: insmod Tainted: G        W    3.10.0-InfoTMIC+ #654
+Function entered at [<c0010535>] from [<c000ebd7>]
+Function entered at [<c000ebd7>] from [<c001b34b>]
+Function entered at [<c001b34b>] from [<c001b3b5>]
+Function entered at [<c001b3b5>] from [<c0119049>]
+Function entered at [<c0119049>] from [<c01193bb>]
+Function entered at [<c01193bb>] from [<bf8352af>]
+Function entered at [<bf8352af>] from [<bf8176dd>]
+Function entered at [<bf8176dd>] from [<bf87304d>]
+Function entered at [<bf87304d>] from [<c000853f>]
+Function entered at [<c000853f>] from [<c004597f>]
+Function entered at [<c004597f>] from [<c0045bd7>]
+Function entered at [<c0045bd7>] from [<c000c681>]
+---[ end trace 50ac537fe0e0a604 ]---
+host_oob_irq: 264
+host_oob_irq_flags=0x414
+dhd_wifi_platform_load: Enter
+Power-up adapter 'DHD generic adapter'
+wifi_platform_set_power = 1
+======== PULL WL_REG_ON HIGH! ========
+bcm_wlan_set_power: wifi_power 0
+wifi_platform_bus_enumerate device present 1
+======== Card detection to detect SDIO card! ========
+bcmsdh_register: register client driver
+bcmsdh_sdmmc: bcmsdh_sdmmc_probe Enter
+bcmsdh_sdmmc: bcmsdh_sdmmc_probe Enter
+bus num (host idx)=1, slot num (rca)=1
+found adapter info 'DHD generic adapter'
+sdioh_attach: set sd_f2_blocksize 128
+dhdsdio_probe : no mutex held. set lock
+F1 signature read @0x18000000=0x1530a9a6
+F1 signature OK, socitype:0x1 chip:0xa9a6 rev:0x0 pkg:0x3
+DHD: dongle ram size is set to 524288(orig 524288) at 0x0
+wifi_platform_get_mac_addr
+======== bcm_wlan_get_mac_address ========
+Host Mac: 44:2C:05:53:2A:84
+####### Get Customer Host Mac ###### = 44:2C:05:53:2A:84
+dhd_conf_set_chiprev: chip=0xa9a6, chiprev=0
+^^^^^^^^^^^^^^^^^^conf->dpc_cpucore=0
+dhd_conf_set_conf_path_by_nv_path: config_path=/etc/firmware/config.txt
+dhd_conf_read_config: Ignore config file /etc/firmware/config.txt
+wl_create_event_handler(): thread:wl_event_handler:2d7 started
+tsk Enter, tsk = 0xc99a147c
+dhd_attach(): thread:dhd_watchdog_thread:2db started
+dhd_attach(): thread:dhd_dpc:2dc started
+dhd_dpc_thread: set dpc_cpucore 0 from config.txt
+dhd_attach(): thread:dhd_rxf:2dd started
+dhd_deferred_work_init: work queue initialized 
+Dongle Host Driver, version 1.201.59.6 (r506368)
+Compiled in drivers/net/wireless/bcmdhd on Feb 21 2017 at 13:39:22
+Register interface [wlan0]  MAC: 44:2c:05:9b:5e:b2
+
+dhdsdio_probe : the lock is released.
+dhd_module_init: Exit err=0
+do_one_initcall[311] fn:0xbf873001, jiff:ffff1e2a, timest:1167623322-467722, diff:579
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:03 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:04 --
+dhd_open: Enter c9998800
+^^^^^^^^^^^^^^^^^^conf->dpc_cpucore=0
+dhd_conf_read_config: Ignore config file /etc/firmware/config.txt
+dhd_conf_set_fw_name_by_chip: firmware_path=/etc/firmware/fw_bcm43438a0.bin
+dhdsdio_download_firmware: set use_rxchain 0
+dhdsdio_download_firmware: set txglomsize 40
+sdioh_set_mode: set txglom_mode to multi-desc
+Final fw_path=/etc/firmware/fw_bcm43438a0.bin
+Final nv_path=/etc/firmware/nvram.txt
+Final conf_path=/etc/firmware/config.txt
+NVRAM version: AP6212_NVRAM_V1.0_20140603
+dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+dhd_bus_init: enable 0x06, ready 0x06 (waited 0us)
+bcmsdh_oob_intr_register: Enter
+bcmsdh_oob_intr_register: HW_OOB enabled
+bcmsdh_oob_intr_register OOB irq=264 flags=414
+bcmsdh_oob_intr_register: enable_irq_wake
+bcmsdh_oob_intr_register: enable_irq_wake failed with -6
+dhd_conf_set_fw_int_cmd: set WLC_SET_BAND 142 0
+dhd_preinit_ioctls: Set tcpack_sup_mode 0
+wifi_platform_get_mac_addr
+======== bcm_wlan_get_mac_address ========
+Host Mac: 44:2C:05:53:2A:84
+####### Get Customer Host Mac ###### = 44:2C:05:53:2A:84
+Firmware up: op_mode=0x0005, MAC=44:2c:05:53:2a:84
+dhd_conf_set_country: set country CN, revision 0
+dhd_conf_set_fw_string_struct_cmd: set country
+Country code: CN (CN/0)
+dhd_conf_set_fw_string_cmd: set roam_off 1
+Firmware version = wl0: Mar  8 2016 15:59:31 version 7.46.57.4.ap.r1 (A0 Station/P2P) FWID 01-e8238bc4
+  Driver: 1.201.59.6 (r506368)
+  Firmware: wl0: Mar  8 2016 15:59:31 version 7.46.57.4.ap.r1 (A0 Station/P2P) FWID 01-e8238bc4 
+dhd_txglom_enable: enable 0
+dhd_conf_set_txglom_params: swtxglom=0, txglom_ext=0
+dhd_conf_set_txglom_params: txglom_bucket_size=0
+dhd_conf_set_txglom_params: txglomsize=0, deferred_tx_len=0, bus_txglom=0
+dhd_conf_set_txglom_params: tx_in_rx=1, tx_max_offset=0
+dhd_conf_set_disable_proptx: set disable_proptx 0
+dhd_wlfc_hostreorder_init(): successful bdcv2 tlv signaling, 64
+dhd_open: Exit ret=0
+ifconfig: SIOCGIFFLAGS: No such device
+my_watch_dog[748]: my_watch_dog started...
+my_watch_dog[748]: my_watch_dog selfcheck thread started...
+av_server timest:1167623323-9739uart_open: tty->index=3
+81
+v_server[749]: "   ^uart_close: (3) called
+^^^^/opt/ipnc/avserver_x15.bin starting.........."
+Jan  1 03:48:43 v_server[749]: "   ^^^^^/optcamif driver run here:imapx_camif_open
+/ipnc/avserver_x15.bin starting.........."
+OSA_ipcShmOpen shmat hndl ptr:0xb6cba000. key:99123458, size:52
+OSA_ipcShmOpen shmat hndl ptr:0xb6cb9000. key:99123461, size:1660
+[I] SHM-(ipc_shm.c:46) camif driver power off rear sensor
+init sys ipc share mem, size:1660, key:99123461
+OSA_ipcShmOpen shmat hndl ptr:0==============> i am in The Init of drinver for mt9d111 <===============
+xb6cb8000. key:99123460, mt9d111 init
+ size:2556
+[I] SHM-(cfg mt9d111 init end, reg=000C,isp-driver-1207-1218-2AB-liupan-initial
+_shm.c:30) init sys conf--------------------------
+ig share mem, size:2556, key:99123460
+[I] SHM-(cfg_shm.c:49) cfg_shm_loadDefCfg file /mnt/config/sportdv_sysenvimapx-i2s imapx-i2s.0: mclkdiv = 29, bitclkdiv = 119
+.cfg not found!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ load_default ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ load_default ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ load_default ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+idx=0, width=1280, height=720
+idx=1, width=1280, height=720
+idx=2, width=320, height=176
+idx=3, width=320, height=176
+[I] SHM-(cfg_shm.c:121) product type(default): IP CAMERA
+[I] VID-(cfg_shm.c:431) Enable strm-preview
+[I] VID-(cfg_shm.c:431) Enable strm-storage
+[I] VID-(cfg_shm.c:431) Disable strm-motiondetetc
+ bitrate=1200, 1885, 921600
+[I] VID-(cfg_shm.c:577) cfg_shm_setVideoStrmResolutionFramerateBitrate  resolution:1->wid:1280, hei:720, bitrate:1930240, fps:20
+ bitrate=680, 1068, 921600
+[I] VID-(cfg_shm.c:577) cfg_shm_setVideoStrmResolutionFramerateBitrate  resolution:1->wid:1280, hei:720, bitrate:1093632, fps:20
+avserver usage: /opt/ipnc/avserver_x15.bin [enable_preview] [pipelineid] [Sensor/ISP resolution(0=720p, 1=1080p)] [ENCODE resolution(0=720p, 1=1080p, 2=vga)]
+[I] PIP-(av_osa_msg.c:102) msg init done, total free msg buffer 128
+[I] SHM-(cfg_shm.c:178) cfg_shm_is_Q3 Is NOT apollo.
+[I] PIP-(av_osa_pipeline.c:24) av_osa_pipeline_init, sensor type 1
+[I] SHM-(cfg_shm.c:121) product type(default): IP CAMERA
+active pipelineCnt=1, 1
+[I] VID-(av_video_capture.c:59) Enable video capture, current status(-1)
+[I] VID-(av_fake_input.c:322) Disable ISP, current status(-1)
+[I] VID-(av_avi_input.c:105) Disable AVI input, current status(-1)
+[I] VID-(av_jpg_input.c:65) Disable JPEG input
+[I] BUF-(buffer_interface.c:57) init total 8 buffer handler
+[I] VID-(av_video_server.c:128) all active pipeine(num = 1): 
+[I] VID-(av_video_server.c:132) 	 pipeline ipc
+[I] VID-(av_video_server.c:142) 	 task cap
+[I] VID-(av_video_server.c:142) 	 task pp
+[I] VID-(av_video_server.c:142) 	 task enc
+[I] VID-(av_video_server.c:142) 	 task jpgenc
+[I] VID-(av_video_server.c:142) 	 task stm
+[I] VID-(av_video_server.c:142) 	 task video_detect
+audio_init_signal start
+Line=247, media_type=0, codec=1, key1=54617402, key2=54617503, iShmSize=280000, iMaxFrameSize=4096
+Line=247, media_type=0, codec=2, key1=54647402, key2=54647803, iShmSize=140000, iMaxFrameSize=8000
+Line=247, media_type=0, codec=2, key1=54637402, key2=54637703, iShmSize=140000, iMaxFrameSize=640
+----------alsa_read_init------
+audioEng[750]: "++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+audioEng[750]: "The init values are:"
+audioEng[750]: "format = Signed 16 bit Little Endian"
+audioEng[750]: "channels = 2"
+audioEng[750]: "framerate = 8000"
+audioEng[750]: "samples per frame = 320"
+audioEng[750]: "++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+snd_pcm_hw_params_alloc
+snd_pcm_hw_params_any
+snd_pcm_hw_params_set_access 3
+snd_pcm_hw_params_set_format 2
+snd_pcm_hw_params_set_channels 2
+snd_pcm_hw_params_set_rate_near, 8000
+snd_pcm_hw_params_set_period_size_near, 320
+snd_pcm_hw_params_set_buffer_size_near, 2560
+    alsa_set_param: before snd_pcm_hw_params.....
+    alsa_set_param: end of snd_pcm_hw_params.....
+audioEng[750]: "rate=8000, frames=320, channels=2, buffer_frames=2560\n"
+audioEng[750]: "@@@@@ audio_capture_thread running....\n"
+max audio frame size=1280
+run cmd: /etc/init.d/S01logging
+Starting logging: OK
+run cmd: /etc/init.d/S20urandom
+Initializing random number generator... done.
+run cmd: /etc/init.d/S40network
+Starting network...
+run cmd: /etc/init.d/S60network
+Mon Jan  1 03:48:45 UTC 2007
+run cmd: /etc/init.d/S80dhcp-relay
+run cmd: /etc/init.d/S80dhcp-server
+run cmd: /etc/init.d/S80mali
+insmod: can't insert '/usr/lib/modules/mali.ko': No such file or directory
+bin dev etc home init ko lib lib32 libexec linuxrc media mnt opt package proc root run sbin sys system tmp usr var
+Settings for eth0:
+Cannot get device settings: No such device
+Cannot get wake-on-lan settings: No such device
+Cannot get message level: No such device
+Cannot get link status: No such device
+No data available
+Cannot get device settings: No such device
+Cannot get wake-on-lan settings: No such device
+Cannot get message level: No such device
+Cannot get link status: No such device
+bin dev etc home init ko lib lib32 libexec linuxrc media mnt opt packageuart_open: tty->index=3
+ proc root run sbin sys system tmp usr var
+end rcs 
+Mon Jan  1 03:48:45 UTC 2007
+uart_open: tty->index=3
+# Successfully initialized wpa_supplicant
+rfkill: WLAN soft blocked
+rfkill: WLAN soft blocked
+ls: /proc//task/: No such file or directory
+  !!!!!!!!!   Setted flicker is 60HZ (2), regvalue=0x00AF
+[I] V4L-(v4l2_interface.fsize->index = 0, ARRAY_SIZE(mt9d111_win_sizes) = 2
+c:328) 
+Support format:width = 800, height = 600
+
+[I] V4L-(v4l2_interfacfsize->index = 1, ARRAY_SIZE(mt9d111_win_sizes) = 2
+e.c:337) 1.
+{
+pixelforwidth = 1280, height = 720
+mat = 'NV12',
+descriptifsize->index = 2, ARRAY_SIZE(mt9d111_win_sizes) = 2
+on = 'YUV 4:2:0'
+ }
+[mt9d111] mt9d111_try_mbus_fmt
+[mt9d111] mt9d111_s_mbus_fmt
+mf->width = 1600, mf->height = 896
+here 1
+ mt9d111 ovfmt 
+America/New_York--------------------------
+ mt9d111 wsize 
+
+--------------------------
+camif Outfmt: win(1600, 896)
+camif Infmt:  win(1600, 896)
+camif driver v4l2 payload = 2150400:
+camif driver :set code size: x = 1600, y= 896
+camif camif_queue_setup
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM!v4l2_alloc_buf 8601600
+Enter new_ion_alloc_2 allocName: "v4l2"
+new_ion_alloc2...fdData.fd = 5
+[I] SHM-(kmem_alloc.c:166) ion[1]-v4l2, sz=8601600, v=0xb5c84000, p=0x8bb00000. tol:834000, timest:1167623325-976804
+[E] VID-(v4l2_interface.c:400) v4l2 init end. timest:1167623325-987483, diff(1998)
+camif driver run here:camif_start_streaming
+[E] VID-(v4l2_interface.c:460) v4l2 start end. timest:1167623326-1152, diff(14)
+[I] VID-(encoder/av_video_encode.c:1158) video_encode_init
+[I] VID-(av_video_capture.c:43) video_capture_create: sensor width=1600, height=896
+av server loop
+  ppppppp streamIndex=0, sInfo->width=1280, sInfo->height=720, alloc buffer size=1382400
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_pp_allocBuffer 1382400
+Enter new_ion_alloc_2 allocName: "pp_stream"
+[E] VID-(av_video_capture.c:286) video_capture_procdata start. timest:1167623326-3150, (Sun Dec 31 22:48:46 2006
+)
+[I] VID-(encoder/av_enc_dll.c:46) trying to load enc dll lib8270enc.so
+[I] VID-(encoder/av_video_burst.c:187) burst_encode_create
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM! burst_encode_allocBuffer 7imapx_camif_irq_handler[1] jiff:ffff20f9, timest:1167623326-66616.
+86432
+new_ion_alloc2...fdData.fd = 7
+[I] SHM-(kmem_alloc.c:166) ion[2]-pp_stream, sz=1382400, v=0xb3140000, p=0x8c400000. tol:985800, timest:1167623326-7926
+  ppppppp streamIndex=1, sInfo->width=1280, sInfo->height=720, alloc buffer size=1382400
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_pp_allocBuffer 1382400
+Enter new_ion_alloc_2 allocName: "pp_stream"
+new_ion_alloc2...fdData.fd = 6
+[I] SHM-(kmem_alloc.c:166) ion[3]-pp_stream, sz=1382400, v=0xb2fee000, p=0x8c600000. tol:ad7000, timest:1167623326-11907
+Enter new_ion_alloc_2 allocName: "burst_enc"
+new_ion_alloc2...fdData.fd = 8
+[I] SHM-(kmem_alloc.c:166) ion[4]-burst_enc, sz=786432, v=0ximapx_camif_irq_handler[2] jiff:ffff2107, timest:1167623326-132949.
+b2f2e000, p=0x8c800000. tol:b97000, timest:1167623326-16817
+[I] VID-(encoder/av_video_burst.c:51) buffer enc: vir 0xb2f2e000, phy 0x8c800000, size 786432
+[I] VID-(encoder/av_video_burst.c:197) burst_encode_start
+  ppppppp streamIndex=2, sInfo->width=320, sInfo->height=176, alloc buffer size=84480
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_pp_allocBuffer 84480
+Enter new_ion_alloc_2 allocName: "pp_stream"
+new_ion_alloc2...fdData.fd = 9
+[I] SHM-(kmem_alloc.c:166) ion[5]-pp_stream, sz=84480, v=0xb2f19000, p=0x8ba40000. tol:baba00, timest:1167623326-18822
+  ppppppp streamIndex=3, sInfo->width=320, sInfo->height=176, alloc buffer size=84480
+MMMMMMMMMMMimapx_camif_irq_handler[3] jiff:ffff2114, timest:1167623326-199287.
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_pp_allocBuffer 84480
+Enter new_ion_alloc_2 allocName: "pp_stream"
+new_ion_alloc2...fdData.fd = 10
+[I] SHM-(kmem_alloc.c:166) ion[6]-pp_stream, sz=84480, v=0xb2f04000, p=0x8ba60000. tol:bc0400, timest:1167623326-20423
+PP_DWLReadAsicID open:/dev/vdec_g1
+[I] VID-(av_video_pp.c:266) video_pp_create timest:18
+H264EncInit#
+video process resolution [320 176][-1287291148]
+Could not sem_init EINVAL: 22
+Could not sem_init ENOSPC: 28
+Could not sem_init EPERM: 1
+H264EncInit: ->H264Init
+H264Init_2
+H264Init_2 EWLInit
+H264Init_2 EWLcalloc
+H264Init_2 H264SeqParameterSetInit
+H264Init_2 SetParameter
+H264Init_2 H264Inimapx_camif_irq_handler[4] jiff:ffff2121, timest:1167623326-265621.
+itRc
+H264Init_2 EncAsicControllerInit
+H264Init_2 EncAsicMemAlloc_2
+kmem alc, buffer:ec190
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 13
+[I] SHM-(kmem_alloc.c:166) ion[7]-alc_alloc_2, sz=921600, v=0xb2605000, p=0x8c900000. tol:ca1400, timest:1167623326-55140
+after kmem alc, buffer vir:b2605000, phy:8c900000
+kmem alc, buffer:ec208
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 14
+[I] SHM-(kmem_alloc.c:166) ion[8]-alc_alloc_2, sz=460800, v=0xb2594000, p=0x8ba80000. tol:d11c00, timest:1167623326-57423
+after kmem alc, buffer vir:b2594000, phy:8ba80000
+kmem alc, buffer:ec1cc
+Enter new_ion_alloc_2 allocName: "alc_alloc_imapx_camif_irq_handler[5] jiff:ffff212e, timest:1167623326-331958.
+2"
+new_ion_alloc2...fdData.fd = 15
+[I] SHM-(kmem_alloc.c:166) ion[9]-alc_alloc_2, sz=921600, v=0xb24b3000, p=0x8ca00000. tol:df2c00, timest:1167623326-60381
+after kmem alc, buffer vir:b24b3000, phy:8ca00000
+kmem alc, buffer:ec244
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 16
+[I] SHM-(kmem_alloc.c:166) ion[10]-alc_alloc_2, sz=460800, v=0xb2442000, p=0x8c380000. tol:e63400, timest:1167623326-62533
+after kmem alc, buffer vir:b2442000, phy:8c380000
+kmem alc, buffer:ec338
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 17
+[I] SHM-(kmem_alloc.c:166) ion[11]-alc_alloc_2, sz=184, v=0xb2441000, p=0x8ba2b000. tol:e634b8, timeimapx_camif_irq_handler[6] jiff:ffff213c, timest:1167623326-398293.
+st:1167623326-63485
+after kmem alc, buffer vir:b2441000, phy:8ba2b000
+kmem alc, buffer:ec280
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 18
+[I] SHM-(kmem_alloc.c:166) ion[12]-alc_alloc_2, sz=48256, v=0xb2435000, p=0x8c340000. tol:e6f138, timest:1167623326-64614
+after kmem alc, buffer vir:b2435000, phy:8c340000
+H264Init_2 init VUI
+H264Init_2 OK
+H264EncInit: ->H264Init ret:0
+Encode fd: 13 14 15 16 17 18 0 0
+H264EncInit: OK
+infolog[749]: "stream(0) set rate control: \n" "\t qp -1 (32-34) \n" "\t bitrate 1930240bps , gopLen 20\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16800000, intraQpDelta=0, fixedIntraQp=47, capture_fps=20\n"
+[E] VID-(imapx_camif_irq_handler[7] jiff:ffff2149, timest:1167623326-464632.
+encoder/av_video_encode.c:239) H264EncSetCodingCtrl 1: 1
+[I] VID-(av_video_capture.c:348) Capture tsk: data Ready! timest:1167623326-79542
+H264EncInit#
+H264EncInit: ->H264Init
+H264Init_2
+H264Init_2 EWLInit
+H264Init_2 EWLcalloc
+H264Init_2 H264SeqParameterSetInit
+H264Init_2 SetParameter
+H264Init_2 H264InitRc
+H264Init_2 EncAsicControllerInit
+H264Init_2 EncAsicMemAlloc_2
+kmem alc, buffer:ece40
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 20
+[I] SHM-(kmem_alloc.c:166) ion[13]-alc_alloc_2, sz=921600, v=0xb2353000, p=0x8cb00000. tol:f50138, timest:1167623326-453064
+after kmem alc, buffer vir:b2353000, phy:8cb00000
+kimapx_camif_irq_handler[8] jiff:ffff2156, timest:1167623326-530966.
+mem alc, buffer:eceb8
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 22
+[I] SHM-(kmem_alloc.c:166) ion[14]-alc_alloc_2, sz=460800, v=0xb22e2000, p=0x8c580000. tol:fc0938, timest:1167623326-455385
+after kmem alc, buffer vir:b22e2000, phy:8c580000
+kmem alc, buffer:ece7c
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 23
+[I] SHM-(kmem_alloc.c:166) ion[15]-alc_alloc_2, sz=921600, v=0xb2201000, p=0x8cc00000. tol:10a1938, timest:1167623326-459320
+after kmem alc, buffer vir:b2201000, phy:8cc00000
+kmem alc, buffer:ecef4
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 2imapx_camif_irq_handler[9] jiff:ffff2164, timest:1167623326-597302.
+4
+[I] SHM-(kmem_alloc.c:166) ion[16]-alc_alloc_2, sz=460800, v=0xb2190000, p=0x8c780000. tol:1112138, timest:1167623326-461824
+after kmem alc, buffer vir:b2190000, phy:8c780000
+kmem alc, buffer:ecfe8
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 25
+[I] SHM-(kmem_alloc.c:166) ion[17]-alc_alloc_2, sz=184, v=0xb218f000, p=0x8ba2c000. tol:11121f0, timest:1167623326-463015
+after kmem alc, buffer vir:b218f000, phy:8ba2c000
+kmem alc, buffer:ecf30
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 26
+[I] SHM-(kmem_alloc.c:166) ion[18]-alc_alloc_2, sz=48256, v=0xb2183000, p=0x8c350000. tol:111de70, timest:1167623326-464281
+after kmem alc, buffer vir:b2183000, phy:8c350000
+H264Init_2 init VUI
+H264Init_2 OK
+H264EncInit: ->H264Init ret:0
+Encode fd: 20 22 23 24 25 26 0 [DWL PP] pp hard ware time use 28ms
+0
+H264EncInit: OK
+infolog[749]: "stream(1) set rate control: \n" "\t qp -1 (36-37) \n" "\t bitrate 1093632bps , gopLen 15\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16800000, intraQpDelta=0, fixedIntraQp=49, capture_fps=20\n"
+[E] VID-(encoder/av_video_encode.c:239) H264EncSetCodingCtrl 1: 1
+H264EncInit#
+H264EncInit: ->H264Init
+H264Init_2
+H264Init_2 EWLInit
+H264Init_2 EWLcalloc
+H264Init_2 H264SeqParameterSetInit
+H264Init_2 SetParameter
+H264Init_2 H264InitRc
+H264Init_2 EncAsicControllerInit
+H264Init_2 EncAsicMemAlloc_2
+kmem alc, buffer:edb38
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 28
+[I] SHM-(kmem_alloc.c:166) ion[19]-alc_alloc_2, sz=56320, v=0xb2174000, p=0x8c360000. tol:112ba70, timest:1167623326-481393
+after kmem alc, buffer vir:b2174000, phy:8c360000
+kmem alc, buffer:edbb0
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 29
+[I] SHM-(kmem_alloc.c:166) ion[20]-alc_alloc_2, sz=28160, v=0xb216d000, p=0x8ba58000. tol:1132870, timest:1167623326-482693
+after kmem alc, buffer vir:b216d000, phy:8ba58000
+kmem alc, buffer:edb74
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 30
+[I] SHM-(kmem_alloc.c:166) ion[21]-alc_alloc_2, sz=56320, v=0xb215f000, p=0x8c370000. tol:1140470, timest:1167623326-483931
+after kmem alc, buffer vir:b215f000, phy:8c370000
+kmem alc, buffer:edbec
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 31
+[I] SHM-(kmem_alloc.c:166) ion[22]-alc_alloc_2, sz=28160, v=0xb2158000, p=0x8ba78000. tol:1147270, timest:1167623326-485031
+after kmem alc, buffer vir:b2158000, phy:8ba78000
+kmem alc, buffer:edce0
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+[DWL PP] pp hard ware time use 9ms
+  ************change Sensitivity: -1 -> 3
+new_ion_alloc2...fdData.fd = 32
+[I] SHM-(kmem_alloc.c:166) ion[23]-alc_alloc_2, sz=48, v=0xb2157000, p=0x8ba2d000. tol:11472a0, timest:1167623326-487863
+after kmem alc, buffer vir:b2157000, phy:8ba2d000
+kmem alc, buffer:edc28
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+[DWL PP] pp hard ware time use 16ms
+new_ion_alloc2...fdData.fd = 33
+[I] SHM-(kmem_alloc.c:166) ion[24]-alc_alloc_2, sz=48256, v=0xb214b000, p=0x8c560000. tol:1152f20, timest:1167623326-840225
+after kmem alc, buffer vir:b214b000, phy:8c560000
+H264Init_2 init VUI
+H264Init_2 OK
+H264EncInit: ->H264Init ret:0
+Encode fd: 28 29 30 31 32 33 0 0
+H264EncInit: OK
+infolog[749]: "stream(2) set rate control: \n" "\t qp -1 (32-34) \n" "\t bitrate 245760bps , gopLen 5\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16800000, intraQpDelta=0, fixedIntraQp=47, capture_fps=20\n"
+[E] VID-(encoder/av_video_encode.c:239) H264EncSetCodingCtrl 1: 1
+H264EncInit#
+H264EncInit: ->H264Init
+H264Init_2
+H264Init_2 EWLInit
+H264Init_2 EWLcalloc
+H264Init_2 H264SeqParameterSetInit
+H264Init_2 SetParameter
+H264Init_2 H264InitRc
+H264Init_2 EncAsicControllerInit
+H264Init_2 EncAsicMemAlloc_2
+kmem alc, buffer:1102d8
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 35
+[I] SHM-(kmem_alloc.c:166) ion[25]-alc_alloc_2, sz=56320, v=0xb213c000, p=0x8c570000. tol:1160b20, timest:1167623326-842946
+after kmem alc, buffer vir:b213c000, phy:8c570000
+kmem alc, buffer:110350
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 36
+[I] SHM-(kmem_alloc.c:166) ion[26]-alc_alloc_2, sz=28160, v=0xb2135000, p=0x8baf8000. tol:1167920, timest:1167623326-844140
+after kmem alc, buffer vir:b2135000, phy:8baf8000
+kmem alc, buffer:110314
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 37
+[I] SHM-(kmem_alloc.c:166) ion[27]-alc_alloc_2, sz=56320, v=0xb2127000, p=0x8c760000. tol:1175520, timest:1167623326-845301
+after kmem alc, buffer vir:b2127000, phy:8c760000
+kmem alc, buffer:11038c
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 38
+[I] SHM-(kmem_alloc.c:166) ion[28]-alc_alloc_2, sz=28160, v=0xb2120000, p=0x8c338000. tol:117c320, timest:1167623326-846205
+after kmem alc, buffer vir:b2120000, phy:8c338000
+kmem alc, buffer:110480
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 39
+[I] SHM-(kmem_alloc.c:166) ion[29]-alc_alloc_2, sz=48, v=0xb211f000, p=0x8ba2e000. tol:117c350, timest:1167623326-847214
+after kmem alc, buffer vir:b211f000, phy:8ba2e000
+kmem alc, buffer:1103c8
+Enter new_ion_alloc_2 allocName: "alc_alloc_2"
+new_ion_alloc2...fdData.fd = 40
+[I] SHM-(kmem_alloc.c:166) ion[30]-alc_alloc_2, sz=48256, v=0xb2113000, p=0x8c770000. tol:1187fd0, timest:1167623326-848304
+after kmem alc, buffer vir:b2113000, phy:8c770000
+H264Init_2 init VUI
+H264Init_2 OK
+H264EncInit: ->H264Init ret:0
+Encode fd: 35 36 37 38 39 40 0 0
+H264EncInit: OK
+infolog[749]: "stream(3) set rate control: \n" "\t qp -1 (32-34) \n" "\t bitrate 245760bps , gopLen 5\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16800000, intraQpDelta=0, fixedIntraQp=47, capture_fps=20\n"
+[E] VID-(encoder/av_video_encode.c:239) H264EncSetCodingCtrl 1: 1
+[DWL PP] pp hard ware time use 9ms
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+new_ion_alloc2...fdData.fd = 41
+[I] SHM-(kmem_alloc.c:166) ion[31]-encode, sz=460800, v=0xb20a2000, p=0x8cd00000. tol:11f87d0, timest:1167623326-858940
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[0]: vir 0xb20a2000, phy 0x8cd00000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+new_ion_alloc2...fdData.fd = 42
+[I] SHM-(kmem_alloc.c:166) ion[32]-encode, sz=460800, v=0xb2031000, p=0x8cd80000. tol:1268fd0, timest:1167623326-861336
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[1]: vir 0xb2031000, phy 0x8cd80000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+new_ion_alloc2...fdData.fd = 43
+[I] SHM-(kmem_alloc.c:166) ion[33]-encode, sz=460800, v=0xb1fc0000, p=0x8ce00000. tol:12d97d0, timest:1167623326-870583
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[2]: vir 0xb1fc0000, phy 0x8ce00000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+[DWL PP] pp hard ware time use 21ms
+new_ion_alloc2...fdData.fd = 44
+[I] SHM-(kmem_alloc.c:166) ion[34]-encode, sz=460800, v=0xb1f4f000, p=0x8ce80000. tol:1349fd0, timest:1167623327-207826
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[3]: vir 0xb1f4f000, phy 0x8ce80000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+new_ion_alloc2...fdData.fd = 45
+[I] SHM-(kmem_alloc.c:166) ion[35]-encode, sz=460800, v=0xb1ede000, p=0x8cf00000. tol:13ba7d0, timest:1167623327-210205
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[4]: vir 0xb1ede000, phy 0x8cf00000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+new_ion_alloc2...fdData.fd = 46
+[I] SHM-(kmem_alloc.c:166) ion[36]-encode, sz=460800, v=0xb1e6d000, p=0x8cf80000. tol:142afd0, timest:1167623327-212589
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[5]: vir 0xb1e6d000, phy 0x8cf80000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+new_ion_alloc2...fdData.fd = 47
+[I] SHM-(kmem_alloc.c:166) ion[37]-encode, sz=460800, v=0xb1dfc000, p=0x8d000000. tol:149b7d0, timest:1167623327-217211
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[6]: vir 0xb1dfc000, phy 0x8d000000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+[DWL PP] pp hard ware time use 11ms
+new_ion_alloc2...fdData.fd = 48
+[I] SHM-(kmem_alloc.c:166) ion[38]-encode, sz=460800, v=0xb1d8b000, p=0x8d080000. tol:150bfd0, timest:1167623327-223745
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[7]: vir 0xb1d8b000, phy 0x8d080000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+new_ion_alloc2...fdData.fd = 49
+[I] SHM-(kmem_alloc.c:166) ion[39]-encode, sz=460800, v=0xb1d1a000, p=0x8d100000. tol:157c7d0, timest:1167623327-226508
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[8]: vir 0xb1d1a000, phy 0x8d100000, size 460800
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM video_encode_allocBuffer 460800
+Enter new_ion_alloc_2 allocName: "encode"
+new_ion_alloc2...fdData.fd = 50
+[I] SHM-(kmem_alloc.c:166) ion[40]-encode, sz=460800, v=0xb1ca9000, p=0x8d180000. tol:15ecfd0, timest:1167623327-229854
+[I] VID-(encoder/av_video_encode.c:214) buffer enc[9]: vir 0xb1ca9000, phy 0x8d180000, size 460800
+[I] VID-(encoder/av_video_encode.c:946) video_encode_create timest:1227, time:1167623327-230026
+[I] VID-(encoder/av_video_encode.c:952) video_encode_start
+[DWL PP] pp hard ware time use 17ms
+[DWL PP] pp hard ware time use 10ms
+[I] VID-(encoder/av_video_encode.c:965) video_encode_start -> video_stream_procVideoHead
+[I] COM-(info_log.c:271) data dump:(len=38,cnt=1)
+	[I] COM-(info_log.c:291) 
+	00 00 00 01 27 64 e0 1f ac 1a d0 0a 00 b7 42 00 
+	00 03 00 02 00 00 03 00 28 1e 20 f5 00 00 00 01 
+	28 ee 07 49 22 40 
+stream(0): 00 00 00 01 67
+[DWL PP] pp hard ware time use 19ms
+[I] VID-(encoder/av_video_encode.c:965) video_encode_start -> video_stream_procVideoHead
+[I] COM-(info_log.c:271) data dump:(len=38,cnt=2)
+	[I] COM-(info_log.c:291) 
+	00 00 00 01 27 64 e0 1f ac 1a d0 0a 00 b7 42 00 
+	00 03 00 02 00 00 03 00 28 1e 20 f5 00 00 00 01 
+	28 ee 02 d2 48 90 
+stream(1): 00 00 00 01 67
+[DWL PP] pp hard ware time use 9ms
+[I] VID-(encoder/av_video_encode.c:965) video_encode_start -> video_stream_procVideoHead
+[I] COM-(info_log.c:271) data dump:(len=36,cnt=3)
+	[I] COM-(info_log.c:291) 
+	00 00 00 01 27 4d e0 1f 8d 68 14 17 a1 00 00 03 
+	00 01 00 00 03 00 05 0f 10 7a 80 00 00 00 01 28 
+	ee 06 49 20 
+stream(2): 00 00 00 01 67
+[DWL PP] pp hard ware time use 15ms
+[I] VID-(encoder/av_video_encode.c:965) video_encode_start -> video_stream_procVideoHead
+[I] COM-(info_log.c:271) data dump:(len=36,cnt=4)
+	[I] COM-(info_log.c:291) 
+	00 00 00 01 27 4d e0 1f 8d 68 14 17 a1 00 00 03 
+	00 01 00 00 03 00 05 0f 10 7a 80 00 00 00 01 28 
+	ee 06 49 20 
+stream(3): 00 00 00 01 67
+[I] VID-(encoder/av_video_encode.c:979) video_encode_start  done
+[DWL PP] pp hard ware time use 9ms
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=1, width=1280, height=720......................
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=1, width=1280, height=720......................
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=1, width=1280, height=720......................
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=1, width=1280, height=720......................
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=1, width=1280, height=720......................
+Line=146, media_type=1, codec=3, res=13, key1=17840186, key2=17840287, iShmSize=1048576, iMaxFrameSize=512000
+[DWL PP] pp hard ware time use 16ms
+  @@@@@@@ resolution changed! 0-->720, keyframe=1, size=1544
+[DWL PP] pp hard ware time use 10ms
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=0, width=1280, height=720......................
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=0, width=1280, height=720......................
+Usage: cameng [-nv/-na  ...]
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=0, width=1280, height=720......................
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=0, width=1280, height=720......................
+	 -nv---no video
+	 -na---no audio
+~~~~~~~~~~~~~~~~~~VE_VideoShmInit, ShmProfileID=0, width=1280, height=720......................
+	 -co---command only(no video/audio/motion/stream)
+Line=146, media_type=1, codec=3, res=13, key1=17830186, key2=17830187, iShmSize=5242880, iMaxFrameSize=512000
+goahead buildtime Apr 25 2017 15:32:32
+[DWL PP] pp hard ware time use 15ms
+uiBrandName=-2(StuartCam) uiProductName=A356 usButtonNumber=2 usCountryCode=US usLed******ledInfo.imapCamengPid = 889*******
+sNumber=3 usSensorID=1(2010), partner=65534(Minions), upg=356
+o_display=StuartCam o_serverip=ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ usFlicker=2
+
+CamEng[889]: "**************************************************************"
+CamEng[889]: "*                                                            *"
+CamEng[889]: "*     VERSION: 00.10.012                      *"
+CamEng[889]: "*     BUILD: 15:32:26 Apr 25 2017                            *"
+CamEng[889]: "*                                                            *"
+CamEng[889]: "**************************************************************"
+init libcur................
+[DWL PP] pp hard ware time use 10ms
+@@@@@ send_thread running....
+[DWL PP] pp hard ware time use 17ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+ bitrate=1200, 1885, 921600
+ bitrate=680, 1068, 921600
+[DWL PP] pp hard ware time use 9ms
+^^^^^^^^^^^^^^^^^ g_encParam.ve[1].ulSuppRes = 0x2000
+^^^^^^^^^^^^^^^^^ g_encParam.ve[1].ulSuppRes = 0x2044
+OSA_ipcShmOpen shmat hndl ptr:0xb6c8d000. key:99123458, size:52
+OSA_ipcShmOpen shmat hndl ptr:0xb6c8c000. key:99123458, size:52
+av server rcv mbx[0] from 12. status:256, id:903
+     IPC_MSG_CMD_AV_SET_FLIP~~~~set flip: 1
+  ~~~~~v4l2_Flip set value=0
+Record_Init: vProfile=0, aProfile=1, ucAudioEnable=1, ucVideoEnable=1
+CamEng[889]: "@@@@@ check_networkThread running....\n"
+  WiFi Module AP6212
+CamEng[889]: "@@@@@ STICK_thread running...."
+^^^^^^^^^^^init_broadcastClient 256
+  wan_if=
+*******go here, set NetWorkTypeForceChange to 1
+bottom 22,sumpin=3-------
+   g_nwState.ucOperationMode=3
+!!!!!!!!!!!!!!!!!!!!! switch  network
+CamEng[889]: "!!!!!!!!!!!!!!!!!!!!! switching  network, ucOperationMode=3\n"
+Now,input pin 53 has set to gpiochip already.
+Now,input pin 54 has set to gpiochip already.
+Now,input pin 106 has set to gpiochip already.
+[DWL PP] pp hard ware time use 17ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+killall: udhcpc: no process killed
+***************** check_switchNetwork  2329
+------------------check_startPingThread 2665
+udhcpc: option -h NAME is deprecated, use -x hostname:NAME
+udhcpc (v1.21.1) started
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+CamEng[889]: "!!!!!!!!!!!!!!!!!!!!!!!!!!!! ping thread start......"
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 18ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+Sending discover...
+[DWL PP] pp hard ware time use 17ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 15ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 15ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+CamEng[889]: "@@@@@@@@@ MD_thread running\n"
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 15ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 15ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 15ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 16ms
+[DWL PP] pp hard ware time use 10ms
+[DWL PP] pp hard ware time use 15ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 15ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 15ms
+[DWL PP] pp hard ware time use 9ms
+[DWL PP] pp hard ware time use 15ms
+CamEng[889]: "Switch to None-SetupMode..........."
+wl: wl driver adapter not found
+wl: wl driver adapter not found
+Setting SSID: "StuartCam2A84"
+Register interface [wl0.1]  MAC: 44:2c:05:53:2a:84
+
+No scan in progress.
+current mac channel	1
+target channel	1
+dhd_helper: Channel: 
+dhd_helper: Broadcast SSID: OFF
+CFG80211-ERROR) wl_cfg80211_event : CamEng[889]: "##########ignore event 16, not interested
+########################### switch to wireless\n"
+g_nwState.ucForceWork=18, ucNetWorkTypeForceChange=1, ucNetWorkType=2, ucBakNetWorkType=2
+pthread_join-0 time: 1167623330
+av server rcv mbx[1] from 12. status:256, id:902
+   ^^^^v4l2_ColorFx:0
+Sending discover...
+CamEng[889]: "@@@@@ Record_Thread running..."
+      ^^^^^^^^^^^^init aacData->samplesInput 1024 aacData->maxBytesOutput 768
+      ^^^^^ default audio encType: 4
+MP4FileAACInit: timeScale=8000, duration=1024, audioType=64
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:13 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:15 --
+Sending discover...
+audioEng[750]: "playback thread!!!!!!!"
+SPEEX_PREPROCESS_GET_AGC_LEVEL:8000.000000
+SPEEX_PREPROCESS_SET_AGC_LEVEL:32768.000000
+warning: The VAD has been replaced by a hack pending a complete rewrite
+newest frame.............. uiPos=52, uiSeq=0
+222222222222222, pftpConfig->settingValid=0
+clear all mp4 files from FS
+motion_action kkkk=0, i=0
+listen at: 0.0.0.0/9595
+CamEng[889]: "+++++++++++++++++++++++++++++++Camera Engine Service Start up, socket=5"
+CamEng[889]: "@@@@@ eventhandle_thread running....threadindex=0"
+CamEng[889]: "@@@@@ SSTREAM_SendTread running...."
+addr1:, ping1:www.yahoo.com
+CamEng[889]: "!!!!!!!!!! refresh  ping address to www.yahoo.com"
+CamEng[889]: "!!!!!!!!!! gateway address is NONE"
+CamEng[889]: "!!!!!!!!!!!!!!!!!!!!!!!!!!!!  exit ping thread"
+pthread_join-1 time: 1167623339
+network_id=-1
+tttttttttttttttttttttttttttttttttttttttttttttttttttt   sulLastSetWifiTime=0, time(NULL)=1167623339
+Sending discover...
+CamEng[889]: "====>match1 find the match router, ssid=IoT, mac=06:18:D6:E1:E3:E7, sec=WPA-PSK\n"
+CamEng[889]: "====>match2 find the match router, ssid=IoT, mac=16:18:D6:69:EB:01, sec=WPA-PSK\n"
+====> SSID=IoT, MAC=16:18:D6:69:EB:01, SEC=WPA-PSK
+OK
+OK
+OK
+OK
+OK
+OK
+wlan0: Trying to associate with 16:18:d6:69:eb:01 (SSID='IoT' freq=2427 MHz)
+Connectting with 16:18:d6:69:eb:01 channel (4) ssid "IoT", len (3)
+
+wl_iw_event: Link UP with BSSID=16:18:00:00:EB:01
+wl_bss_connect_done succeeded with 16:18:d6:69:eb:01
+wlan0: Associated with 16:18:d6:69:eb:01
+wlan0: WPA: Key negotiation completed with 16:18:d6:69:eb:01 [PTK=CCMP GTK=CCMP]
+wlan0: CTRL-EVENT-CONNECTED - Connection to 16:18:d6:69:eb:01 completed [id=0 id_str=]
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:23 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:24 --
+CFG80211-ERROR) wl_cfg80211_event : ignore event 16, not interested
+!!!!!!!!!!!!!!!!!!!!! switch  network
+CamEng[889]: "!!!!!!!!!!!!!!!!!!!!! switching  network, ucOperationMode=3\n"
+udhcpc: option -h NAME is deprecated, use -x hostname:NAME
+udhcpc (v1.21.1) started
+infolog[749]: "change bitRate from 1093632 to 855021"
+infolog[749]: "stream(1) set rate control: \n" "\t qp -1 (36-37) \n" "\t bitrate 855021bps , gopLen 14\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16793600, intraQpDelta=0, fixedIntraQp=49, capture_fps=14\n"
+Sending discover...
+infolog[749]: "change bitRate from 1930240 to 1509096"
+infolog[749]: "stream(0) set rate control: \n" "\t qp -1 (32-34) \n" "\t bitrate 1509096bps , gopLen 14\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16793600, intraQpDelta=0, fixedIntraQp=47, capture_fps=14\n"
+***************** check_switchNetwork  2329
+------------------check_startPingThread 2665
+CamEng[889]: "ERROR: Can not get the local ip"
+CamEng[889]: "!!!!!!!!!!!!!!!!!!!!!!!!!!!! ping thread start......"
+udhcpc: option -h NAME is deprecated, use -x hostname:NAME
+udhcpc (v1.21.1) started
+Sending discover...
+Sending discover...
+Sending select for 10.0.2.221...
+Lease of 10.0.2.221 obtained, lease time 86400
+deleting routers
+route: SIOCDELRT: No such process
+adding dns 10.0.0.20
+adding dns 10.0.0.21
+CamEng[889]: "Get the local ip 10.0.2.221"
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:33 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:38 --
+addr2:, ping2:www.google.com
+CamEng[889]: "!!!!!!!!!! refresh  ping address to www.google.com"
+CamEng[889]: "!!!!!!!!!! renew socket"
+CamEng[889]: "Greate, Connection to Gateway OK!!!"
+CamEng[889]: "######  1  #######  ping  internet  IP 172.217.0.4\n"
+CamEng[889]: "Awesome, Connection to Internet OK!!!"
+serverip=server.seedonk.com, owner=nonono420, passwd=f338e48a06dcce3939511f1de33c2316b228ea31953276f8705468701340c2ed0e95aecfb37e6dd89f5374a2c6955661, cameratime=2006
+cnt_nc_pid=0, cnt_nc_err=1
+killall: netcapture: no process killed
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:43 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:44 --
+killall: netcapture: no process killed
+netcapture[1203]: netcapture message
+netcapture[1203]: **************************************************************
+netcapture[1203]: *                                                            *
+netcapture[1203]: *     Build Time: 13:46:26--Apr 20 2017                      *
+netcapture[1203]: *                                                            *
+netcapture[1203]: **************************************************************
+openssl version: OpenSSL 1.0.2a 19 Mar 2015
+"upnpDiscover succeed \n"
+"UPnP device found. Is it an IGD ? : http://10.0.2.137:80/\n"
+"an UPnP device has been found but was not recognized as an IGD\n"
+"No valid UPNP Internet Gateway Device found.\n"
+netcapture[1203]:  
+ => UPNP SETUP SUCCESS
+netcapture[1203]: get_local_ip 1 lo: 127.0.0.1
+
+netcapture[1203]: get_local_ip 2 wlan0: 10.0.2.221
+
+urls and data are uninited, please setup IGD first
+urls and data are uninited, please setup IGD first
+netcapture[1203]: Warning: fake UPort=NULL
+
+urls and data are uninited, please setup IGD first
+~~~~~~ owner ports: vp1=9688, vp2=9689, ap1=9690, ap2=9691
+netcapture[1203]:  Warning: ftpproto=NULL
+
+actionID=9, cmdlen=87
+CamEng[889]: "resolution2:720P:Video2Resolution:4"
+CamEng[889]: "codec2:H264:VideoCodec:5"
+CamEng[889]: "quality2:low:Video2Quality:6"
+CamEng[889]: "fps2:20:Video2FPS:7"
+CamEng[889]: "verify:goodgoodstudy:error:95"
+  nc--codec2=H264
+  nc--resolution2=720P, 2000, m_video_res_bit=2000
+  nc--quality2=low
+  nc--fps2=20
+netcapture[1203]: Warning: fake PTCam=NULL
+
+  nc--size=0#1280x720:640x352:320x176:0
+netcapture[1203]:  Warning: WRXFunction=NULL
+
+[@] SKConfig TIMESTAMP: 2006-12-31-22-49-25
+netcapture[1203]: 
+netcapture-7.0.0 started...
+netcapture[1203]: Init media source: profileno = 7, m_shm_i=0,  use aes:yes
+netcapture[1203]: Init media source: profileno = 7, m_shm_i=1,  use aes:yes
+netcapture[1203]: Init media source: profileno = 8, m_shm_i=0,  use aes:yes
+netcapture[1203]: Init media source: profileno = 8, m_shm_i=1,  use aes:yes
+netcapture[1203]: Init media source: profileno = 17, m_shm_i=2,  use aes:yes
+netcapture[1203]: Init media source: profileno = 17, m_shm_i=3,  use aes:yes
+netcapture[1203]: Init media source: profileno = 18, m_shm_i=2,  use aes:yes
+netcapture[1203]: Init media source: profileno = 18, m_shm_i=3,  use aes:yes
+|+++++++++++++remove the playback audio peer++++++++++++++++++|, audiospeakercount=0iSockFd=7
+actionID=24, cmdlen=24
+ct=nc
+pt=0
+remove the netcapture speaker out peer
+cmdHead.actionID=Playback
+[@] SKConfig TIMESTAMP: 2006-12-31-22-49-25
+netcapture[1203]:  => Signin [0]...
+ssl connection=1
+finish raw connecting bSSL=1, bblock=1
+knnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnno 
+infolog[749]: "change bitRate from 855021 to 894789"
+get peer certificate....
+infolog[749]: "stream(1) set rate control: \n" "\t qp -1 (36-37) \n" "\t bitrate 894789bps , gopLen 15\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16793600, intraQpDelta=0, fixedIntraQp=49, capture_fps=15\n"
+netcapture[1203]:  Warning: NVcerti=NULL
+
+commonName:server.seedonk.com
+dns_name :server.seedonk.com
+dns_name :server.swannsmart.com
+netcapture[1203]: an unsecure connection 9:(null)
+
+netcapture[1203]:   command  ssl socket error!
+netcapture[1203]: <FATAL> can not open cmd socket!
+netcapture[1203]:  [FATAL] signin failed.
+delete igd...............
+[@] SKConfig TIMESTAMP: 2006-12-31-22-49-26
+netcapture[1203]: => program exit
+infolog[749]: "change bitRate from 1509096 to 1579287"
+infolog[749]: "stream(0) set rate control: \n" "\t qp -1 (32-34) \n" "\t bitrate 1579287bps , gopLen 15\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16793600, intraQpDelta=0, fixedIntraQp=47, capture_fps=15\n"
+serverip=server.seedonk.com, owner=nonono420, passwd=f338e48a06dcce3939511f1de33c2316b228ea31953276f8705468701340c2ed0e95aecfb37e6dd89f5374a2c6955661, cameratime=2006
+cnt_nc_pid=0, cnt_nc_err=1
+killall: netcapture: no process killed
+10 Jan 04:09:51 ntpdate[1199]: step time server 129.6.15.27 offset 379488021.116710 sec
+killall: netcapture: no process killed
+netcapture[1249]: netcapture message
+netcapture[1249]: **************************************************************
+netcapture[1249]: *                                                            *
+netcapture[1249]: *     Build Time: 13:46:26--Apr 20 2017                      *
+netcapture[1249]: *                                                            *
+netcapture[1249]: **************************************************************
+openssl version: OpenSSL 1.0.2a 19 Mar 2015
+"upnpDiscover succeed \n"
+"UPnP device found. Is it an IGD ? : http://10.0.2.137:80/\n"
+"an UPnP device has been found but was not recognized as an IGD\n"
+"No valid UPNP Internet Gateway Device found.\n"
+netcapture[1249]:  
+ => UPNP SETUP SUCCESS
+netcapture[1249]: get_local_ip 1 lo: 127.0.0.1
+
+netcapture[1249]: get_local_ip 2 wlan0: 10.0.2.221
+
+urls and data are uninited, please setup IGD first
+urls and data are uninited, please setup IGD first
+urls and data are uninited, please setup IGD first
+~~~~~~ owner ports: vp1=9792, vp2=9793, ap1=9794, ap2=9795
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:09:54 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:13:08 --
+netcapture[1249]:  Warning: ftpproto=NULL
+
+actionID=9, cmdlen=87
+CamEng[889]: "resolution2:720P:Video2Resolution:4"
+CamEng[889]: "codec2:H264:VideoCodec:5"
+CamEng[889]: "quality2:low:Video2Quality:6"
+CamEng[889]: "fps2:20:Video2FPS:7"
+CamEng[889]: "verify:goodgoodstudy:error:95"
+  nc--codec2=H264
+  nc--resolution2=720P, 2000, m_video_res_bit=2000
+  nc--quality2=low
+  nc--fps2=20
+netcapture[1249]: Warning: fake PTCam=NULL
+
+  nc--size=0#1280x720:640x352:320x176:0
+netcapture[1249]:  Warning: WRXFunction=NULL
+
+[@] SKConfig TIMESTAMP: 2019-01-10-04-09-54
+netcapture[1249]: 
+netcapture-7.0.0 started...
+netcapture[1249]: Init media source: profileno = 7, m_shm_i=0,  use aes:yes
+netcapture[1249]: Init media source: profileno = 7, m_shm_i=1,  use aes:yes
+netcapture[1249]: Init media source: profileno = 8, m_shm_i=0,  use aes:yes
+netcapture[1249]: Init media source: profileno = 8, m_shm_i=1,  use aes:yes
+netcapture[1249]: Init media source: profileno = 17, m_shm_i=2,  use aes:yes
+netcapture[1249]: Init media source: profileno = 17, m_shm_i=3,  use aes:yes
+netcapture[1249]: Init media source: profileno = 18, m_shm_i=2,  use aes:yes
+netcapture[1249]: Init media source: profileno = 18, m_shm_i=3,  use aes:yes
+actionID=24, cmdlen=24
+ct=nc
+pt=0
+remove the netcapture speaker out peer
+cmdHead.actionID=Playback
+|+++++++++++++remove the playback audio peer++++++++++++++++++|, audiospeakercount=0iSockFd=7
+[@] SKConfig TIMESTAMP: 2019-01-10-04-09-54
+netcapture[1249]:  => Signin [0]...
+ssl connection=1
+finish raw connecting bSSL=1, bblock=1
+knnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnno 
+get peer certificate....
+netcapture[1249]:  Warning: NVcerti=NULL
+
+commonName:server.seedonk.com
+dns_name :server.seedonk.com
+dns_name :server.swannsmart.com
+Verify OK!
+netcapture[1249]: @@@@@@@@@@@@@ len = 9, OWNER = nonono420
+netcapture[1249]: @@@@@@@@@@@@@ len = 25, PASSWD = xxxxxx
+netcapture[1249]: @@@@@@@@@@@@@ len = 17, MAC = 44:2C:05:53:2A:84
+netcapture[1249]: @@@@@@@@@@@@@ len = 10, LIP = 10.0.2.221
+netcapture[1249]: @@@@@@@@@@@@@ len = 4, LPORT = xxxxxx
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, UIP = 0
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, UPORT = xxxxxx
+netcapture[1249]: @@@@@@@@@@@@@ len = 28, SIZE = 2#1280x720:640x352:320x176:0
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, CD = 3
+netcapture[1249]: @@@@@@@@@@@@@ len = 4, CDLIST = H264
+netcapture[1249]: @@@@@@@@@@@@@ len = 9, VER = 00.10.012
+netcapture[1249]: @@@@@@@@@@@@@ len = 2, VFK = 60
+netcapture[1249]: @@@@@@@@@@@@@ len = 2, CCD = US
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, RTP = 1
+netcapture[1249]: @@@@@@@@@@@@@ len = 16, TZ = America/New_York
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, PTZTYPE = 0
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, AUD = 1
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, AUE = 1
+netcapture[1249]: @@@@@@@@@@@@@ len = 2, NVER = 1.1
+netcapture[1249]: @@@@@@@@@@@@@ len = 7, FPS = 5:30:20
+netcapture[1249]: @@@@@@@@@@@@@ len = 5, QTY = 1:5:2
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, IRE = 1
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, IRS = 2
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, ATB = 1
+netcapture[1249]: @@@@@@@@@@@@@ len = 9, VOL = 100:0:100
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, ROTATE = 1
+netcapture[1249]: @@@@@@@@@@@@@ len = 3, RTE = 1:4
+netcapture[1249]: @@@@@@@@@@@@@ len = 21, CAM = Seedonk:Imogen-X860-I
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, AUT = 1
+netcapture[1249]: @@@@@@@@@@@@@ len = 4, MD_TYPE = FULL
+netcapture[1249]: @@@@@@@@@@@@@ len = 1, MD_SENS = 3
+netcapture[1249]: @@@@@@@@@@@@@ len = 3, APSSID = IoT
+my_socket, close*****************
+netcapture[1249]: Trying to connect to HUB at: 52.0.170.147:5104!
+ssl connection=1
+finish raw connecting bSSL=1, bblock=1
+knnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnno 
+get peer certificate....
+netcapture[1249]:  Warning: NVcerti=NULL
+
+commonName:server.seedonk.com
+dns_name :server.seedonk.com
+dns_name :h1.hubs.tend-us.tendplatform.com
+dns_name :h10.hubs.tend-us.tendplatform.com
+dns_name :h11.hubs.tend-us.tendplatform.com
+dns_name :h12.hubs.tend-us.tendplatform.com
+dns_name :h13.hubs.tend-us.tendplatform.com
+dns_name :h14.hubs.tend-us.tendplatform.com
+dns_name :h15.hubs.tend-us.tendplatform.com
+dns_name :h16.hubs.tend-us.tendplatform.com
+dns_name :h2.hubs.tend-us.tendplatform.com
+dns_name :h3.hubs.tend-us.tendplatform.com
+dns_name :h4.hubs.tend-us.tendplatform.com
+dns_name :h5.hubs.tend-us.tendplatform.com
+dns_name :h6.hubs.tend-us.tendplatform.com
+dns_name :h7.hubs.tend-us.tendplatform.com
+dns_name :h8.hubs.tend-us.tendplatform.com
+dns_name :h9.hubs.tend-us.tendplatform.com
+dns_name :origin.tend-us.tendplatform.com
+dns_name :server.swannsmart.com
+Verify OK!
+netcapture[1249]: begin to get aes key
+netcapture[1249]: finish getting aes key process
+
+set SO_REUSEADDR for localp2p
+[@] SKConfig TIMESTAMP: 2019-01-10-04-09-55
+netcapture[1249]: "ListenThread start....\n"
+netcapture[1249]:  => Signin success.
+netcapture[1249]:  => Process ID: 1249
+netcapture[1249]: @@@ cmd read thread started...
+netcapture[1249]: @@@ video write thread started...
+netcapture[1249]: @@@ audio write thread started...
+netcapture[1249]: @@@ cmd write thread started..., thread id: 1249
+netcapture[1249]: @@@ server alive thread started...
+netcapture[1249]: Thu Jan 10 04:09:55 2019
+
+XC::listenThread: select ERROR: Interrupted system call
+old_vol=0, new=100
+left=, right=, vol=63
+numid=2,iface=MIXER,name='Speaker Playback Volume'
+  ; type=INTEGER,access=rw------,values=2,min=0,max=63,step=0
+  : values=63,63
+infolog[749]: "change bitRate from 894789 to 1093632"
+infolog[749]: "stream(1) set rate control: \n" "\t qp -1 (36-37) \n" "\t bitrate 1093632bps , gopLen 15\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16793600, intraQpDelta=0, fixedIntraQp=49, capture_fps=20\n"
+infolog[749]: "change bitRate from 1579287 to 1930240"
+infolog[749]: "stream(0) set rate control: \n" "\t qp -1 (32-34) \n" "\t bitrate 1930240bps , gopLen 20\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16793600, intraQpDelta=0, fixedIntraQp=47, capture_fps=20\n"
+1     ^^^video timestamp: 81126536
+infolog[749]: "change bitRate from 1093632 to 894789"
+infolog[749]: "stream(1) set rate control: \n" "\t qp -1 (36-37) \n" "\t bitrate 894789bps , gopLen 15\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16793600, intraQpDelta=0, fixedIntraQp=49, capture_fps=15\n"
+infolog[749]: "change bitRate from 1930240 to 1579287"
+infolog[749]: "stream(0) set rate control: \n" "\t qp -1 (32-34) \n" "\t bitrate 1579287bps , gopLen 15\n" "\t picRc 1, mbRc 0, picSkip 0,  hrd 0,  cpbSize 16793600, intraQpDelta=0, fixedIntraQp=47, capture_fps=15\n"
+1     ^^^video timestamp: 147463614
+ulltsLatest=205261590, pRec->ullLatestVts=0, pRec->ucContinueEvent=0
+newest frame.............. uiPos=2173920, uiSeq=2916
+^^^^^^^^^^^^^^^11 ulltsv: 207 (s), ulltsa=208(s)
+^^^^^^^^^^^^^ ullcurts=208(s), ulltsLatest=204(s), continuerec=0, pRec->ullLatestVts=204(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0001.mp4 "
+AVCProfileIndication:100, profile_compat:224,AVCLevelIndication:31
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=2055 LatestVts=204563 ullStartts=204548(ms) pRec->event.partnum=1\n"
+1     ^^^video timestamp: 213798741
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=215(s), pRec->ullLatestAts=215, precfile->ullStartts=204(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0001.mp4, filesize 960815\n"
+ulltsLatest=212213413, pRec->ullLatestVts=215128326, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=212213413, pRec->ullLatestVts=215128326
+^^^^^^^^^^^^^ ullcurts=215(s), ulltsLatest=215(s), continuerec=1, pRec->ullLatestVts=215(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0002.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=12902 LatestVts=215179 ullStartts=215128(ms) pRec->event.partnum=2\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0001.mp4  filesize:960815"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111547
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0001.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111558
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0001.mp4"
+CamEng[889]: "the current upload speed: 91835.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=225(s), pRec->ullLatestAts=225, precfile->ullStartts=215(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0002.mp4, filesize 1534016\n"
+ulltsLatest=222818064, pRec->ullLatestVts=225739247, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=222818064, pRec->ullLatestVts=225739247
+^^^^^^^^^^^^^ ullcurts=225(s), ulltsLatest=225(s), continuerec=1, pRec->ullLatestVts=225(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0003.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=7827 LatestVts=225790 ullStartts=225739(ms) pRec->event.partnum=3\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0002.mp4  filesize:1534016"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111560
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0002.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111569
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0002.mp4"
+CamEng[889]: "the current upload speed: 165749.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=237(s), pRec->ullLatestAts=237, precfile->ullStartts=225(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0003.mp4, filesize 755781\n"
+ulltsLatest=234757119, pRec->ullLatestVts=237679810, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=234757119, pRec->ullLatestVts=237679810
+^^^^^^^^^^^^^ ullcurts=237(s), ulltsLatest=237(s), continuerec=1, pRec->ullLatestVts=237(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0004.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=4963 LatestVts=237730 ullStartts=237679(ms) pRec->event.partnum=4\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0003.mp4  filesize:755781"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111571
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0003.mp4.partial"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=248(s), pRec->ullLatestAts=248, precfile->ullStartts=237(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0004.mp4, filesize 1215170\n"
+ulltsLatest=245363944, pRec->ullLatestVts=248293624, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=245363944, pRec->ullLatestVts=248293624
+^^^^^^^^^^^^^ ullcurts=248(s), ulltsLatest=248(s), continuerec=1, pRec->ullLatestVts=248(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0005.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6985 LatestVts=248346 ullStartts=248293(ms) pRec->event.partnum=5\n"
+0-----------------0FTP_Upload_Start end: 1547111587
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0003.mp4"
+CamEng[889]: "the current upload speed: 47818.000000Bps, threadindex=0"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0004.mp4  filesize:1215170"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111587
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0004.mp4.partial"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=258(s), pRec->ullLatestAts=258, precfile->ullStartts=248(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0005.mp4, filesize 1058175\n"
+ulltsLatest=255975592, pRec->ullLatestVts=258907103, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=255975592, pRec->ullLatestVts=258907103
+^^^^^^^^^^^^^ ullcurts=258(s), ulltsLatest=258(s), continuerec=1, pRec->ullLatestVts=258(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0006.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5994 LatestVts=258959 ullStartts=258907(ms) pRec->event.partnum=6\n"
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:13:14 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:13:22 --
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=269(s), pRec->ullLatestAts=269, precfile->ullStartts=258(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0006.mp4, filesize 681839\n"
+ulltsLatest=266610866, pRec->ullLatestVts=269521387, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=266610866, pRec->ullLatestVts=269521387
+^^^^^^^^^^^^^ ullcurts=269(s), ulltsLatest=269(s), continuerec=1, pRec->ullLatestVts=269(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0007.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6984 LatestVts=269576 ullStartts=269521(ms) pRec->event.partnum=7\n"
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:13:24 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:13:30 --
+0-----------------0FTP_Upload_Start end: 1547111610
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0004.mp4"
+CamEng[889]: "the current upload speed: 53744.000000Bps, threadindex=0"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0005.mp4  filesize:1058175"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111610
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0005.mp4.partial"
+1     ^^^video timestamp: 280134979
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=280(s), pRec->ullLatestAts=280, precfile->ullStartts=269(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0007.mp4, filesize 815774\n"
+ulltsLatest=277220279, pRec->ullLatestVts=280134979, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=277220279, pRec->ullLatestVts=280134979
+^^^^^^^^^^^^^ ullcurts=280(s), ulltsLatest=280(s), continuerec=1, pRec->ullLatestVts=280(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0008.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5500 LatestVts=280188 ullStartts=280134(ms) pRec->event.partnum=8\n"
+0-----------------0FTP_Upload_Start end: 1547111613
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0005.mp4"
+CamEng[889]: "the current upload speed: 277004.000000Bps, threadindex=0"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0006.mp4  filesize:681839"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111613
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0006.mp4.partial"
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:13:34 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:16:40 --
+0-----------------0FTP_Upload_Start end: 1547111616
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0006.mp4"
+CamEng[889]: "the current upload speed: 265666.000000Bps, threadindex=0"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0007.mp4  filesize:815774"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111616
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0007.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111619
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0007.mp4"
+CamEng[889]: "the current upload speed: 258398.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=290(s), pRec->ullLatestAts=290, precfile->ullStartts=280(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0008.mp4, filesize 657827\n"
+ulltsLatest=287820737, pRec->ullLatestVts=290748186, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=287820737, pRec->ullLatestVts=290748186
+^^^^^^^^^^^^^ ullcurts=290(s), ulltsLatest=290(s), continuerec=1, pRec->ullLatestVts=290(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0009.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5965 LatestVts=290799 ullStartts=290748(ms) pRec->event.partnum=9\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0008.mp4  filesize:657827"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111623
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0008.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111626
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0008.mp4"
+CamEng[889]: "the current upload speed: 250527.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=301(s), pRec->ullLatestAts=301, precfile->ullStartts=290(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0009.mp4, filesize 749442\n"
+ulltsLatest=298458982, pRec->ullLatestVts=301362078, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=298458982, pRec->ullLatestVts=301362078
+^^^^^^^^^^^^^ ullcurts=301(s), ulltsLatest=301(s), continuerec=1, pRec->ullLatestVts=301(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0010.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5885 LatestVts=301413 ullStartts=301362(ms) pRec->event.partnum=10\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0009.mp4  filesize:749442"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111634
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0009.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111636
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0009.mp4"
+CamEng[889]: "the current upload speed: 273484.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=311(s), pRec->ullLatestAts=311, precfile->ullStartts=301(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0010.mp4, filesize 842940\n"
+ulltsLatest=309058469, pRec->ullLatestVts=311977845, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=309058469, pRec->ullLatestVts=311977845
+^^^^^^^^^^^^^ ullcurts=312(s), ulltsLatest=311(s), continuerec=1, pRec->ullLatestVts=311(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0011.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6738 LatestVts=312027 ullStartts=311977(ms) pRec->event.partnum=11\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0010.mp4  filesize:842940"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111644
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0010.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111647
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0010.mp4"
+CamEng[889]: "the current upload speed: 290053.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=322(s), pRec->ullLatestAts=322, precfile->ullStartts=311(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0011.mp4, filesize 847055\n"
+ulltsLatest=319658278, pRec->ullLatestVts=322589250, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=319658278, pRec->ullLatestVts=322589250
+^^^^^^^^^^^^^ ullcurts=322(s), ulltsLatest=322(s), continuerec=1, pRec->ullLatestVts=322(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0012.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5863 LatestVts=322642 ullStartts=322589(ms) pRec->event.partnum=12\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0011.mp4  filesize:847055"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111655
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0011.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111658
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0011.mp4"
+CamEng[889]: "the current upload speed: 299225.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=333(s), pRec->ullLatestAts=333, precfile->ullStartts=322(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0012.mp4, filesize 767854\n"
+ulltsLatest=330292108, pRec->ullLatestVts=333204686, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=330292108, pRec->ullLatestVts=333204686
+^^^^^^^^^^^^^ ullcurts=333(s), ulltsLatest=333(s), continuerec=1, pRec->ullLatestVts=333(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0013.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6076 LatestVts=333254 ullStartts=333204(ms) pRec->event.partnum=13\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0012.mp4  filesize:767854"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111666
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0012.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111669
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0012.mp4"
+CamEng[889]: "the current upload speed: 278992.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=343(s), pRec->ullLatestAts=343, precfile->ullStartts=333(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0013.mp4, filesize 755672\n"
+ulltsLatest=340900969, pRec->ullLatestVts=343817226, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=340900969, pRec->ullLatestVts=343817226
+^^^^^^^^^^^^^ ullcurts=343(s), ulltsLatest=343(s), continuerec=1, pRec->ullLatestVts=343(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0014.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6904 LatestVts=343868 ullStartts=343817(ms) pRec->event.partnum=14\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0013.mp4  filesize:755672"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111677
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0013.mp4.partial"
+1     ^^^video timestamp: 346471968
+0-----------------0FTP_Upload_Start end: 1547111680
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0013.mp4"
+CamEng[889]: "the current upload speed: 278033.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=354(s), pRec->ullLatestAts=354, precfile->ullStartts=343(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0014.mp4, filesize 977509\n"
+ulltsLatest=351504351, pRec->ullLatestVts=354431562, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=351504351, pRec->ullLatestVts=354431562
+^^^^^^^^^^^^^ ullcurts=354(s), ulltsLatest=354(s), continuerec=1, pRec->ullLatestVts=354(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0015.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6815 LatestVts=354482 ullStartts=354431(ms) pRec->event.partnum=15\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0014.mp4  filesize:977509"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111688
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0014.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111691
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0014.mp4"
+CamEng[889]: "the current upload speed: 307700.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=365(s), pRec->ullLatestAts=365, precfile->ullStartts=354(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0015.mp4, filesize 1002065\n"
+ulltsLatest=362121487, pRec->ullLatestVts=365044662, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=362121487, pRec->ullLatestVts=365044662
+^^^^^^^^^^^^^ ullcurts=365(s), ulltsLatest=365(s), continuerec=1, pRec->ullLatestVts=365(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0016.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6657 LatestVts=365095 ullStartts=365044(ms) pRec->event.partnum=16\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0015.mp4  filesize:1002065"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111699
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0015.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111702
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0015.mp4"
+CamEng[889]: "the current upload speed: 319246.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=375(s), pRec->ullLatestAts=375, precfile->ullStartts=365(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0016.mp4, filesize 885713\n"
+ulltsLatest=372733322, pRec->ullLatestVts=375658442, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=372733322, pRec->ullLatestVts=375658442
+^^^^^^^^^^^^^ ullcurts=375(s), ulltsLatest=375(s), continuerec=1, pRec->ullLatestVts=375(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0017.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6224 LatestVts=375709 ullStartts=375658(ms) pRec->event.partnum=17\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0016.mp4  filesize:885713"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111708
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0016.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111711
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0016.mp4"
+CamEng[889]: "the current upload speed: 272243.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=386(s), pRec->ullLatestAts=386, precfile->ullStartts=375(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0017.mp4, filesize 776313\n"
+ulltsLatest=383339594, pRec->ullLatestVts=386272004, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=383339594, pRec->ullLatestVts=386272004
+^^^^^^^^^^^^^ ullcurts=386(s), ulltsLatest=386(s), continuerec=1, pRec->ullLatestVts=386(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0018.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6224 LatestVts=386323 ullStartts=386272(ms) pRec->event.partnum=18\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0017.mp4  filesize:776313"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111719
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0017.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111722
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0017.mp4"
+CamEng[889]: "the current upload speed: 305797.000000Bps, threadindex=0"
+netcapture[1249]: 10 x SRV_ALIVE
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=396(s), pRec->ullLatestAts=396, precfile->ullStartts=386(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0018.mp4, filesize 913554\n"
+ulltsLatest=393969595, pRec->ullLatestVts=396888277, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=393969595, pRec->ullLatestVts=396888277
+^^^^^^^^^^^^^ ullcurts=396(s), ulltsLatest=396(s), continuerec=1, pRec->ullLatestVts=396(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0019.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5912 LatestVts=396937 ullStartts=396888(ms) pRec->event.partnum=19\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0018.mp4  filesize:913554"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111730
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0018.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111733
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0018.mp4"
+CamEng[889]: "the current upload speed: 285813.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=407(s), pRec->ullLatestAts=407, precfile->ullStartts=396(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0019.mp4, filesize 873439\n"
+ulltsLatest=404579053, pRec->ullLatestVts=407500469, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=404579053, pRec->ullLatestVts=407500469
+^^^^^^^^^^^^^ ullcurts=407(s), ulltsLatest=407(s), continuerec=1, pRec->ullLatestVts=407(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0020.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5436 LatestVts=407551 ullStartts=407500(ms) pRec->event.partnum=20\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0019.mp4  filesize:873439"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111741
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0019.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111744
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0019.mp4"
+CamEng[889]: "the current upload speed: 296714.000000Bps, threadindex=0"
+1     ^^^video timestamp: 412806372
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=418(s), pRec->ullLatestAts=418, precfile->ullStartts=407(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0020.mp4, filesize 692867\n"
+ulltsLatest=415180644, pRec->ullLatestVts=418113067, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=415180644, pRec->ullLatestVts=418113067
+^^^^^^^^^^^^^ ullcurts=418(s), ulltsLatest=418(s), continuerec=1, pRec->ullLatestVts=418(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0021.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5551 LatestVts=418164 ullStartts=418113(ms) pRec->event.partnum=21\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0020.mp4  filesize:692867"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111752
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0020.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111755
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0020.mp4"
+CamEng[889]: "the current upload speed: 265047.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=428(s), pRec->ullLatestAts=428, precfile->ullStartts=418(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0021.mp4, filesize 724326\n"
+ulltsLatest=425794062, pRec->ullLatestVts=428726754, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=425794062, pRec->ullLatestVts=428726754
+^^^^^^^^^^^^^ ullcurts=428(s), ulltsLatest=428(s), continuerec=1, pRec->ullLatestVts=428(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0022.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5829 LatestVts=428778 ullStartts=428726(ms) pRec->event.partnum=22\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0021.mp4  filesize:724326"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111763
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0021.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111765
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0021.mp4"
+CamEng[889]: "the current upload speed: 267346.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=439(s), pRec->ullLatestAts=439, precfile->ullStartts=428(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0022.mp4, filesize 759338\n"
+ulltsLatest=436409069, pRec->ullLatestVts=439341530, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=436409069, pRec->ullLatestVts=439341530
+^^^^^^^^^^^^^ ullcurts=439(s), ulltsLatest=439(s), continuerec=1, pRec->ullLatestVts=439(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0023.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6739 LatestVts=439392 ullStartts=439341(ms) pRec->event.partnum=23\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0022.mp4  filesize:759338"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111773
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0022.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111776
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0022.mp4"
+CamEng[889]: "the current upload speed: 287451.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=449(s), pRec->ullLatestAts=449, precfile->ullStartts=439(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0023.mp4, filesize 921582\n"
+ulltsLatest=447022674, pRec->ullLatestVts=449954307, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=447022674, pRec->ullLatestVts=449954307
+^^^^^^^^^^^^^ ullcurts=450(s), ulltsLatest=449(s), continuerec=1, pRec->ullLatestVts=449(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0024.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=5215 LatestVts=450006 ullStartts=449954(ms) pRec->event.partnum=24\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0023.mp4  filesize:921582"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111784
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0023.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111787
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0023.mp4"
+CamEng[889]: "the current upload speed: 316007.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=460(s), pRec->ullLatestAts=460, precfile->ullStartts=449(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0024.mp4, filesize 635850\n"
+ulltsLatest=457656828, pRec->ullLatestVts=460569268, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=457656828, pRec->ullLatestVts=460569268
+^^^^^^^^^^^^^ ullcurts=460(s), ulltsLatest=460(s), continuerec=1, pRec->ullLatestVts=460(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0025.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=4650 LatestVts=460620 ullStartts=460569(ms) pRec->event.partnum=25\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0024.mp4  filesize:635850"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111793
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0024.mp4.partial"
+0-----------------0FTP_Upload_Start end: 1547111795
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0024.mp4"
+CamEng[889]: "the current upload speed: 267319.000000Bps, threadindex=0"
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=471(s), pRec->ullLatestAts=471, precfile->ullStartts=460(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0025.mp4, filesize 663780\n"
+ulltsLatest=468259547, pRec->ullLatestVts=471182016, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=468259547, pRec->ullLatestVts=471182016
+^^^^^^^^^^^^^ ullcurts=471(s), ulltsLatest=471(s), continuerec=1, pRec->ullLatestVts=471(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0026.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6852 LatestVts=471233 ullStartts=471182(ms) pRec->event.partnum=26\n"
+ls-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:16:44 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:16:44 --
+
+# :qCamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0025.mp4  filesize:663780"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111805
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0025.mp4.partial"
+[J[J
+# 0-----------------0FTP_Upload_Start end: 1547111808
+CamEng[889]: "FTP(s)_UPLOAD: ftp==succeed in uploading motionStream_0001547111540_0025.mp4"
+CamEng[889]: "the current upload speed: 278923.000000Bps, threadindex=0"
+telnetd
+# 1     ^^^video timestamp: 479143358
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:16:54 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/10/19  4:16:54 --
+CamEng[889]: "Record timeout, end of packing this file, pRec->ullLatestVts=481(s), pRec->ullLatestAts=481, precfile->ullStartts=471(s)\n"
+CamEng[889]: "close an file,named motionStream_0001547111540_0026.mp4, filesize 770551\n"
+ulltsLatest=478869645, pRec->ullLatestVts=481795398, pRec->ucContinueEvent=1
+continue event...., ulltsLatest=478869645, pRec->ullLatestVts=481795398
+^^^^^^^^^^^^^ ullcurts=481(s), ulltsLatest=481(s), continuerec=1, pRec->ullLatestVts=481(s)
+CamEng[889]: "mp4 create, file name :/tmp/motionStream_0001547111540_0027.mp4 "
+create the new video track mp4timescale: 90000, mp4FrameDuration: 3000.
+video track nVideoWidth: 1280, nVideoHeight: 720
+call MP4GetNumberOfTracks function, trackId=2
+CamEng[889]: "###line:143  framelen=6741 LatestVts=481847 ullStartts=481795(ms) pRec->event.partnum=27\n"
+CamEng[889]: "+++++start FTP upload: motionStream_0001547111540_0026.mp4  filesize:770551"
+FTP_Upload start.............
+0-----------------0FTP_Upload_Start began: 1547111816
+CamEng[889]: "ftp://user_nonono420_1519267696299_6389:******@ftp4.seedonk.com:21/./motionStream_0001547111540_0026.mp4.partial"

@@ -1,0 +1,10 @@
+# cat /proc/mtd 
+dev:    size   erasesize  name
+mtd0: 00080000 00010000 "boot"
+mtd1: 00010000 00010000 "oem"
+mtd2: 00010000 00010000 "config"
+mtd3: 00a00000 00010000 "kernel0"
+mtd4: 00a00000 00010000 "kernel1"
+mtd5: 00080000 00010000 "jffs"
+mtd6: 00ae0000 00010000 "media"
+

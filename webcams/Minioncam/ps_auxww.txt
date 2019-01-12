@@ -1,0 +1,97 @@
+PID   USER     COMMAND
+    1 root     init
+    2 root     [kthreadd]
+    3 root     [ksoftirqd/0]
+    4 root     [kworker/0:0]
+    5 root     [kworker/0:0H]
+    7 root     [migration/0]
+    8 root     [rcu_preempt]
+    9 root     [rcu_bh]
+   10 root     [rcu_sched]
+   11 root     [migration/1]
+   12 root     [ksoftirqd/1]
+   14 root     [kworker/1:0H]
+   15 root     [khelper]
+   16 root     [kdevtmpfs]
+   23 root     [kworker/0:1]
+   24 root     [kworker/1:1]
+  275 root     [writeback]
+  277 root     [bioset]
+  279 root     [kblockd]
+  309 root     [khubd]
+  332 root     [cfg80211]
+  337 root     [spi0]
+  340 root     [spi1]
+  425 root     [dwc_otg]
+  428 root     [rpciod]
+  439 root     [kswapd0]
+  440 root     [ksmd]
+  486 root     [fsnotify_mark]
+  495 root     [nfsiod]
+  503 root     [crypto]
+  599 root     [gadget]
+  619 root     [ion_system_heap]
+  623 root     [dw-mci-card]
+  625 root     [dw-mci-card]
+  660 root     [kondemandup]
+  664 root     [kworker/u4:3]
+  665 root     [kworker/u4:4]
+  678 root     [deferwq]
+  690 root     [f_mtp]
+  695 root     [file-storage]
+  711 root     [jffs2_gcd_mtd5]
+  727 root     [wl_event_handle]
+  731 root     [dhd_watchdog_th]
+  732 root     [dhd_dpc]
+  733 root     [dhd_rxf]
+  741 root     [kworker/1:2]
+  748 root     my_watch_dog
+  749 root     /opt/ipnc/avserver_x15.bin
+  425 root     [dwc_otg]
+  428 root     [rpciod]
+  439 root     [kswapd0]
+  440 root     [ksmd]
+  486 root     [fsnotify_mark]
+  495 root     [nfsiod]
+  503 root     [crypto]
+  599 root     [gadget]
+  619 root     [ion_system_heap]
+  623 root     [dw-mci-card]
+  625 root     [dw-mci-card]
+  660 root     [kondemandup]
+  664 root     [kworker/u4:3]
+  665 root     [kworker/u4:4]
+  678 root     [deferwq]
+  690 root     [f_mtp]
+  695 root     [file-storage]
+  711 root     [jffs2_gcd_mtd5]
+  727 root     [wl_event_handle]
+  731 root     [dhd_watchdog_th]
+  732 root     [dhd_dpc]
+  733 root     [dhd_rxf]
+  741 root     [kworker/1:2]
+  748 root     my_watch_dog
+  749 root     /opt/ipnc/avserver_x15.bin
+  750 root     audioEng
+  754 root     [IMAP mt9d111 CH]
+  757 root     {exe} ash /sbin/update_speaker_volume.sh
+  763 root     /sbin/syslogd -n -C4096
+  767 root     /sbin/klogd -n
+  831 root     -sh
+  845 root     wpa_supplicant -Dnl80211 -iwlan0 -c/tmp/wpa_supplicant.conf
+  846 root     {check_cameng.sh} /bin/sh /sbin/check_cameng.sh
+  889 root     cameng
+  890 root     goahead
+  918 root     {exe} ash /sbin/keep_scan.sh
+  923 root     {exe} ash /sbin/check_netcapture.sh
+ 1114 root     udhcpc -A 3 -i wlan0 -h x15
+ 1249 root     netcapture
+ 4331 root     telnetd
+ 4838 root     -sh
+ 6777 root     sleep 30
+ 6888 root     sleep 10
+ 6914 root     sleep 5
+ 6916 root     sleep 1
+ 6917 root     ps auxww
+ 6918 root     less
+
