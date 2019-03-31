@@ -1,0 +1,112 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-01-14 15:10 EST
+Nmap scan report for 192.168.8.221
+Host is up (0.016s latency).
+Not shown: 65528 closed ports
+PORT      STATE SERVICE       VERSION
+80/tcp    open  http          uc-httpd 1.0.0
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Content-type: text/html
+|     Server: uc-httpd 1.0.0
+|     Expires: 0
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+|     <link rel="stylesheet" type="text/css" media="screen" href="m.css" />
+|     <title>NETSurveillance WEB</title>
+|     <!-- m.js -->
+|     <script type="text/javascript" language="JavaScript">
+|     bCrossBrow=false;
+|     bnpCheck = false;
+|     ShowTipFlag=2;
+|     SupportFind=false;
+|     if(navigator.userAgent.indexOf('IE') < 0)
+|     if(navigator.platform != "Win32")//
+|     location="Login.htm";
+|     userAgent = navigator.userAgent, 
+|     rMsie = /(msies|trident.*rv:)([w.]+)/, 
+|_    rFire
+|_http-server-header: uc-httpd 1.0.0
+554/tcp   open  rtsp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.1 200 OK
+|     Content-Type: application/x-rtsp-tunnelled
+|     Server: H264DVR 1.0
+|     Connection: close
+|     Cache-Control: private
+|   HTTPOptions, RTSPRequest: 
+|     RTSP/1.0 200 OK
+|     Server: H264DVR 1.0
+|_    Public: OPTIONS, DESCRIBE, SETUP, TEARDOWN, GET_PARAMETER, SET_PARAMETER, PLAY, PAUSE
+|_rtsp-methods: OPTIONS, DESCRIBE, SETUP, TEARDOWN, GET_PARAMETER, SET_PARAMETER, PLAY, PAUSE
+8000/tcp  open  http-alt?
+8899/tcp  open  soap          gSOAP 2.7
+|_http-server-header: gSOAP/2.7
+|_http-title: Site doesn't have a title (text/xml; charset=utf-8).
+9530/tcp  open  unknown
+34561/tcp open  unknown
+34567/tcp open  dhanalakshmi?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.60%I=7%D=1/14%Time=5C3CECC1%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,51E9,"HTTP/1\.0\x20200\x20OK\r\nContent-type:\x20text/html\r\nSe
+SF:rver:\x20uc-httpd\x201\.0\.0\r\nExpires:\x200\r\n\r\n\xef\xbb\xbf<!DOCT
+SF:YPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Transitional
+SF://EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\
+SF:">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\">\r\n<head>\r\n\
+SF:x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/h
+SF:tml;\x20charset=UTF-8\"\x20/>\r\n\x20\x20\x20\x20<link\x20rel=\"stylesh
+SF:eet\"\x20type=\"text/css\"\x20media=\"screen\"\x20href=\"m\.css\"\x20/>
+SF:\r\n\x20\x20\x20\x20\r\n\x20\x20\x20\x20<title>NETSurveillance\x20WEB</
+SF:title>\r\n\x20\x20\x20\x20\r\n\x20\x20\x20\x20<!--\x20m\.js\x20-->\r\n\
+SF:r\n\x20\x20\x20\x20<script\x20type=\"text/javascript\"\x20language=\"Ja
+SF:vaScript\">\r\n\x20\x20\x20\x20\x20var\x20bCrossBrow=false;\r\n\t\x20va
+SF:r\x20bnpCheck\x20=\x20false;\r\nvar\x20ShowTipFlag=2;\r\n\t//\x20var\x2
+SF:0SupportFind=false;\r\n\t\r\n\tif\(navigator\.userAgent\.indexOf\('IE'\
+SF:)\x20<\x200\)\r\n\t{\r\n\t\x20\x20\x20\x20\r\n\t\tif\(navigator\.platfo
+SF:rm\x20!=\x20\"Win32\"\)//\r\n\t\t{\r\n\t\t\tlocation=\"Login\.htm\";\r\
+SF:n\t\t}\r\n\t\tvar\x20userAgent\x20=\x20navigator\.userAgent,\x20\x20\x2
+SF:0\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20rM
+SF:sie\x20=\x20/\(msie\\s\|trident\.\*rv:\)\(\[\\w\.\]\+\)/,\x20\x20\x20\r
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20rFire
+SF:")%r(HTTPOptions,1BE9,"HTTP/1\.0\x20200\x20OK\r\nContent-type:\x20text/
+SF:html\r\nServer:\x20uc-httpd\x201\.0\.0\r\nExpires:\x200\r\n\r\n\xef\xbb
+SF:\xbf<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Tr
+SF:ansitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transiti
+SF:onal\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\">\r\n<
+SF:head>\r\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20conten
+SF:t=\"text/html;\x20charset=UTF-8\"\x20/>\r\n\x20\x20\x20\x20<link\x20rel
+SF:=\"stylesheet\"\x20type=\"text/css\"\x20media=\"screen\"\x20href=\"m\.c
+SF:ss\"\x20/>\r\n\x20\x20\x20\x20\r\n\x20\x20\x20\x20<title>NETSurveillanc
+SF:e\x20WEB</title>\r\n\x20\x20\x20\x20\r\n\x20\x20\x20\x20<!--\x20m\.js\x
+SF:20-->\r\n\r\n\x20\x20\x20\x20<script\x20type=\"text/javascript\"\x20lan
+SF:guage=\"JavaScript\">\r\n\x20\x20\x20\x20\x20var\x20bCrossBrow=false;\r
+SF:\n\t\x20var\x20bnpCheck\x20=\x20false;\r\nvar\x20ShowTipFlag=2;\r\n\t//
+SF:\x20var\x20SupportFind=false;\r\n\t\r\n\tif\(navigator\.userAgent\.inde
+SF:xOf\('IE'\)\x20<\x200\)\r\n\t{\r\n\t\x20\x20\x20\x20\r\n\t\tif\(navigat
+SF:or\.platform\x20!=\x20\"Win32\"\)//\r\n\t\t{\r\n\t\t\tlocation=\"Login\
+SF:.htm\";\r\n\t\t}\r\n\t\tvar\x20userAgent\x20=\x20navigator\.userAgent,\
+SF:x20\x20\x20\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20rMsie\x20=\x20/\(msie\\s\|trident\.\*rv:\)\(\[\\w\.\]\+\)/,\x20
+SF:\x20\x20\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20rFire");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.60%I=7%D=1/14%Time=5C3CECC8%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,7F,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20application/x-rt
+SF:sp-tunnelled\r\nServer:\x20H264DVR\x201\.0\r\nConnection:\x20close\r\nC
+SF:ache-Control:\x20private\r\n\r\n")%r(RTSPRequest,7F,"RTSP/1\.0\x20200\x
+SF:20OK\r\nServer:\x20H264DVR\x201\.0\r\nPublic:\x20OPTIONS,\x20DESCRIBE,\
+SF:x20SETUP,\x20TEARDOWN,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20PLAY,\x20
+SF:PAUSE\r\n\r\n")%r(HTTPOptions,7F,"RTSP/1\.0\x20200\x20OK\r\nServer:\x20
+SF:H264DVR\x201\.0\r\nPublic:\x20OPTIONS,\x20DESCRIBE,\x20SETUP,\x20TEARDO
+SF:WN,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20PLAY,\x20PAUSE\r\n\r\n")%r(F
+SF:ourOhFourRequest,7F,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20applica
+SF:tion/x-rtsp-tunnelled\r\nServer:\x20H264DVR\x201\.0\r\nConnection:\x20c
+SF:lose\r\nCache-Control:\x20private\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 216.00 seconds

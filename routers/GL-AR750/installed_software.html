@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=3.0, width=device-width">
+	<title>GL.iNet</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<script type="text/javascript" src="installed_software_files/detectmobilebrowser.js"></script>
+	<link rel="stylesheet" type="text/css" href="installed_software_files/gl.css">
+	<link rel="stylesheet" href="installed_software_files/hint.css">
+	<script type="text/javascript" src="installed_software_files/jquery-1.js"></script>
+	<script type="text/javascript" src="installed_software_files/gl.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="header">
+		<a href="http://192.168.8.1/html/index?"><img src="installed_software_files/logo.png"></a>
+		<div class="div_top">
+			<input type="button" class="button_nav" value="Reboot" onclick="reboot();">
+			<input type="button" class="button_nav" value="Logout" onclick="logout();">
+			<ul class="menu">
+				<li>
+					<input type="button" id="language" class="button_nav" value="English">
+					<ul>
+						<li onclick="location='?lang=en'">English</li>
+						<li onclick="location='?lang=cn'">Chinese</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="luci"><a href="http://192.168.8.1/cgi-bin/luci" onclick="return go_advanced();">Advanced settings &gt;&gt;</a></div>
+	</div>
+
+	<div id="div_nav">
+		<div class="div_app dim" style="margin-left:30px;margin-right:30px" data-url="index">
+			<img src="installed_software_files/home.png">
+			<label>Settings</label>
+			<img src="installed_software_files/down.png" class="indicator1">
+		</div>
+		<div class="verticalline"></div>
+		<div class="div_app highlight" data-url="software.html">
+			<img src="installed_software_files/store.png">
+			<label>App repo</label>
+			<img src="installed_software_files/down.png" class="indicator1" style="display: inline;">
+		</div>
+		<div class="verticalline"></div>
+		<div class="div_app dim" id="div_video" data-url="video.html" style="display:none">
+			<img src="installed_software_files/video.png"><label>Video</label>
+			<img src="installed_software_files/down.png" class="indicator1">
+		</div>
+		<div class="div_app dim" id="div_cloud" data-url="cloud.html">
+			<img src="installed_software_files/cloud.png"><label>Cloud</label>
+			<img src="installed_software_files/down.png" class="indicator1">
+		</div>
+		<div class="div_app dim" id="div_samba" data-url="samba.html">
+			<img src="installed_software_files/share.png"><label>Share</label>
+			<img src="installed_software_files/down.png" class="indicator1">
+		</div>
+		<div class="div_app dim" id="div_upnpd" data-url="upnpd.html">
+			<img src="installed_software_files/upnpd.png"><label>UPnP server</label>
+			<img src="installed_software_files/down.png" class="indicator1">
+		</div>
+		<div class="div_app dim" id="div_adblock" data-url="adblock.html" style="display:none">
+			<img src="installed_software_files/adblock.png"><label>Adblock</label>
+			<img src="installed_software_files/down.png" class="indicator1">
+		</div>
+		<div class="div_app dim" id="div_mesh" data-url="mesh.html" style="display:none">
+			<img src="installed_software_files/mesh.png"><label>Mesh</label>
+			<img src="installed_software_files/down.png" class="indicator1">
+		</div>
+		<div class="div_app dim" id="div_vpn" data-url="vpn.html">
+			<img src="installed_software_files/vpn.png"><label>OpenVpn</label>
+			<img src="installed_software_files/down.png" class="indicator1">
+		</div>
+	</div>
+	<div id="div_area" style="min-height:500px"><div id="app-video" class="app-container">
+	<div class="toolbar"> 
+		<div class="control_pannel"> 
+			<span>
+				<label>Flash usage</label>
+				<label></label>
+				<div id="flash-usage"><span class="usage" style="width: 64.0625%;"></span></div>5.75M free (Total: 16.0M)
+			</span>
+		</div>
+	</div> 
+	<div id="div-software-search" style="text-align:center">
+		<div style="display:inline-block;position:relative"><input id="keyword" class="search-box1" type="text"><input id="search-keyword" class="download-button" type="button" value="Search">
+		<ul id="search-autocomplete" class="dropdown-list">
+			
+		</ul>
+		</div>
+		<input id="search-installed" type="button" class="download-button" value="List installed">
+		<input id="search-all" type="button" class="download-button" value="List all">
+	</div>
+	<div id="div-software-list" style="text-align:center">
+		<div id="list-title">Installed packages</div>
+		<table id="table-software" class="table-list"><tbody><tr><td>Action</td><td>Name</td><td>Version</td></tr><tr><td><a href='javascript:opkg("remove","ChinaDNS")'>remove</a></td><td>ChinaDNS</td><td>1.3.2-6</td></tr><tr><td><a href='javascript:opkg("remove","ar750-sta-watch")'>remove</a></td><td>ar750-sta-watch</td><td>1-1</td></tr><tr><td><a href='javascript:opkg("remove","ath10k-firmware-qca9887")'>remove</a></td><td>ath10k-firmware-qca9887</td><td>2017-12-20-35d8642f-1</td></tr><tr><td><a href='javascript:opkg("remove","base-files")'>remove</a></td><td>base-files</td><td>173.1-r3560-79f57e422d</td></tr><tr><td><a href='javascript:opkg("remove","blkid")'>remove</a></td><td>blkid</td><td>2.29.2-1</td></tr><tr><td><a href='javascript:opkg("remove","bridge")'>remove</a></td><td>bridge</td><td>1.5-5</td></tr><tr><td><a href='javascript:opkg("remove","busybox")'>remove</a></td><td>busybox</td><td>1.25.1-4</td></tr><tr><td><a href='javascript:opkg("remove","chat")'>remove</a></td><td>chat</td><td>2.4.7-11</td></tr><tr><td><a href='javascript:opkg("remove","comgt")'>remove</a></td><td>comgt</td><td>0.32-29</td></tr><tr><td><a href='javascript:opkg("remove","comgt-directip")'>remove</a></td><td>comgt-directip</td><td>0.32-29</td></tr><tr><td><a href='javascript:opkg("remove","comgt-ncm")'>remove</a></td><td>comgt-ncm</td><td>0.32-29</td></tr><tr><td><a href='javascript:opkg("remove","dns-forwarder")'>remove</a></td><td>dns-forwarder</td><td>1.2.1-1</td></tr><tr><td><a href='javascript:opkg("remove","dnsmasq")'>remove</a></td><td>dnsmasq</td><td>2.78-1</td></tr><tr><td><a href='javascript:opkg("remove","dropbear")'>remove</a></td><td>dropbear</td><td>2017.75-2</td></tr><tr><td><a href='javascript:opkg("remove","ethtool")'>remove</a></td><td>ethtool</td><td>4.8-1</td></tr><tr><td><a href='javascript:opkg("remove","fcgi")'>remove</a></td><td>fcgi</td><td>2.4.0-1</td></tr><tr><td><a href='javascript:opkg("remove","firewall")'>remove</a></td><td>firewall</td><td>2017-05-27-a4d98aea-1</td></tr><tr><td><a href='javascript:opkg("remove","fstools")'>remove</a></td><td>fstools</td><td>2017-06-30-bdcb075f-1</td></tr><tr><td><a href='javascript:opkg("remove","fwtool")'>remove</a></td><td>fwtool</td><td>1</td></tr><tr><td><a href='javascript:opkg("remove","gl-base-files")'>remove</a></td><td>gl-base-files</td><td>1</td></tr><tr><td><a href='javascript:opkg("remove","gl-inet")'>remove</a></td><td>gl-inet</td><td>2.3.0-1</td></tr><tr><td><a href='javascript:opkg("remove","gl-modem")'>remove</a></td><td>gl-modem</td><td>1</td></tr><tr><td><a href='javascript:opkg("remove","gl-repeater")'>remove</a></td><td>gl-repeater</td><td>1</td></tr><tr><td><a href='javascript:opkg("remove","gl-util")'>remove</a></td><td>gl-util</td><td>1</td></tr><tr><td><a href='javascript:opkg("remove","gl-vpn")'>remove</a></td><td>gl-vpn</td><td>1</td></tr><tr><td><a href='javascript:opkg("remove","gl-wifi-core")'>remove</a></td><td>gl-wifi-core</td><td>1</td></tr><tr><td><a href='javascript:opkg("remove","hostapd-common")'>remove</a></td><td>hostapd-common</td><td>2016-12-19-ad02e79d-6</td></tr><tr><td><a href='javascript:opkg("remove","ip-full")'>remove</a></td><td>ip-full</td><td>4.4.0-9</td></tr><tr><td><a href='javascript:opkg("remove","ip6tables")'>remove</a></td><td>ip6tables</td><td>1.4.21-2</td></tr><tr><td><a href='javascript:opkg("remove","ipset")'>remove</a></td><td>ipset</td><td>6.30-1</td></tr><tr><td><a href='javascript:opkg("remove","iptables")'>remove</a></td><td>iptables</td><td>1.4.21-2</td></tr><tr><td><a href='javascript:opkg("remove","iptables-mod-conntrack-extra")'>remove</a></td><td>iptables-mod-conntrack-extra</td><td>1.4.21-2</td></tr><tr><td><a href='javascript:opkg("remove","iptables-mod-ipopt")'>remove</a></td><td>iptables-mod-ipopt</td><td>1.4.21-2</td></tr><tr><td><a href='javascript:opkg("remove","iptables-mod-ipsec")'>remove</a></td><td>iptables-mod-ipsec</td><td>1.4.21-2</td></tr><tr><td><a href='javascript:opkg("remove","iw")'>remove</a></td><td>iw</td><td>4.9-1</td></tr><tr><td><a href='javascript:opkg("remove","iwinfo")'>remove</a></td><td>iwinfo</td><td>2016-09-21-fd9e17be-1</td></tr><tr><td><a href='javascript:opkg("remove","jshn")'>remove</a></td><td>jshn</td><td>2017-02-24-96305a3c-1</td></tr><tr><td><a href='javascript:opkg("remove","jsonfilter")'>remove</a></td><td>jsonfilter</td><td>2016-07-02-dea067ad-1</td></tr><tr><td><a href='javascript:opkg("remove","kernel")'>remove</a></td><td>kernel</td><td>4.4.92-1-231923acd2df801345799963d64393b7</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ath")'>remove</a></td><td>kmod-ath</td><td>4.4.92+2017-01-31-3</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ath10k")'>remove</a></td><td>kmod-ath10k</td><td>4.4.92+2017-01-31-3</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ath9k")'>remove</a></td><td>kmod-ath9k</td><td>4.4.92+2017-01-31-3</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ath9k-common")'>remove</a></td><td>kmod-ath9k-common</td><td>4.4.92+2017-01-31-3</td></tr><tr><td><a href='javascript:opkg("remove","kmod-cfg80211")'>remove</a></td><td>kmod-cfg80211</td><td>4.4.92+2017-01-31-3</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-aead")'>remove</a></td><td>kmod-crypto-aead</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-authenc")'>remove</a></td><td>kmod-crypto-authenc</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-cbc")'>remove</a></td><td>kmod-crypto-cbc</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-crc32c")'>remove</a></td><td>kmod-crypto-crc32c</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-deflate")'>remove</a></td><td>kmod-crypto-deflate</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-des")'>remove</a></td><td>kmod-crypto-des</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-ecb")'>remove</a></td><td>kmod-crypto-ecb</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-echainiv")'>remove</a></td><td>kmod-crypto-echainiv</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-hash")'>remove</a></td><td>kmod-crypto-hash</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-hmac")'>remove</a></td><td>kmod-crypto-hmac</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-iv")'>remove</a></td><td>kmod-crypto-iv</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-manager")'>remove</a></td><td>kmod-crypto-manager</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-md5")'>remove</a></td><td>kmod-crypto-md5</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-null")'>remove</a></td><td>kmod-crypto-null</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-pcompress")'>remove</a></td><td>kmod-crypto-pcompress</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-rng")'>remove</a></td><td>kmod-crypto-rng</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-sha1")'>remove</a></td><td>kmod-crypto-sha1</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-sha256")'>remove</a></td><td>kmod-crypto-sha256</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-crypto-wq")'>remove</a></td><td>kmod-crypto-wq</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-fs-exfat")'>remove</a></td><td>kmod-fs-exfat</td><td>4.4.92+2017-01-03-8d291f525ce6d88fe0d8b11b86fd5c2e900401d3-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-fs-ext4")'>remove</a></td><td>kmod-fs-ext4</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-fs-ntfs")'>remove</a></td><td>kmod-fs-ntfs</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-fs-vfat")'>remove</a></td><td>kmod-fs-vfat</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-fuse")'>remove</a></td><td>kmod-fuse</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-gpio-button-hotplug")'>remove</a></td><td>kmod-gpio-button-hotplug</td><td>4.4.92-2</td></tr><tr><td><a href='javascript:opkg("remove","kmod-gre")'>remove</a></td><td>kmod-gre</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-i2c-core")'>remove</a></td><td>kmod-i2c-core</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ifb")'>remove</a></td><td>kmod-ifb</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ip6tables")'>remove</a></td><td>kmod-ip6tables</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipsec")'>remove</a></td><td>kmod-ipsec</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipsec4")'>remove</a></td><td>kmod-ipsec4</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipsec6")'>remove</a></td><td>kmod-ipsec6</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipt-conntrack")'>remove</a></td><td>kmod-ipt-conntrack</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipt-conntrack-extra")'>remove</a></td><td>kmod-ipt-conntrack-extra</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipt-core")'>remove</a></td><td>kmod-ipt-core</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipt-ipopt")'>remove</a></td><td>kmod-ipt-ipopt</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipt-ipsec")'>remove</a></td><td>kmod-ipt-ipsec</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipt-ipset")'>remove</a></td><td>kmod-ipt-ipset</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ipt-nat")'>remove</a></td><td>kmod-ipt-nat</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-iptunnel")'>remove</a></td><td>kmod-iptunnel</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-iptunnel4")'>remove</a></td><td>kmod-iptunnel4</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-iptunnel6")'>remove</a></td><td>kmod-iptunnel6</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-l2tp")'>remove</a></td><td>kmod-l2tp</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-lib-crc-ccitt")'>remove</a></td><td>kmod-lib-crc-ccitt</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-lib-crc16")'>remove</a></td><td>kmod-lib-crc16</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-lib-textsearch")'>remove</a></td><td>kmod-lib-textsearch</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-lib-zlib-deflate")'>remove</a></td><td>kmod-lib-zlib-deflate</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-lib-zlib-inflate")'>remove</a></td><td>kmod-lib-zlib-inflate</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-mac80211")'>remove</a></td><td>kmod-mac80211</td><td>4.4.92+2017-01-31-3</td></tr><tr><td><a href='javascript:opkg("remove","kmod-mii")'>remove</a></td><td>kmod-mii</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-mppe")'>remove</a></td><td>kmod-mppe</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nf-conntrack")'>remove</a></td><td>kmod-nf-conntrack</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nf-conntrack6")'>remove</a></td><td>kmod-nf-conntrack6</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nf-ipt")'>remove</a></td><td>kmod-nf-ipt</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nf-ipt6")'>remove</a></td><td>kmod-nf-ipt6</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nf-nat")'>remove</a></td><td>kmod-nf-nat</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nf-nathelper-extra")'>remove</a></td><td>kmod-nf-nathelper-extra</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nfnetlink")'>remove</a></td><td>kmod-nfnetlink</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nls-base")'>remove</a></td><td>kmod-nls-base</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nls-cp437")'>remove</a></td><td>kmod-nls-cp437</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nls-iso8859-1")'>remove</a></td><td>kmod-nls-iso8859-1</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-nls-utf8")'>remove</a></td><td>kmod-nls-utf8</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-ppp")'>remove</a></td><td>kmod-ppp</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-pppoe")'>remove</a></td><td>kmod-pppoe</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-pppol2tp")'>remove</a></td><td>kmod-pppol2tp</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-pppox")'>remove</a></td><td>kmod-pppox</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-pptp")'>remove</a></td><td>kmod-pptp</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-sched-connmark")'>remove</a></td><td>kmod-sched-connmark</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-sched-core")'>remove</a></td><td>kmod-sched-core</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-scsi-core")'>remove</a></td><td>kmod-scsi-core</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-slhc")'>remove</a></td><td>kmod-slhc</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-tun")'>remove</a></td><td>kmod-tun</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-udptunnel4")'>remove</a></td><td>kmod-udptunnel4</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-udptunnel6")'>remove</a></td><td>kmod-udptunnel6</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-acm")'>remove</a></td><td>kmod-usb-acm</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-core")'>remove</a></td><td>kmod-usb-core</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-net")'>remove</a></td><td>kmod-usb-net</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-net-cdc-ether")'>remove</a></td><td>kmod-usb-net-cdc-ether</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-net-cdc-ncm")'>remove</a></td><td>kmod-usb-net-cdc-ncm</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-net-huawei-cdc-ncm")'>remove</a></td><td>kmod-usb-net-huawei-cdc-ncm</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-net-ipheth")'>remove</a></td><td>kmod-usb-net-ipheth</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-net-qmi-wwan")'>remove</a></td><td>kmod-usb-net-qmi-wwan</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-net-rndis")'>remove</a></td><td>kmod-usb-net-rndis</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-net-sierrawireless")'>remove</a></td><td>kmod-usb-net-sierrawireless</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-ohci")'>remove</a></td><td>kmod-usb-ohci</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-serial")'>remove</a></td><td>kmod-usb-serial</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-serial-cp210x")'>remove</a></td><td>kmod-usb-serial-cp210x</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-serial-option")'>remove</a></td><td>kmod-usb-serial-option</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-serial-sierrawireless")'>remove</a></td><td>kmod-usb-serial-sierrawireless</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-serial-wwan")'>remove</a></td><td>kmod-usb-serial-wwan</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-storage")'>remove</a></td><td>kmod-usb-storage</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-uhci")'>remove</a></td><td>kmod-usb-uhci</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb-wdm")'>remove</a></td><td>kmod-usb-wdm</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","kmod-usb2")'>remove</a></td><td>kmod-usb2</td><td>4.4.92-1</td></tr><tr><td><a href='javascript:opkg("remove","lede-keyring")'>remove</a></td><td>lede-keyring</td><td>2017-01-20-a50b7529-1</td></tr><tr><td><a href='javascript:opkg("remove","libblkid")'>remove</a></td><td>libblkid</td><td>2.29.2-1</td></tr><tr><td><a href='javascript:opkg("remove","libblobmsg-json")'>remove</a></td><td>libblobmsg-json</td><td>2017-02-24-96305a3c-1</td></tr><tr><td><a href='javascript:opkg("remove","libc")'>remove</a></td><td>libc</td><td>1.1.16-1</td></tr><tr><td><a href='javascript:opkg("remove","libcares")'>remove</a></td><td>libcares</td><td>1.13.0-1</td></tr><tr><td><a href='javascript:opkg("remove","libev")'>remove</a></td><td>libev</td><td>4.24-1</td></tr><tr><td><a href='javascript:opkg("remove","libgcc")'>remove</a></td><td>libgcc</td><td>5.4.0-1</td></tr><tr><td><a href='javascript:opkg("remove","libgmp")'>remove</a></td><td>libgmp</td><td>6.1.2-1</td></tr><tr><td><a href='javascript:opkg("remove","libimobiledevice")'>remove</a></td><td>libimobiledevice</td><td>1.2.1-2</td></tr><tr><td><a href='javascript:opkg("remove","libip4tc")'>remove</a></td><td>libip4tc</td><td>1.4.21-2</td></tr><tr><td><a href='javascript:opkg("remove","libip6tc")'>remove</a></td><td>libip6tc</td><td>1.4.21-2</td></tr><tr><td><a href='javascript:opkg("remove","libiwinfo")'>remove</a></td><td>libiwinfo</td><td>2016-09-21-fd9e17be-1</td></tr><tr><td><a href='javascript:opkg("remove","libiwinfo-lua")'>remove</a></td><td>libiwinfo-lua</td><td>2016-09-21-fd9e17be-1</td></tr><tr><td><a href='javascript:opkg("remove","libjson-c")'>remove</a></td><td>libjson-c</td><td>0.12.1-1</td></tr><tr><td><a href='javascript:opkg("remove","libjson-script")'>remove</a></td><td>libjson-script</td><td>2017-02-24-96305a3c-1</td></tr><tr><td><a href='javascript:opkg("remove","liblua")'>remove</a></td><td>liblua</td><td>5.1.5-1</td></tr><tr><td><a href='javascript:opkg("remove","liblzo")'>remove</a></td><td>liblzo</td><td>2.09-1</td></tr><tr><td><a href='javascript:opkg("remove","libmbedtls")'>remove</a></td><td>libmbedtls</td><td>2.6.0-2</td></tr><tr><td><a href='javascript:opkg("remove","libminiupnpc")'>remove</a></td><td>libminiupnpc</td><td>1.9-1</td></tr><tr><td><a href='javascript:opkg("remove","libmnl")'>remove</a></td><td>libmnl</td><td>1.0.4-1</td></tr><tr><td><a href='javascript:opkg("remove","libnl-tiny")'>remove</a></td><td>libnl-tiny</td><td>0.1-5</td></tr><tr><td><a href='javascript:opkg("remove","libopenssl")'>remove</a></td><td>libopenssl</td><td>1.0.2k-1</td></tr><tr><td><a href='javascript:opkg("remove","libpcre")'>remove</a></td><td>libpcre</td><td>8.41-2</td></tr><tr><td><a href='javascript:opkg("remove","libplist")'>remove</a></td><td>libplist</td><td>1.13-2</td></tr><tr><td><a href='javascript:opkg("remove","libpthread")'>remove</a></td><td>libpthread</td><td>1.1.16-1</td></tr><tr><td><a href='javascript:opkg("remove","librt")'>remove</a></td><td>librt</td><td>1.1.16-1</td></tr><tr><td><a href='javascript:opkg("remove","libsodium")'>remove</a></td><td>libsodium</td><td>1.0.12-1</td></tr><tr><td><a href='javascript:opkg("remove","libubox")'>remove</a></td><td>libubox</td><td>2017-02-24-96305a3c-1</td></tr><tr><td><a href='javascript:opkg("remove","libubus")'>remove</a></td><td>libubus</td><td>2017-02-18-34c6e818-1</td></tr><tr><td><a href='javascript:opkg("remove","libubus-lua")'>remove</a></td><td>libubus-lua</td><td>2017-02-18-34c6e818-1</td></tr><tr><td><a href='javascript:opkg("remove","libuci")'>remove</a></td><td>libuci</td><td>2016-07-04-e1bf4356-1</td></tr><tr><td><a href='javascript:opkg("remove","libuci-lua")'>remove</a></td><td>libuci-lua</td><td>2016-07-04-e1bf4356-1</td></tr><tr><td><a href='javascript:opkg("remove","libuclient")'>remove</a></td><td>libuclient</td><td>2017-09-06-24d6eded-1</td></tr><tr><td><a href='javascript:opkg("remove","libusb-1.0")'>remove</a></td><td>libusb-1.0</td><td>1.0.21-1</td></tr><tr><td><a href='javascript:opkg("remove","libusbmuxd")'>remove</a></td><td>libusbmuxd</td><td>1.1.0-2</td></tr><tr><td><a href='javascript:opkg("remove","libuuid")'>remove</a></td><td>libuuid</td><td>2.29.2-1</td></tr><tr><td><a href='javascript:opkg("remove","libxml2")'>remove</a></td><td>libxml2</td><td>2.9.4-1</td></tr><tr><td><a href='javascript:opkg("remove","libxtables")'>remove</a></td><td>libxtables</td><td>1.4.21-2</td></tr><tr><td><a href='javascript:opkg("remove","lighttpd")'>remove</a></td><td>lighttpd</td><td>1.4.37-1</td></tr><tr><td><a href='javascript:opkg("remove","lighttpd-mod-access")'>remove</a></td><td>lighttpd-mod-access</td><td>1.4.37-1</td></tr><tr><td><a href='javascript:opkg("remove","lighttpd-mod-cgi")'>remove</a></td><td>lighttpd-mod-cgi</td><td>1.4.37-1</td></tr><tr><td><a href='javascript:opkg("remove","lighttpd-mod-expire")'>remove</a></td><td>lighttpd-mod-expire</td><td>1.4.37-1</td></tr><tr><td><a href='javascript:opkg("remove","lighttpd-mod-fastcgi")'>remove</a></td><td>lighttpd-mod-fastcgi</td><td>1.4.37-1</td></tr><tr><td><a href='javascript:opkg("remove","lighttpd-mod-proxy")'>remove</a></td><td>lighttpd-mod-proxy</td><td>1.4.37-1</td></tr><tr><td><a href='javascript:opkg("remove","logd")'>remove</a></td><td>logd</td><td>2017-03-10-16f7e161-1</td></tr><tr><td><a href='javascript:opkg("remove","lua")'>remove</a></td><td>lua</td><td>5.1.5-1</td></tr><tr><td><a href='javascript:opkg("remove","luci")'>remove</a></td><td>luci</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-app-chinadns")'>remove</a></td><td>luci-app-chinadns</td><td>1.6.1-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-app-dns-forwarder")'>remove</a></td><td>luci-app-dns-forwarder</td><td>1.6.1-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-app-firewall")'>remove</a></td><td>luci-app-firewall</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-app-mwan3")'>remove</a></td><td>luci-app-mwan3</td><td>1.4-5</td></tr><tr><td><a href='javascript:opkg("remove","luci-app-qos")'>remove</a></td><td>luci-app-qos</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-app-samba")'>remove</a></td><td>luci-app-samba</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-app-shadowsocks")'>remove</a></td><td>luci-app-shadowsocks</td><td>1.8.2-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-app-upnp")'>remove</a></td><td>luci-app-upnp</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-base")'>remove</a></td><td>luci-base</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-lib-ip")'>remove</a></td><td>luci-lib-ip</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-lib-json")'>remove</a></td><td>luci-lib-json</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-lib-jsonc")'>remove</a></td><td>luci-lib-jsonc</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-lib-nixio")'>remove</a></td><td>luci-lib-nixio</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-mod-admin-full")'>remove</a></td><td>luci-mod-admin-full</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-mod-rpc")'>remove</a></td><td>luci-mod-rpc</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-proto-3g")'>remove</a></td><td>luci-proto-3g</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-proto-ipv6")'>remove</a></td><td>luci-proto-ipv6</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-proto-ppp")'>remove</a></td><td>luci-proto-ppp</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","luci-theme-bootstrap")'>remove</a></td><td>luci-theme-bootstrap</td><td>git-17.290.79498-d3f0685-1</td></tr><tr><td><a href='javascript:opkg("remove","miniupnpc")'>remove</a></td><td>miniupnpc</td><td>1.9-1</td></tr><tr><td><a href='javascript:opkg("remove","miniupnpd")'>remove</a></td><td>miniupnpd</td><td>2.0.20170421-2</td></tr><tr><td><a href='javascript:opkg("remove","mtd")'>remove</a></td><td>mtd</td><td>21</td></tr><tr><td><a href='javascript:opkg("remove","mwan3")'>remove</a></td><td>mwan3</td><td>2.0.2-1</td></tr><tr><td><a href='javascript:opkg("remove","netifd")'>remove</a></td><td>netifd</td><td>2017-01-25-650758b1-1</td></tr><tr><td><a href='javascript:opkg("remove","ntfs-3g")'>remove</a></td><td>ntfs-3g</td><td>2016.2.22-1-fuseint</td></tr><tr><td><a href='javascript:opkg("remove","odhcp6c")'>remove</a></td><td>odhcp6c</td><td>2017-01-30-c13b6a05-2</td></tr><tr><td><a href='javascript:opkg("remove","odhcpd")'>remove</a></td><td>odhcpd</td><td>2017-10-02-c6f3d5d4-2</td></tr><tr><td><a href='javascript:opkg("remove","openssl-util")'>remove</a></td><td>openssl-util</td><td>1.0.2k-1</td></tr><tr><td><a href='javascript:opkg("remove","openvpn-openssl")'>remove</a></td><td>openvpn-openssl</td><td>2.4.3-2</td></tr><tr><td><a href='javascript:opkg("remove","opkg")'>remove</a></td><td>opkg</td><td>2017-03-23-1d0263bb-1</td></tr><tr><td><a href='javascript:opkg("remove","ppp")'>remove</a></td><td>ppp</td><td>2.4.7-11</td></tr><tr><td><a href='javascript:opkg("remove","ppp-mod-pppoe")'>remove</a></td><td>ppp-mod-pppoe</td><td>2.4.7-11</td></tr><tr><td><a href='javascript:opkg("remove","ppp-mod-pppol2tp")'>remove</a></td><td>ppp-mod-pppol2tp</td><td>2.4.7-11</td></tr><tr><td><a href='javascript:opkg("remove","ppp-mod-pptp")'>remove</a></td><td>ppp-mod-pptp</td><td>2.4.7-11</td></tr><tr><td><a href='javascript:opkg("remove","procd")'>remove</a></td><td>procd</td><td>2017-08-08-66be6a23-1</td></tr><tr><td><a href='javascript:opkg("remove","qos-scripts")'>remove</a></td><td>qos-scripts</td><td>1.3.0-1</td></tr><tr><td><a href='javascript:opkg("remove","relayd")'>remove</a></td><td>relayd</td><td>2016-02-07-ad0b25ad-2</td></tr><tr><td><a href='javascript:opkg("remove","resolveip")'>remove</a></td><td>resolveip</td><td>2</td></tr><tr><td><a href='javascript:opkg("remove","rpcd")'>remove</a></td><td>rpcd</td><td>2016-12-03-0577cfc1-1</td></tr><tr><td><a href='javascript:opkg("remove","samba36-server")'>remove</a></td><td>samba36-server</td><td>3.6.25-6</td></tr><tr><td><a href='javascript:opkg("remove","shadowsocks-libev")'>remove</a></td><td>shadowsocks-libev</td><td>3.1.0-1</td></tr><tr><td><a href='javascript:opkg("remove","shadowsocks-libev-server")'>remove</a></td><td>shadowsocks-libev-server</td><td>3.1.0-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan")'>remove</a></td><td>strongswan</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-charon")'>remove</a></td><td>strongswan-charon</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-default")'>remove</a></td><td>strongswan-default</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-aes")'>remove</a></td><td>strongswan-mod-aes</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-attr")'>remove</a></td><td>strongswan-mod-attr</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-connmark")'>remove</a></td><td>strongswan-mod-connmark</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-constraints")'>remove</a></td><td>strongswan-mod-constraints</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-des")'>remove</a></td><td>strongswan-mod-des</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-dnskey")'>remove</a></td><td>strongswan-mod-dnskey</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-fips-prf")'>remove</a></td><td>strongswan-mod-fips-prf</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-gmp")'>remove</a></td><td>strongswan-mod-gmp</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-hmac")'>remove</a></td><td>strongswan-mod-hmac</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-kernel-netlink")'>remove</a></td><td>strongswan-mod-kernel-netlink</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-md5")'>remove</a></td><td>strongswan-mod-md5</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-nonce")'>remove</a></td><td>strongswan-mod-nonce</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-pem")'>remove</a></td><td>strongswan-mod-pem</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-pgp")'>remove</a></td><td>strongswan-mod-pgp</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-pkcs1")'>remove</a></td><td>strongswan-mod-pkcs1</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-pubkey")'>remove</a></td><td>strongswan-mod-pubkey</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-random")'>remove</a></td><td>strongswan-mod-random</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-rc2")'>remove</a></td><td>strongswan-mod-rc2</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-resolve")'>remove</a></td><td>strongswan-mod-resolve</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-revocation")'>remove</a></td><td>strongswan-mod-revocation</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-sha1")'>remove</a></td><td>strongswan-mod-sha1</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-sha2")'>remove</a></td><td>strongswan-mod-sha2</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-socket-default")'>remove</a></td><td>strongswan-mod-socket-default</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-sshkey")'>remove</a></td><td>strongswan-mod-sshkey</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-stroke")'>remove</a></td><td>strongswan-mod-stroke</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-updown")'>remove</a></td><td>strongswan-mod-updown</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-x509")'>remove</a></td><td>strongswan-mod-x509</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-xauth-generic")'>remove</a></td><td>strongswan-mod-xauth-generic</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-mod-xcbc")'>remove</a></td><td>strongswan-mod-xcbc</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","strongswan-utils")'>remove</a></td><td>strongswan-utils</td><td>5.5.3-1</td></tr><tr><td><a href='javascript:opkg("remove","swconfig")'>remove</a></td><td>swconfig</td><td>11</td></tr><tr><td><a href='javascript:opkg("remove","tc")'>remove</a></td><td>tc</td><td>4.4.0-9</td></tr><tr><td><a href='javascript:opkg("remove","uboot-envtools")'>remove</a></td><td>uboot-envtools</td><td>2015.10-1</td></tr><tr><td><a href='javascript:opkg("remove","ubox")'>remove</a></td><td>ubox</td><td>2017-03-10-16f7e161-1</td></tr><tr><td><a href='javascript:opkg("remove","ubus")'>remove</a></td><td>ubus</td><td>2017-02-18-34c6e818-1</td></tr><tr><td><a href='javascript:opkg("remove","ubusd")'>remove</a></td><td>ubusd</td><td>2017-02-18-34c6e818-1</td></tr><tr><td><a href='javascript:opkg("remove","uci")'>remove</a></td><td>uci</td><td>2016-07-04-e1bf4356-1</td></tr><tr><td><a href='javascript:opkg("remove","uclient-fetch")'>remove</a></td><td>uclient-fetch</td><td>2017-09-06-24d6eded-1</td></tr><tr><td><a href='javascript:opkg("remove","uhttpd")'>remove</a></td><td>uhttpd</td><td>2017-08-19-3fd58e9b-1</td></tr><tr><td><a href='javascript:opkg("remove","uhttpd-mod-ubus")'>remove</a></td><td>uhttpd-mod-ubus</td><td>2017-08-19-3fd58e9b-1</td></tr><tr><td><a href='javascript:opkg("remove","unzip")'>remove</a></td><td>unzip</td><td>6.0-5</td></tr><tr><td><a href='javascript:opkg("remove","uqmi")'>remove</a></td><td>uqmi</td><td>2016-12-19-8ceeab69-1</td></tr><tr><td><a href='javascript:opkg("remove","usb-modeswitch")'>remove</a></td><td>usb-modeswitch</td><td>2017-05-24-453da8e5-1</td></tr><tr><td><a href='javascript:opkg("remove","usbmuxd")'>remove</a></td><td>usbmuxd</td><td>1.1.1-4</td></tr><tr><td><a href='javascript:opkg("remove","usign")'>remove</a></td><td>usign</td><td>2015-07-04-ef641914-1</td></tr><tr><td><a href='javascript:opkg("remove","wpa-cli")'>remove</a></td><td>wpa-cli</td><td>2016-12-19-ad02e79d-6</td></tr><tr><td><a href='javascript:opkg("remove","wpad")'>remove</a></td><td>wpad</td><td>2016-12-19-ad02e79d-6</td></tr><tr><td><a href='javascript:opkg("remove","wpad-mini")'>remove</a></td><td>wpad-mini</td><td>2016-12-19-ad02e79d-6</td></tr><tr><td><a href='javascript:opkg("remove","wwan")'>remove</a></td><td>wwan</td><td>2014-07-17-1</td></tr><tr><td><a href='javascript:opkg("remove","xl2tpd")'>remove</a></td><td>xl2tpd</td><td>devel-20151125-3</td></tr><tr><td><a href='javascript:opkg("remove","zlib")'>remove</a></td><td>zlib</td><td>1.2.11-1</td></tr></tbody></table>
+	</div>		
+</div>
+
+<script>
+var all_list;
+var installed_list;
+
+check_software_status();
+
+$("#search-installed").click(function(){get_installed();});
+$("#search-keyword").click(function(){search_keyword();});
+$("#search-all").click(function(){get_all_packages();});
+
+function check_software_status(){
+	$.ajax({
+	    type: "GET",
+	    url: "/cgi-bin/software_cgi?action=getstatus",
+	    dataType: "json",
+	    success: function(result){
+			$("#table-software").html("");
+			$("#table-software").attr("class","table-info");
+			var s= "<tr></tr><td>Firmware version</td><td>"+result.version+"</td></tr>";
+			s = s + "<tr><td>Openwrt release</td><td>"+result.release+"</td></tr>";
+			s = s + "<tr><td>Linux kernel</td><td>"+result.kernel+"</td></tr>";
+			s = s + "<tr><td>Repository</td><td>"+result.repo+"</td></tr>";
+			s = s + "<tr><td>Package count</td><td id='software-count'><img src='/images/loading.gif'>Checking...</td></tr>";
+			$("#table-software").append(s);
+			$("#flash-usage .usage").css("width",(1-result.available/result.total)*100 +"%");
+			$("#flash-usage ").after(result.available.toFixed(2) +"M free (Total: "+result.total.toFixed(1)+"M)");
+			get_installed_packages(true);
+	    }
+	});
+}
+
+function get_all_list(){
+	// 判断获取的all_list 有没有存储到localStorage中
+	var listItem = JSON.parse(localStorage.getItem("all_list"))
+	if(listItem && listItem.length > 0){
+		all_list= listItem
+		// console.log("使用存储")
+		$("#software-count").text(all_list.length);
+		return;
+	}
+	// console.log("没有存储重新获取并储存")
+	// 没有存储重新获取并储存
+	$.ajax({
+	    type: "GET",
+	    url: "/cgi-bin/software_cgi?action=listall",
+	    dataType: 'json',
+	    success: function(result){
+			all_list=result.packages;
+			if(typeof(Storage) !== "undefined"){
+				localStorage.setItem("all_list",JSON.stringify(all_list));
+			}
+			if(result.opkg_updated || all_list.length > 0){
+				$("#software-count").text(result.count);
+			}else{
+				setTimeout(function(){get_all_list();},1000);
+			}
+	    },
+	    error: function(){
+			setTimeout(function(){get_all_list();},1000);
+		}
+	});
+}
+
+function already_installed(pkg){
+	var installed=false;
+	for(var i=0;i<installed_list.length;i++){
+		if(installed_list[i].name==pkg){
+			installed=true;
+			break;
+		}
+	}
+	return installed;
+}
+
+function search_keyword(keyword){
+	$("#table-software").html("<tr><td><img src='/images/loading.gif'>Checking...</td></tr>");
+	if(!keyword) keyword=$("#keyword").val();
+	$("#list-title").html("Search packages");
+	$.ajax({
+	    type: "GET",
+	    url: "/cgi-bin/software_cgi?action=find&pattern="+keyword,
+	    dataType: "json",
+	    success: function(result){
+			$("#table-software").html("<tr><td>Action</td><td>Name</td><td>Version</td><td>Description</td></tr>");
+			$("#table-software").attr("class","table-list");
+			for(var i=0;i<result.packages.length;i++){
+				var action="install";
+				var action_s="install";
+				if(already_installed(result.packages[i].name)) {
+					action="remove";
+					action_s="remove";
+				}
+				$("#table-software").append("<tr><td><a href='javascript:opkg(\""+action+"\",\""+result.packages[i].name+"\")'>"+action_s+"</a></td><td>"+result.packages[i].name+"</td><td>"+result.packages[i].ver+"</td><td>"+result.packages[i].desc+"</td></tr>");
+			}
+	    }
+	});
+}
+function get_installed_packages(getall){
+	$.ajax({
+	    type: "GET",
+	    url: "/cgi-bin/software_cgi?action=installed",
+	    dataType: "json",
+	    success: function(result){
+			installed_list=result.packages;
+			if(getall) {
+				get_all_list()
+			};
+	    },
+		error: function(){
+			setTimeout(function(){get_installed_packages(getall);},1000);
+		}
+	});
+}
+function get_installed(){
+	$("#table-software").html("<tr><td><img src='/images/loading.gif'>Checking...</td></tr>");
+	$.ajax({
+	    type: "GET",
+	    url: "/cgi-bin/software_cgi?action=installed",
+	    dataType: "json",
+	    success: function(result){
+			$("#table-software").html("<tr><td>Action</td><td>Name</td><td>Version</td></tr>");
+			$("#list-title").html("Installed packages");
+			$("#table-software").attr("class","table-list");
+			for(var i=0;i<result.packages.length;i++){
+				$("#table-software").append("<tr><td><a href='javascript:opkg(\"remove\",\""+result.packages[i].name+"\")'>remove</a></td><td>"+result.packages[i].name+"</td><td>"+result.packages[i].version+"</td></tr>");
+			}
+	    },
+		error: function(){
+			setTimeout(function(){get_installed();},1000);
+		}
+	});
+}
+function search_letter(letter){
+	$("#table-software").html("<tr><td><img src='/images/loading.gif'>Checking...</td></tr>");
+	$.ajax({
+	    type: "GET",
+	    url: "/cgi-bin/software_cgi?action=find&letter="+encodeURIComponent(letter),
+	    dataType: "json",
+	    success: function(result){
+			$("#table-software").html("<tr><td>Action</td><td>Name</td><td>Version</td><td>Description</td></tr>");
+			$("#table-software").attr("class","table-list");
+			for(var i=0;i<result.packages.length;i++){
+				var action="install";
+				var action_s="install";
+				if(already_installed(result.packages[i].name)) {
+					action="remove";
+					action_s="remove";
+				}
+				$("#table-software").append("<tr><td><a href='javascript:opkg(\""+action+"\",\""+result.packages[i].name+"\")'>"+action_s+"</a></td><td>"+result.packages[i].name+"</td><td style='max-width:100px;word-wrap:break-word'>"+result.packages[i].ver+"</td><td>"+result.packages[i].desc+"</td></tr>");
+			}
+	    }
+	});
+}
+function opkg(action, pkg){
+	$("#list-title").html(action+" package "+ pkg);
+	$("#table-software").attr("class","table-info");	
+	$("#table-software").html("");
+	$("#table-software").append("<tr><td>Output</td><td><img src='/images/loading.gif'></td></tr>");
+	$.ajax({
+	    type: "GET",
+	    url: "/cgi-bin/software_cgi?action="+action+"&package="+pkg,
+	    dataType: "json",
+	    success: function(result){
+			console.log(result)
+			get_installed_packages(false);
+			$("#table-software").html("");
+			// 删除提示
+			$("#table-software").append("<tr><td>Output</td><td>"+result.stdout+"</td></tr>");
+			// 添加提示
+			if(result.stderr)
+				$("#table-software").append("<tr><td>Error</td><td>"+result.stderr+"</td></tr>");
+		}
+	});
+}
+function get_all_packages(){
+	$("#table-software").html("");
+	
+	var s="";
+	for(var i=0;i<26;i++){
+		var code=65+i;
+		var ch=String.fromCharCode(code);
+		s=s+"<a class='letter' href='javascript:search_letter(\""+ch+"\");'>"+ch+"</a>";
+	}
+	s=s+"<a class='letter' href='javascript:search_letter(\"#\");'>#</a>";
+	$("#list-title").html("<div>Please click initial letter</div>");
+	$("#list-title").append(s);
+}
+
+$("#keyword").focus(function(){
+	$("#search-autocomplete").show();
+});
+
+$("#keyword").focusout(function(){
+	setTimeout(function(){$("#search-autocomplete").hide()},200);
+});
+$("#keyword").on('input propertychange paste',function(){
+	$("#search-autocomplete").show();
+	$("#search-autocomplete").text("");
+	var keyword=$(this).val();
+	if(keyword.length==0) return;
+	if(!all_list) return;
+	var count=0;
+	
+	for(var i=0;i<all_list.length;i++){
+		if(count>10)break;
+		if(all_list[i].indexOf(keyword)==0) {
+			$("#search-autocomplete").append("<li onclick='select_keyword(this)'>"+all_list[i]+"</li>");
+			count=count+1;
+		}
+	}
+
+	for(var i=0;i<all_list.length;i++){
+		if(count>10)break;
+		if(all_list[i].indexOf(keyword)>0){
+			$("#search-autocomplete").append("<li onclick='select_keyword(this)'>"+all_list[i]+"</li>");
+			count=count+1;
+		}
+	}
+});
+
+$("#keyword").keydown(function(e){
+	if(e.keyCode==27){
+		$("#search-autocomplete").hide();
+	}else if (e.keyCode==13){
+		$("#search-autocomplete").hide();
+		search_keyword();
+	}
+});
+function select_keyword(li){
+	$("#keyword").val($(li).text());
+}
+</script>
+
+</div>
+	<hr>
+	<div class="div_ddns">
+		<span><label>DDNS</label><label id="label-ddns" class="hint--top" data-hint="Your unique domain name. You can visit from internet."><a href="http://iq440e2.gl-inet.com/">iq440e2.gl-inet.com</a></label><label id="internet-accessible" class="hint--top" data-hint="You are not accessible from the Internet"><img src="installed_software_files/warning.png"></label></span>
+		<span><label>Model</label><label id="label-model">ar750</label></span>
+		<span><label>MAC</label><label class="hint--top" data-hint="Click to setup clone"><a href="javascript:go_clone_mac()">e4:95:6e:44:40:e2</a></label></span>
+	</div>
+	<div id="div_footer">
+		<a class="footer_a" href="http://www.gl-inet.com/">www.gl-inet.com</a>
+		<label id="copyright">@2017 GL.iNet</label>
+	</div>
+
+
+</div>
+
+<div id="modal" class="modal">
+	<a id="modal-close" href="#" title="Close" class="close">X</a>
+	<div id="model_content">
+	</div>
+</div>
+
+<div id="div-reboot" class="modal-reboot">
+	<div id="div-reboot-title">
+		Rebooting
+	</div>
+	<div class="progress-bar"><span>0%</span></div>
+</div>
+
+<div id="overlay"></div>
+
+
+
+<script>
+var select_wifi=1;
+$.ajaxSetup({
+	cache: false,
+	headers: {'X-CSRF-TOKEN':'zr9u977HIrVbpM2eWSRlQQEwojIXcnxS'}
+});
+
+dic["11ng"]="150M";
+dic["11ng2"]="300M";
+
+var mobile=false;
+
+/*Bind event*/
+$("#img-internet").click(function(){
+	popWanSetting();
+});
+$("#img-wifi-0").click(function(){
+	popWifiSetting();
+});
+$("#div-internet").click(function(){
+	$("#div_main").load("/html/wan_status");
+	if(window.history.pushState) window.history.pushState({},null,"index?index&wan_status");
+});
+$("#div-wifi-0").click(function(){
+	select_wifi=1;
+	$("#div_main").load("/html/wifi_status");
+	if(window.history.pushState) window.history.pushState({},null,"index?index&wifi_status");
+});
+$("#div-port").click(function(){
+	$("#div_main").load("/html/port_status");
+	if(window.history.pushState) window.history.pushState({},null,"index?index&port_status");
+});
+$("#div-firmware").click(function(){
+	$("#div_main").load("/html/firmware_status");
+	if(window.history.pushState) window.history.pushState({},null,"index?index&firmware_status");
+});
+$("#div-clients").click(function(){
+	$("#div_main").load("/html/clients");
+	if(window.history.pushState) window.history.pushState({},null,"index?index&clients");
+});
+// $("#div-internet").click(function(){
+// 	if($(".mainbar").find("label").text() == "Internet Status " || $(".mainbar").find("label").text() == "外网状态 ") {
+// 		return;
+// 	} 
+// 	$("#div_main").load("/html/wan_status");
+// 	if(window.history.pushState) window.history.pushState({},null,"index?index&wan_status");
+	
+// });
+// $("#div-wifi-0").click(function(){
+// 	if($(".mainbar").find("label").text() == "Wireless Status " || $(".mainbar").find("label").text() == "无线状态 ") {
+// 		return;
+// 	} 
+// 	select_wifi=1;
+// 	$("#div_main").load("/html/wifi_status");
+// 	if(window.history.pushState) window.history.pushState({},null,"index?index&wifi_status");
+// });
+// $("#div-port").click(function(){
+// 	if($(".mainbar").find("label").text() == "Access Control" || $(".mainbar").find("label").text() == "访问控制") {
+// 		return;
+// 	} 
+// 	$("#div_main").load("/html/port_status");
+// 	if(window.history.pushState) window.history.pushState({},null,"index?index&port_status");
+// });
+// $("#div-firmware").click(function(){
+// 	if($(".mainbar").find("label").text() == "Firmware " || $(".mainbar").find("label").text() == "固件 ") {
+// 		return;
+// 	} 
+// 	$("#div_main").load("/html/firmware_status");
+// 	if(window.history.pushState) window.history.pushState({},null,"index?index&firmware_status");
+// });
+// $("#div-clients").click(function(){
+// 	if($(".mainbar").find("label").text() == "DHCP Clients ") {
+// 		return;
+// 	} 
+// 	$("#div_main").load("/html/clients");
+// 	if(window.history.pushState) window.history.pushState({},null,"index?index&clients");
+// });
+
+$(".div_setting").click(function(){
+	$(".indicator").hide();
+	$(".indicator1").hide();
+	$(this).find(".indicator").show();
+	$(".div_setting").removeClass("highlight");
+	$(".div_app").removeClass("highlight");
+	$(this).addClass("highlight");
+});
+$(".div_app").click(function(){
+	var url=$(this).attr("data-url");
+	window.location="/html/index?"+url;
+});
+function setup_access(){
+	$('#div-port').trigger('click');
+}
+function check_firmware(){
+	$("#div-firmware").trigger('click');
+}
+function change_lanip(){
+	$("#div-wifi-0").trigger('click');
+	setTimeout(function(){display_lanip()},200);
+}
+
+function highlight_app(url){
+	var div_app=$(".div_app[data-url='"+url+"']");
+	$(div_app).find(".indicator1").show();
+	if(url != "index") 	$(".div_app").addClass("dim");
+	$(div_app).removeClass("dim");
+	$(div_app).addClass("highlight");
+}
+
+var checker;
+var checker_upnp;
+var query=document.URL.split('?')[1];
+var page;
+if(query && (page=query.match(/[a-z0-9_]*.html/))){
+	$("#div_area").load("/html/"+page);
+	highlight_app(page);
+}else{
+	highlight_app("index");
+	/*Run once after load*/
+	getNetworkStatus();
+	getDeviceStatus();
+	checkUpnp();
+	getClients();
+	getFirmwareStatus();
+	checkAvailability();
+
+	startChecker();
+	checker_upnp=setInterval(function(){
+		checkUpnp();
+		checkAvailability();
+	},60000);
+	/*go to subpage*/
+	var subpage=document.URL.split('&')[1];
+	if(subpage){
+		$("#div_main").load("/html/"+subpage);
+	}else{
+		$("#div_main").load("/html/default")
+	}
+}
+
+function startChecker(){
+	checker=setInterval(function(){
+		getNetworkStatus();
+		getDeviceStatus();
+		getClients();
+	},5000);
+}
+function stopChecker(){
+	window.clearInterval(checker);
+}
+
+/*Close the popup*/
+$("#modal-close").click(function(){
+	close_modal();
+});
+function go_advanced(){
+	if(confirm("Advanced settings page needs separate login. \n\nIt is for hobbyist and no support will be provided. \n\nUsing improper settings will brick your router.")==true) return true;
+	else return false;
+}
+</script>
+
+</body></html>

@@ -1,0 +1,1802 @@
+
+U-Boot> reset
+resetting ...
+ROM:	Use nor flash.
+ROM ERROR NO:	217
+ROM:	Ok.
+RamBoot: Start
+kgd test done.
+load uboot..
+
+
+U-Boot 2010.06 (Mar 06 2018 - 18:26:49)
+
+DRAM:  64 MiB
+SF: Got idcode 20 70 17 20 70
+In:    serial
+Out:   serial
+Err:   serial
+MMC:   FH_MMC: 0
+MMC FLASH INIT: No card on slot!
+Net:   set to RMII
+FH EMAC
+SF: Got idcode 20 70 17 20 70
+8192 KiB M25P64 at 0:0 is now current device
+Do authentication...
+Saving Environment to SPI Flash...
+Erasing SPI flash...Writing to SPI flash...done
+mmc_auto_up =============================== 
+Card did not respond to voltage select!
+** Can't read from device 0 **
+
+** Unable to use mmc 0:1 for fatload **
+Found no file: updatecfg.txt, return! 
+Hit any key to stop autoboot:  3  2  1  0 
+SF: Got idcode 20 70 17 20 70
+8192 KiB M25P64 at 0:0 is now current device
+## Booting kernel from Legacy Image at a1000000 ...
+   Image Name:   Linux-3.0.8
+   Created:      2017-11-03   2:50:23 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1891624 Bytes = 1.8 MiB
+   Load Address: a0008000
+   Entry Point:  a0008000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Linux version 3.0.8 (root@mail.cerlluars.com) (gcc version 4.3.2 (crosstool-NG 1.19.0) ) #24 Fri Nov 3 10:50:21 CST 2017
+[    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387f
+[    0.000000] CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+[    0.000000] Machine: FH8830
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 8382
+[    0.000000] Kernel command line: console=ttyS0,115200 root=/dev/mtdblock2 rootfstype=squashfs init=/squashfs_init mem=33M mtdparts=spi_flash:320K@0x0(uboot),0x1F0000@0x50000(kernel),0x420000@0x240000(rootfs),0x1a0000@0x660000(config),8M@0x0(all)
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 33MB = 33MB total
+[    0.000000] Memory: 29616k/29616k available, 4176k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+[    0.000000]     vmalloc : 0xc2800000 - 0xfe000000   ( 952 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc2100000   (  33 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .init : 0xc0008000 - 0xc0024000   ( 112 kB)
+[    0.000000]       .text : 0xc0024000 - 0xc037b000   (3420 kB)
+[    0.000000]       .data : 0xc037c000 - 0xc039b120   ( 125 kB)
+[    0.000000]        .bss : 0xc039b144 - 0xc03b4b60   ( 103 kB)
+[    0.000000] SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:128
+[    0.000000] timer mult: 0xfa000000, timer shift: 0x16
+[    0.000000] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 4294967ms
+[    0.000000] Console: colour dummy device 80x30
+[    0.000000] console [ttyS0] enabled
+[    0.181245] Calibrating delay loop... 430.08 BogoMIPS (lpj=2150400)
+[    0.240074] pid_max: default: 32768 minimum: 301
+[    0.244664] Mount-cache hash table entries: 512
+[    0.249477] CPU: Testing write buffer coherency: ok
+[    0.253840] hw perfevents: enabled with v6 PMU driver, 3 counters available
+[    0.261533] devtmpfs: initialized
+[    0.267547] NET: Registered protocol family 16
+[    0.273378] fh8830 board init 
+[    0.286650] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+[    0.290610] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.321268] bio: create slab <bio-0> at 0
+[    0.327713] fh_dmac fh_dmac.0: FH DMA Controller, 8 channels
+[    0.339043] cfg80211: Calling CRDA to update world regulatory domain
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:51:42 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:51:42 --
+[    0.345758] Switching to clocksource fh_clocksource
+[    0.402013] NET: Registered protocol family 2
+[    0.403708] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.410866] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.417272] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.423495] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.429619] TCP reno registered
+[    0.432741] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.438449] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.445006] NET: Registered protocol family 1
+[    0.486290] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.493200] JFFS2 version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+[    0.498483] msgmni has been set to 57
+[    0.502897] NET: Registered protocol family 38
+[    0.505208] io scheduler noop registered (default)
+[    0.512067] PWM driver, Number: 8, IO base ad[    0.516213] ttyS.0: ttyS0 at MMIO 0xf0700000 (irq = 30) is a ttyS
+[    0.522560] brd: module loaded
+[    0.534846] loop: module loaded
+[    0.540605] CLK misc driver init successfully
+[    0.546332] m25p80 spi0.0: found xm25qh64a, expected m25p80
+[    0.549042] m25p80 spi0.0: xm25qh64a (16384 Kbytes)
+[    0.553872] DEBUG-CMDLINE-PART: parsing <320K@0x0(uboot),0x1F0000@0x50000(kernel),0x420000@0x240000(rootfs),0x1a0000@0x660000(config),8M@0x0(all)>
+[    0.566736] DEBUG-CMDLINE-PART: partition 4: name <all>, offset 0, size 800000, mask flags 0
+[    0.574995] DEBUG-CMDLINE-PART: partition 3: name <config>, offset 660000, size 1a0000, mask flags 0
+[    0.583948] DEBUG-CMDLINE-PART: partition 2: name <rootfs>, offset 240000, size 420000, mask flags 0
+[    0.592906] DEBUG-CMDLINE-PART: partition 1: name <kernel>, offset 50000, size 1f0000, mask flags 0
+[    0.601782] DEBUG-CMDLINE-PART: partition 0: name <uboot>, offset 0, size 50000, mask flags 0
+[    0.610144] DEBUG-CMDLINE-PART: mtdid=<spi_flash> num_parts=<5>
+[    0.615935] 5 cmdlinepart partitions found on MTD device spi_flash
+[    0.622466] Do the authentication in kernel...
+[    0.673628] Creating 5 MTD partitions on "spi_flash":
+[    0.675821] 0x000000000000-0x000000050000 : "uboot"
+[    0.683969] 0x000000050000-0x000000240000 : "kernel"
+[    0.689388] 0x000000240000-0x000000660000 : "rootfs"
+[    0.694820] 0x000000660000-0x000000800000 : "config"
+[    0.700221] 0x000000000000-0x000000800000 : "all"
+[    0.710602] console [netcon0] enabled
+[    0.711408] netconsole: network logging started
+[    0.716788] fh_rtc fh_rtc.0: rtc core: registered rtc as rtc0
+[    0.722130] i2c /dev entries driver
+[    0.725444] I2C driver:
+[    0.725464] 	platform registration... 
+[    0.730905] 	Clock: 15000khz, Standard-mode HCNT:LCNT = 62:74
+[    0.736586] 	tx fifo depth: 16, rx fifo depth: 16
+[    0.742611] 	I2C - (dev. name: fh_i2c - id: 0, IRQ #42
+[    0.742630] 		IO base addr: 0xc28a8000)
+[    0.750017] I2C driver:
+[    0.750030] 	platform registration... 
+[    0.755996] 	Clock: 15000khz, Standard-mode HCNT:LCNT = 62:74
+[    0.761716] 	tx fifo depth: 16, rx fifo depth: 16
+[    0.768713] 	I2C - (dev. name: fh_i2c - id: 1, IRQ #43
+[    0.768733] 		IO base addr: 0xc28b0000)
+[    0.776546] fh_wdt_drv_probe, start watchdog! 
+[    0.779431] [wdt] set topval: 5 
+[    0.787555] TCP cubic registered
+[    0.787949] NET: Registered protocol family 17
+[    0.792397] lib80211: common routines for IEEE802.11 drivers
+[    0.797868] Registering the dns_resolver key type
+[    0.802551] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+[    0.813443] GMAC driver:
+[    0.813464] 	platform registration... 
+[    0.816776] 	using random MAC address: ee:8b:9d:76:7e:64
+[    0.823115] fh_gmac fh_gmac.0: eth0: mixed HW and IP checksum settings.
+[    0.828524] fh_gmac fh_gmac.0: eth0: mixed no checksumming and other settings.
+[    0.835886] 	eth0 - (dev. name: fh_gmac - id: 0, IRQ #14
+[    0.835905] 		IO base addr: 0xc28d0000)
+[    0.850931] mmc0: card claims to support voltages below the defined range. These will be ignored.
+[    0.871105] mmc0: new high speed SDIO card at address 0001
+[    0.875991] card1 disconnected!
+[    0.909677] gmac_rmii: probed
+[    0.909817] eth0: PHY ID 0000ffff at 0 IRQ -1 (0:00) active
+[    0.916312] fh_rtc fh_rtc.0: setting system clock to 1970-01-01 00:00:00 UTC (0)
+[    0.925382] aes driver registered
+[    0.936140] VFS: Mounted root (squashfs filesystem) readonly on device 31:2.
+[    0.940492] Freeing init memory: 112K
+init: must be run as PID 1
+[RCS]: /etc/init.d/S01insmod
+write: 0xf0000038, 0x35353b3b
+[    3.131179] card1 connected!
+[    4.079737] Video Memory Manager
+[    4.113459] load rtthread_arc_FH8630.bin at 0xa3f00000, set ring buffer at 0xa3ef0000 with size 0x10000
+[    4.119953] get irq offset: 0
+[    4.130268] chn0 dev nr: 252
+[    4.138156] VBus loaded: 255 in blocks, 255 out blocks
+[    4.140420] VBUS driver loaded.
+[    4.143561] VBUS load rtthread_arc_FH8630.bin for rtvbus
+[    4.513001] firmware: rtthread_arc_FH8630.bin loaded
+[    4.515206] firmware: rtthread_arc_FH8630.bin started
+[    4.520045] ARC is running.
+[    4.540649] media_process: module license 'Proprietary' taints kernel.
+[    4.544285] Disabling lock debugging due to kernel taint
+[    4.571028] media_process_module_init 229: media process init success!!
+[    4.673890] WARN: set clk isp_aclk to 96000000, but get 108000000
+[    4.681239] module->phys_addr=0xea000000  module->virt_addr=0xc2c00000 
+[    4.684968] 	isp - (dev. name: ipf - IRQ #3
+[    4.684981] 		IO base addr: 0xc2c00000)
+[    4.692961] module->phys_addr=0xea000700  module->virt_addr=0xc2e00700 
+[    4.699301] 	isp - (dev. name: ipb - IRQ #0
+[    4.699314] 		IO base addr: 0xc2e00700)
+[    4.707180] 
+[    4.707189] 	stat buffer size: 66KBytes
+============================================================bg0806======================================
+[    5.367952] vpu_module_init 679: vpu init success!!
+[    5.471937] pae_module_init 827: PAE init success!
+[    5.545492] jpeg_module_init 271: JPEG init success!
+[    5.599828] bgm_module_init 441: bgm init success!!
+[    5.704522] exFAT: Version 1.2.9
+write: 0xf0000024, 0x21030200
+Mon Jan  1 00:00:00 CST 2018
+[RCS]: /etc/init.d/S02init_rootfs
+[RCS]: /etc/init.d/S07wifi
+Failed to connect to wpa_supplicant - wpa_ctrl_open: No such file or directory
+Unable to unload driver module "rtl8189ftv": No such file or directory
+[    8.257454] HW EFUSE
+[    8.257498] 0x000: 29 81 03 CC 00 00 50 00    00 00 04 CC 0A 0C 00 00
+[    8.263128] 0x010: 28 29 29 2B 2B 2B 2B 2B    2B 2E 2E 01 FF FF FF FF
+[    8.269441] 0x020: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.275757] 0x030: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.282072] 0x040: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.288385] 0x050: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.294701] 0x060: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.301037] 0x070: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.307330] 0x080: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.313645] 0x090: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.319959] 0x0a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.326274] 0x0b0: FF FF FF FF FF FF FF FF    23 30 20 00 00 00 00 FF
+[    8.332589] 0x0c0: FF 02 00 10 00 FF 00 FF    00 00 FF FF FF FF FF FF
+[    8.338902] 0x0d0: 3E 10 01 12 23 FF FF FF    20 04 4C 02 79 F1 21 02
+[    8.345218] 0x0e0: 0C 00 22 04 00 08 00 32    FF 21 02 0C 00 22 2A 01
+[    8.351533] 0x0f0: 01 00 00 00 00 00 00 00    00 00 00 00 02 00 FF FF
+[    8.357846] 0x100: 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00
+[    8.364162] 0x110: 00 EB 00 6E 01 00 00 00    00 FF 20 32 33 17 D4 B8
+[    8.370475] 0x120: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.376792] 0x130: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.383106] 0x140: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.389420] 0x150: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.395736] 0x160: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.402050] 0x170: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.408364] 0x180: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.414679] 0x190: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.421013] 0x1a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.427308] 0x1b0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.433624] 0x1c0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.439937] 0x1d0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.446253] 0x1e0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.452567] 0x1f0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+[    8.458880] 
+[    8.821727] MSC msc_proc_create: c2b57000
+[RCS]: /etc/init.d/S80network
+Setting up IP spoofing protection: rp_filter.
+Disable TCP/IP Explicit Congestion Notification: done.
+Configuring network interfaces: ifdown: interface lo not configured
+ifdown: interface eth0 not configured
+ifdown: interface wlan0 not configured
+ifdown: interface ra0 not configured
+ioctl[SIOCSIWAP]: Operation not permitted
+[   10.160806] fh_gmac fh_gmac.0: eth0: mixed HW and IP checksum settings.
+[   10.164602] fh_gmac fh_gmac.0: eth0: mixed no checksumming and other settings.
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:51:52 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:51:52 --
+ip: RTNETLINK answers: Network is unreachable
+
+Can not find wifi dev ra0
+done.
+eth0      Link encap:Ethernet  HWaddr 00:24:B9:44:D6:00  
+          inet addr:192.168.2.11  Bcast:192.168.2.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:14 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan0     Link encap:Ethernet  HWaddr 20:32:33:17:D4:B8  
+          inet addr:192.168.0.11  Bcast:192.168.0.255  Mask:255.255.255.0
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+Mon Jan  1 00:00:00 CST 2018
+Updating
+MP4Sys_SetWatchDogEn, iEnable=1 [   10.694612] fh_wdt_ioctl, watchdog is enabled! 
+
+[watchd] file_watchdog /dev/watchdog open success
+[watchd] WDIOC_SETTIMEOUT 30(s) ok!!
+[watchd] WDIOC_GETTIMEOUT 30(s) ok!!
+AAA WDIOC_ENABLE=2, WDIOC_DISABLE=1; WDIOC_SETTIMEOUT=c0045706, WDIOC_GETTIMEOUT=80045707 
+[watchd] WDIOC_ENABLE ok!!
+[01/Jan/2018:00:00:00 +0800] boa: server version Boa/0.94.14rc21
+[01/Jan/2018:00:00:00 +0800] boa: server built Apr 26 2017 at 18:24:46.
+[01/Jan/2018:00:00:00 +0800] boa: starting server pid=671, port 80
+
+(FH8630) login: begin_init_watchdog 00000 
+Don't find debug file, IN watchdog !!! 
+AVL_Start_sCamera_Watchdog 11111 create init watchdog 
+PUB[INFO][669]: [CLed.cpp work_thread 141] begin run thread 669 !
+
+Jan  1 00:00:03 PUB[INFO][669]: [CLed.cpp work_thread 141] begin run thread 669 !
+
+PUB[INFO][669]: [CIP2PasswdResume.cpp work_thread 107] begin run thread 669 !
+
+Jan  1 00:00:03 PUB[INFO][669]: [CIP2PasswdResume.cpp work_thread 107] begin run thread 669 !
+
+PUB[INFO][669]: [CBuzzer.cpp work_thread 191] begin run thread 669 !
+
+Jan  1 00:00:03 PUB[INFO][669]: [CBuzzer.cpp work_thread 191] begin run thread 669 !
+
+[Watch Daemon] add, TaskID = 0, TimeSpace = 20, pMsg->m_szTaskName = AVL_Start_sCamera_Watchdog
+[WATCH] WATCH_AddTask() ok, TaskID = 0
+AVL_Start_sCamera_Watchdog, s_init_watchdog=0 
+====Load different path name : ====
+/tmp/
+/tmp/hy_edvr_update.tar.gz
+/tmp/hy_edvr_remote_config.xml
+/tmp/download
+/etc/.update_success
+etc/version
+/etc/version
+/etc/DeviceVersion.ini
+/etc/res/
+/etc/res/
+/etc/.muttrc
+/etc/.msmtpr
+/etc/.disk_error.txt
+/etc/Config.html
+/etc/.lastmaintime
+/etc/.wlan.gw.gw.gw
+/etc/.tmp.gw.gw.gw
+boa -c /etc -f /etc/conf.d/boa/boa.conf &
+======================End====================
+Fnx_CheckWatchThread_sCamera, hello !! 
+[0;31m[SysSDK] ERROR[Hi_Api.cpp MP4Sys_GetSerialNum 389][0;39mMP4Sys_GetSerialNum: SDK Not Init
+elian_exit >>>>>>>>>>>>>>>>>>>>> 
+elian_exit : echo stop > /proc/elian
+[   14.143928] [MSC] msc_cmd_handler stop 5
+elian_exit <<<<<<<<<<<<<<<<<<<<< 
+PUB[INFO][669]: [MPU_init.cpp [   14.215322] kernel space : ENCRPTGET_DATA1=====================
+mpu_init_thread 149] begin run thread 669 !
+
+Jan  1 00:00:03 PUB[INFO][669]: [MPU_init.cpp mpu_init_thread 149] begin run thread 669 !
+
+[0;32m[SysSDK][Ha_MPP.cpp GetBoardType 1899][0;39mBoardType: TYPE_FH8630_VIPC 
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_InitDSPs 191][0;39mCompileTime: Aug  1 2018, 11:43:14 #########################
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_InitDSPs 207][0;39mCurTime: 2018.01.01-00:00:03
+IsDoubleBoard, only s_bIsDoubleBoard = 0 
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_InitDSPs 239][0;39mRead BoardID = 0xaa10
+HY_General_BoardInfo_Init >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[0;32m[SysSDK][Ha_MPP.cpp GetBoardType 1899][0;39mBoardType: TYPE_FH8630_VIPC 
+HY_General_BoardInfo_Init, pSysInfo=0x4025e330, boardtype=73 
+HY_General_BoardInfo_Init, m_SerialNum=0x8044d600, g_dwSensorID=-1 
+HY_General_BoardInfo_Init, 4444444444444444444444 i=0,  [bg0806
+], [ov9732]
+HY_General_BoardInfo_Init, 4444444444444444444444 i=1,  [bg0806
+], [ov9733]
+HY_General_BoardInfo_Init, 4444444444444444444444 i=2,  [bg0806
+], [imx323]
+HY_General_BoardInfo_Init, 4444444444444444444444 i=3,  [bg0806
+], [bg0806]
+HY_General_BoardInfo_Init, get sensor : bg0806 
+HY_General_BoardInfo_Init 5555555555555555555 g_dwSensorID=42, g_iSenLocal=3 
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_InitDSPs 246][0;39mhere
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_SDK_Init 1485][0;39mhere
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_SDK_Init 1496][0;39mhere
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_EncChInfo_Init 1744][0;39mhere
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_EncChInfo_Init 1779][0;39mhere
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_EncChInfo_Init 1785][0;39mhere
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_EncChInfo_Init 1795][0;39mpSysInfo->m_WorkMode  = 42
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_SDK_Init 1504][0;39mhere
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_SDK_Init 1512][0;39mhere
+change_vpu_capability, g_iSenLocal=3,  main: 1280 x 1280, sub: 640 x 640 ======================= 
+vou driver not install
+fd driver not install
+FH_VPSS_SetViAttr Success u32Width=1920, u32Height=1080 
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 552][0;39mFH_VPSS_Enable Success[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 564][0;39mFH_VPSS_SetChnAttr ch0 Success[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 573][0;39mFH_VPSS_SetChnAttr ch1 SuccessFH_VPSS_SetCrop: (x,y)=(455, 35), (w,h)=(1010, 1010) 
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 695][0;39mFH_VPSS_OpenChn ch0 Success[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 702][0;39mFH_VPSS_OpenChn ch1 SuccessFH_BGM_InitMem ok!
+---	FH8830 BG0806 ipc 30fps inital ok----
+set cis_clk_out freq: 27000000 hz
+[ISP] NR3D straight through mode.
+logday : -1
+============================================================================
+Hi_MPP_SetVideoPara INIT Brightness_hex = 100 ,mode = 1 Contrast_hex = 85  ,mode1 = 1 Saturation_hex = 112
+============================================================================
+FH_isp_init, color_main_bitrate: 800 500 500 200 ============================== 
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 800][0;39mFH_isp_init Success[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 808][0;39mFH_ISP_Run Success[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 822][0;39mFHAdv_MD_Ex_Init Success
+FHAdv_Osd_Init, ViWidth=1920, ViHeight=1080 
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 837][0;39mFHAdv_Osd_Init Success[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_Init 855][0;39mload_font_lib SuccessInit_EncParam, bitrate=1572864, pChannelContext->m_CurPictureFormat[0]=15, 000000000000000000 
+[0;32m[SysSDK][Hw_MPP.cpp Enc_CreateCh 2107][0;39m´´½¨Ö÷±àÂëÍ¨µÀ[0]³É¹¦
+[0;32m[SysSDK][Hw_MPP.cpp Enc_CreateCh 2132][0;39m´´½¨¸¨±àÂëÍ¨µÀ[1]³É¹¦
+Hi_MPP_InitMDEx >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+Hi_MPP_InitMDEx, Grade=1, md_config.threshold =0 ================================== 
+[0;32m[SysSDK][Ha_MPP.cpp HY_General_SDK_Init 1520][0;39mhere
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_InitDSPs 268][0;39mhere
+[0;32m[SysSDK][Ha_MPP.cpp ReadTalkingStreamThread 607][0;39mReadTalkingStreamThread Thread PID = 669 !!!!!!!!!!!!
+[0;32m[SysSDK][Ha_MPP.cpp ReadMediaStreamThread 171][0;39mReadMediaStreamThread Thread PID = 669 !!!!!!!!!!!!
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_InitDSPs 278][0;39mSysSDK_SysInit OK
+[00:00:04.076845, 1514736004] UpdateOSDThread, normal check FH_VENC_GetStream, main: 1, 1, sub: 1, 1
+OPL[INFO][669]: [CLogDao.cpp line 211] Create or Open Table OPL Success
+Jan  1 00:00:04 OPL[INFO][669]: [CLogDao.cpp line 211] Create or Open Table OPL Success
+OPL[INFO][669]: [CLogDao.cpp line 223] m_nLogCount=2905
+
+Jan  1 00:00:04 OPL[INFO][669]: [CLogDao.cpp line 223] m_nLogCount=2905
+
+OPL_GetInstance, create succesfully! 
+PUB[INFO][669]: [MPU_init.cpp mpu_init_thread 189] end   run thread 669 !
+
+Jan  1 00:00:04 PUB[INFO][669]: [MPU_init.cpp mpu_init_thread 189] end   run thread 669 !
+
+[   17.177199] kernel space : ENCRPTGET_DATA1=====================
+Now get UUID: 8044D600 
+init_hostpad_cfg, >>>>>>>>>>>>>>>>>>>>>> Get_UUID_CharLow, gid=8044d600 
+PUB[INFO][669]: [MPU_init.cpp mpu_init2_thread 1383] begin run thread 669 !
+
+Jan  1 00:00:06 PUB[INFO][669]: [MPU_init.cpp mpu_init2_thread 1383] begin run thread 669 !
+
+mpu_init2_thread 0000000000000 
+PUB[INFO][669]: [MPU_init.cpp check_IRCUT_thread 794] begin run thread 669 !
+
+Jan  1 00:00:06 PUB[INFO][669]: [MPU_init.cpp check_IRCUT_thread 794] begin run thread 669 !
+
+check_IRCUT_thread, finnally s_TrigleVideoColor=4 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+FH_SetColor, Enble : 1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FH_SetColor, s_DayTimeMode : 1
+Hi_MPP_SetBitRate, nAux=0, [framerate=0, a.framerate=0];  [nBitrate=800,a.nBitrate=0];    >>>>>>>>> 
+Hi_MPP_SetBitRate, FH_SetVerticalRotation  
+FH_SetVerticalRotation, mirror=0, flip=0 >>>>>>>>>>>>>>>>>>> 
+FH_SetVerticalRotation2222, mirror=0, flip=0, ret_FH_VENC_SetRotate=0 
+FH_SetVerticalRotation2222, mirror=0, flip=0, ret_FH_VENC_SetRotate=0 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+ 55555555555555 INet::Init 
+INet::WLAN_LoadParam,  IWNAME=wlan0 
+FH_SetVerticalRotation, g_mirror=0, g_flip=0, nOSDMode=0 <<<<<<<<<<<<<<<<<<<<<
+Hi_MPP_SetBitRate, nAux=0, nBitrate=800 kbps framerate=0 fps <<<<<<<<<<<<<<< 
+Hi_MPP_SetBitRate, nAux=1, [framerate=0, a.framerate=0];  [nBitrate=500,a.nBitrate=0];    >>>>>>>>> 
+Hi_MPP_SetBitRate, FH_SetVerticalRotation  
+FH_SetVerticalRotation, mirror=0, flip=0 >>>>>>>>>>>>>>>>>>> 
+FH_SetVerticalRotation2222, mirror=0, flip=0, ret_FH_VENC_SetRotate=0 
+FH_SetVerticalRotation2222, mirror=0, flip=0, ret_FH_VENC_SetRotate=0 
+FH_SetVerticalRotation, g_mirror=0, g_flip=0, nOSDMode=0 <<<<<<<<<<<<<<<<<<<<<
+Hi_MPP_SetBitRate, nAux=1, nBitrate=500 kbps framerate=0 fps <<<<<<<<<<<<<<< 
+FH_SetColor, path=/etc/fh/bg0806_attr.hex, Enable=1 
+FH_SetColor, nWdrMode=1, nWdrLevel=0 
+MP4Sys_SetIR_CUT bEnable=1 =================================================  
+MP4Sys_SetIR_CUT bEnable=1, nSwitchLeftInSame=4, ircut=1 111111111111111111  
+ReadMediaStreamThread, waiting for MP4Sys_SetVideoOrientation, nowtime=18, g_tOrient_initedtime=0, passedtime=18 
+Selected interface 'wlan0'
+OK
+Selected interface 'wlan0'
+OK
+WLAN_LoadParam begin before setting : szSSID=, nNetworkType=2, nAuthMode=2, nEncrypType=2, password=bValid1=1, bValid2=1
+WLAN_ReActive, m_iWlan_DHCPFailed=1 1111111111111111 
+ 666666666666666 INet::Init 
+ip = 192.168.2.11,netmask = 255.255.255.0,gateway = 192.168.2.1
+same ad_ip = -1062731253,ad_netmask = -256,ad_gateway = -1062731263
+set_default_gw(): route del default dev eth0
+set_default_gw(): route add default gw 192.168.2.1 dev eth0
+route: SIOCADDRT: File exists
+ip = 192.168.2.11,netmask = 255.255.255.0,gateway = 192.168.2.1
+same ad_ip = -1062731253,ad_netmask = -256,ad_gateway = -1062731263
+set_default_gw(): route del default dev eth0
+set_default_gw(): route add default gw 192.168.2.1 dev eth0
+[00:00:09.225409, 1514736009] UpdateOSDThread, normal check FH_VENC_GetStream, main: 1, 1, sub: 1, 1
+ReadMediaStreamThread, waiting for MP4Sys_SetVideoOrientation, nowtime=20, g_tOrient_initedtime=0, passedtime=20 
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:52:02 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:52:02 --
+ip = 192.168.2.11,netmask = 255.255.255.0,gateway = 192.168.2.1
+same ad_ip = -1062731253,ad_netmask = -256,ad_gateway = -1062731263
+set_default_gw(): route del default dev eth0
+set_default_gw(): route add default gw 192.168.2.1 dev eth0
+ip: RTNETLINK answers: File exists
+speaker close! close! close! close! close! close!
+set_default_gw(): route del default dev eth0
+set_default_gw(): route add default gw 192.168.2.1 dev eth0
+check_IRCUT_thread 1111111111111111111111111111 VideoColor=4, s_LightMode=0, s_LightModeMenual=0 
+[INFO]Read sadc get: 0  sadc
+MP4Sys_GetIR_Detect, detect_nvalue = 0, pFlag = 0 
+MP4Sys_SetVideoColor, ColorMode=4, ir_detect_status = 0 (0:day, 1:night)#############################
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+ReadMediaStreamThread, waiting for MP4Sys_SetVideoOrientation, nowtime=23, g_tOrient_initedtime=0, passedtime=23 
+ip = 192.168.2.11,netmask = 255.255.255.0,gateway = 192.168.2.1
+same ad_ip = -1062731253,ad_netmask = -256,ad_gateway = -1062731263
+set_default_gw(): route del default dev eth0
+set_default_gw(): route add default gw 192.168.2.1 dev eth0
+[NET][INFO][669]: [INet.cpp-Get_UID:2208]: return 671
+
+Jan  1 00:00:12 [NET][INFO][669]: [INet.cpp-Get_UID:2208]: return 671
+
+[NET][INFO][669]: [INet.cpp-NET_SetHttpPort:2028]: The same port set
+
+Jan  1 00:00:12 [NET][INFO][669]: [INet.cpp-NET_SetHttpPort:2028]: The same port set
+
+INet::NET_ReActive, m_iNetDHCPFailed = 1 
+ 77777777777777777 INet::Init 
+mpu_init2_thread 11111111111111 
+ EDVRS_DDT_GetDeviceDescriptionByID, iItemIndex=27, BoardID=49168 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IPC_Generate_Type, SensorType=42, BoardFormat=73 bbbbbbbbb 
+IPC_Generate_Type, platform, m=17 
+IPC_Generate_Type, szTypeName=IPC-17483W 
+ BuildDeviceDescriptionByID_GM  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++                         Device Info Dump                       ++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+BoardID = 0xc010
+BoardTypeName = IPC-17483W
+bytVideoStreamFormatCap:
+2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+bytAudioStreamFormatCap:
+12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+bytVideoSteamType:
+7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+bytMainVideoSreamResolutionCap:
+19848 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+bytSubVideoSreamResolutionCap:
+138 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+bytCoreFileType = 1
+bytDecChannels = 1
+bytAudioInChannels = 1
+bytVideoInChannels = 1
+bytAudioOutChannels = 1
+bytVoiceInChannels = 1
+bytSpotOutChannles = 0
+bytLoopBackOutChannels = 0
+bytAlarmInChannels = 0
+bytAlarmOutChannels =0
+bytRS422Channels:
+129 0 0 0 
+bytRS232Channels:
+130 0 0 0 
+bytRS485Channels:
+128 0 0 0 
+bytVGAChannels = 0
+bytUSBChannels = 0
+bytCVBSPorts = 1
+bytSVideoPorts = 0
+bytIDEType = 4
+bytMaxDiskNums = 1
+bytAimDetectSupport = 0
+bytMotionDetectSupport = 1
+bytMosaicSupport = 130
+dwReserved1 = 130
+dwReserved2 = 0
+dwReserved3 = 0
+dwReserved4 = 0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++                        End                                     ++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[CChannelManager.cpp 344]
+[AVL][ERROR][669]: [CChannelManager:Init]theCoderHandle[0]=1076219432 
+
+Jan  1 00:00:12 [AVL][ERROR][669]: [CChannelManager:Init]theCoderHandle[0]=1076219432 
+
+Fnx_CheckNETLOGThread >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>. 
+  Fnx_CheckThread 0000000000000000000000 
+INet::CheckAPManage, this function is empty ! 
+WLAN_CheckStatus aaaaaaaaaaaaaaaaaaaaaaaaaaa, m_bWlan_Enable=1 
+[SnapShot][CSnapshotManager.cpp-GetInstance:385]: 1.0.0 svn:1234CFileManager::EDVR_FM_Set_DiskFullParams, stop_when_all_full=0 
+CFileManager::EDVR_FM_Start_DiskSpace_Check_Task >>>>>>>>>> 
+[CMosaic:SetRect]param>> valid rectNum ==0
+PUB[INFO][669]: [fm.cpp heart_beat_test 1398] begin run thread 669 !
+
+Jan  1 00:00:12 PUB[INFO][669]: [fm.cpp heart_beat_test 1398] begin run thread 669 !
+
+============ COsd::LoadParam, OsdCfgSection=OsdCfg, key_str=OsdShowType00,  m_iShowType=0xb 
+LoadParam, k=0, m_osdtype_positionX=10, m_osdtype_positionY=10 
+LoadParam, k=1, m_osdtype_positionX=10, m_osdtype_positionY=500 
+LoadParam, k=2, m_osdtype_positionX=600, m_osdtype_positionY=500 
+LoadParam, k=3, m_osdtype_positionX=0, m_osdtype_positionY=0 
+LoadParam, k=4, m_osdtype_positionX=0, m_osdtype_positionY=0 
+LoadParam, LoadOSDPixel:  
+[COsd.cpp 372]
+PUB[INFO][669]: [fm.cpp start_space_check 2506] begin run thread 669 !
+
+Jan  1 00:00:12 PUB[INFO][669]: [fm.cpp start_space_check 2506] begin run thread 669 !
+
+CFileManager::space_check >>>> g_HeartBeat = 1 
+check_space, not all disks are full, check current disk_full 
+check_space,  CheckIfCurDiskFull 66666666666666666666 
+[AVL][ERROR][669]: [COsd:LoadOSDPixel]lstat</etc/res/osd_CH01.pix.update> failed(-1)
+
+Jan  1 00:00:12 [AVL][ERROR][669]: [COsd:LoadOSDPixel]lstat</etc/res/osd_CH01.pix.update> failed(-1)
+
+[COsd.cpp 372]
+[AVL][ERROR][669]: [COsd:LoadOSDPixel]lstat</etc/res/osd_user_CH01_TYPE01.pix> failed(-1)
+
+Jan  1 00:00:12 [AVL][ERROR][669]: [COsd:LoadOSDPixel]lstat</etc/res/osd_user_CH01_TYPE01.pix> failed(-1)
+
+m_iWlan_DHCPFailed 000000000000000 
+WLAN_CheckStatus do_callback 000000000000000000000000 WlanIpDisconnect=0 
+wifi status:Connected, saveStatus=0 =======================
+IsEth0Broken, finnally, eth0_status=1 
+INet::NET_CheckStatus , saveStatus=0x1, m_iNetStatus=0x2
+[COsd.cpp 372]
+[AVL][ERROR][669]: [COsd:LoadOSDPixel]lstat</etc/res/osd_user_CH01_TYPE02.pix> failed(-1)
+
+Jan  1 00:00:12 [AVL][ERROR][669]: [COsd:LoadOSDPixel]lstat</etc/res/osd_user_CH01_TYPE02.pix> failed(-1)
+
+LoadParam, SetType:  0xb
+============== COsd::SetType, 11111111111,  nShowType=0xb 
+======================== ifconfig ra0 up 1111111111111111111111 
+NET_RenewDhcp wired 111111111111111111111111111111111111111111 
+IsEth0Broken, finnally, eth0_status=1 
+[NET][INFO][669]: [INet.cpp-NET_CheckStatus:2927]: status:Disconnect
+
+Jan  1 00:00:12 [NET][INFO][669]: [INet.cpp-NET_CheckStatus:2927]: status:Disconnect
+
+IsEth0Broken, finnally, eth0_status=1 
+============== COsd::SetType, 11111111111,  bEnable=0x00000000 , showtype=0x0000000b
+ShowOsd [x,y]=[0,0] 
+New Thread: Name = OSDThread, task_td = 102
+task(OSDThread/102) start run!
+task(102), thread id = 1074332880!
+ShowOsd [x,y]=[0,0] 
+ShowOsd [x,y]=[0,0] 
+ShowOsd [x,y]=[0,0] 
+ShowOsd [x,y]=[0,0] 
+ShowOsd [x,y]=[0,0] 
+HY_Enc_SetOSDTime 1 [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+yb111111111111111111
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetOsdText 1579][0;39mover...
+============== COsd::SetType, 22222222, bEnable=0x00000000 , showtype=0x0000000b
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+HY_Enc_SetOSDTime 1 [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+yb111111111111111111
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetOsdText 1579][0;39mover...
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+HY_Enc_SetOSDTime 1 [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+yb111111111111111111
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetOsdText 1579][0;39mover...
+============== COsd::SetType, 3333333333, bEnable=0x00000000 , showtype=0x0000000b
+======= COsd::SetType 4444444444, bEnable=0x00000000 , showtype=0x0000000b
+======= COsd::SetType 5555555555, bEnable=0x80000001 , showtype=0x0000000b
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+HY_Enc_SetOSDTime 1 [x,y]=[450,0] 
+ShowOsd [x,y]=[450,0] 
+yb111111111111111111
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetOsdText 1579][0;39mover...
+!!!! pSpecialCfg=(nil),RecordCfgSection=RecordCfg key_str=, value= 
+!!!! strncmp(value, 0, 1)=-48 
+!!! clear key_str! 
+CRecord::IsSupport , EncFormat =14
+ EDVRS_DDT_GetDeviceDescriptionByID, iItemIndex=27, BoardID=49168 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IPC_Generate_Type, SensorType=42, BoardFormat=73 bbbbbbbbb 
+IPC_Generate_Type, platform, m=17 
+IPC_Generate_Type, szTypeName=IPC-17483W 
+ BuildDeviceDescriptionByID_GM  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IsSupport_byResolution=14 
+============================== from IE, CRecord::SetEncCfg, nEnctype=0 ================================== 
+ EDVRS_DDT_GetDeviceDescriptionByID, iItemIndex=27, BoardID=49168 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IPC_Generate_Type, SensorType=42, BoardFormat=73 bbbbbbbbb 
+IPC_Generate_Type, platform, m=17 
+IPC_Generate_Type, szTypeName=IPC-17483W 
+ BuildDeviceDescriptionByID_GM  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+CRecord::SetEncCfg, Info->byPicQuality = 3 
+CRecord::SetEncCfg,  tmp_info.byPicQuality =3 
+SetEncCfg 1293 tmp_info.byResolution =0xe
+CRecord::IsSupport , EncFormat =14
+SetEncCfg 1295 tmp_info.byResolution =0xe
+!!!! pSpecialCfg=(nil),RecordCfgSection=RecordCfg key_str=, value= 
+!!!! strncmp(value, 0, 1)=-48 
+!!! clear key_str! 
+save encode cfg: 14:15:1:1:3:0:800:0:50 
+[CRecord:CheckEncCfg] ch=0 pic=15 fs=15,br=819200,cbr=1,qlevel=0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1448][0;39mMP4Sys_EncSetCodecPara CH_0 : bAux = 0, PictureFormat = 15, Bit = 800k, FRate = 15, bCbr = 1, Key = 50, picQ = 0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1476][0;39mpChannelContext->m_UserSetFrameRate[0]=25
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1497][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+CRecord::SetEncCfg, save encode PicQualityPat: 0 
+MP4Sys_EncSetPicQualityPat >>>>>>>>>>>>>>>>>>>>>>>>>> PicQualityPat=0 
+!!! clear key_str! 
+CRecord::IsSupport , EncFormat =14
+============================== from IE, CRecord::SetEncCfg, nEnctype=1 ================================== 
+CRecord::SetEncCfg, Info->byPicQuality = 3 
+CRecord::SetEncCfg,  tmp_info.byPicQuality =3 
+SetEncCfg 1293 tmp_info.byResolution =0xe
+CRecord::IsSupport , EncFormat =14
+SetEncCfg 1295 tmp_info.byResolution =0xe
+!!! clear key_str! 
+save encode cfg: 14:15:1:0:3:0:800:0:15 
+[CRecord:CheckEncCfg] ch=0 pic=15 fs=15,br=819200,cbr=1,qlevel=0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1448][0;39mMP4Sys_EncSetCodecPara CH_0 : bAux = 0, PictureFormat = 15, Bit = 800k, FRate = 15, bCbr = 1, Key = 50, picQ = 0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1476][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1497][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+!!! clear key_str! 
+CRecord::IsSupport , EncFormat =14
+============================== from IE, CRecord::SetEncCfg, nEnctype=2 ================================== 
+CRecord::SetEncCfg, Info->byPicQuality = 3 
+CRecord::SetEncCfg,  tmp_info.byPicQuality =3 
+SetEncCfg 1293 tmp_info.byResolution =0xe
+CRecord::IsSupport , EncFormat =14
+SetEncCfg 1295 tmp_info.byResolution =0xe
+!!! clear key_str! 
+save encode cfg: 14:15:1:0:3:0:800:0:15 
+[CRecord:CheckEncCfg] ch=0 pic=15 fs=15,br=819200,cbr=1,qlevel=0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1448][0;39mMP4Sys_EncSetCodecPara CH_0 : bAux = 0, PictureFormat = 15, Bit = 800k, FRate = 15, bCbr = 1, Key = 50, picQ = 0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1476][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1497][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+[CRecord:CheckEncCfg] ch=0 pic=15 fs=15,br=819200,cbr=1,qlevel=0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1448][0;39mMP4Sys_EncSetCodecPara CH_0 : bAux = 0, PictureFormat = 15, Bit = 800k, FRate = 15, bCbr = 1, Key = 50, picQ = 0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1476][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1497][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+[0;31m[SysSDK] ERROR[Hw_MPP.cpp Hi_MPP_StartENC 1380][0;39mError: FH_SYS_BindVpu2Enc failed with 504
+Hi_MPP_SetEncPara, bAux = 0 pParam->bCbr = 1, PictureFormat=15, BitRate=800, FrameRate=15, PicQualityLever=0, KeyFrameInterval=50
+Hi_MPP_SetEncPara, FH_VPSS_SetFramectrl, subChn=0, frame_count=15, frame_time=1 
+FH_VENC_GetAdvParam <0> OK!
+FH_VENC_SetAdvParam <0> OK!
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_SetEncPara 1709][0;39mHi_MPP_SetEncPara channel 0
+Hi_MPP_SetEncPara bitrate=800 ============================================================ 
+MP4Sys_EncAdjustMotionDetectPrecision >>>>>>>>>>>>>>>>> iGrade=1, iMotionDetectFps=10 
+ EDVRS_DDT_GetDeviceDescriptionByID, iItemIndex=27, BoardID=49168 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IPC_Generate_Type, SensorType=42, BoardFormat=73 bbbbbbbbb 
+IPC_Generate_Type, platform, m=17 
+IPC_Generate_Type, szTypeName=IPC-17483W 
+ BuildDeviceDescriptionByID_GM  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+[Init] MP4Sys_EncSetCodecPara(Aux) picFormat=0 bCbr=1 KeyFrameInterval=50 BitRate=512000 FrameRate=15
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1448][0;39mMP4Sys_EncSetCodecPara CH_0 : bAux = 1, PictureFormat = 0, Bit = 500k, FRate = 15, bCbr = 1, Key = 50, picQ = 3
+Hi_MPP_SetEncPara, bAux = 0 pParam->bCbr = 1, PictureFormat=15, BitRate=800, FrameRate=15, PicQualityLever=0, KeyFrameInterval=50
+Hi_MPP_SetEncPara, FH_VPSS_SetFramectrl, subChn=0, frame_count=15, frame_time=1 
+FH_VENC_GetAdvParam <0> OK!
+FH_VENC_SetAdvParam <0> OK!
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_SetEncPara 1709][0;39mHi_MPP_SetEncPara channel 0
+Hi_MPP_SetEncPara bitrate=800 ============================================================ 
+[Init] MP4Sys_EncSetCodecPara(HDAux) picFormat=8 bCbr=1 KeyFrameInterval=25 BitRate=1048576 FrameRate=255
+ADD AVL_AV_CallBack to watchdog task !!!
+[Watch Daemon] add, TaskID = 1, TimeSpace = 30, pMsg->m_szTaskName = AVL_AV_CallBack
+[WATCH] WATCH_AddTask() ok, TaskID = 1
+AVL_Stop_sCamera_watchdog, 0000.... 
+[CChannelManager.cpp 3758]
+[AVL][INFO][669]: [Fnx_CheckWatchThread]threadid=669 
+
+Jan  1 00:00:13 [AVL][INFO][669]: [Fnx_CheckWatchThread]threadid=669 
+
+ReadMediaStreamThread, waiting for MP4Sys_SetVideoOrientation, nowtime=25, g_tOrient_initedtime=0, passedtime=25 
+[00:00:14.355979, 1514736014] UpdateOSDThread, normal check FH_VENC_GetStream, main: 1, 1, sub: 1, 1
+Fnx_CheckWatchThread_sCamera, byebye!! 
+AVL_Stop_sCamera_watchdog, stopped keepalive thread 1111...., s_init_watchdog=1077661968 
+[WATCH] WATCH_RemoveTask() ok, nTaskID = 0
+OK, AVL_AV_CallBack has replaced init_watchdog 
+[Watch Daemon] remove, TaskID = 0
+Hi_MPP_StopENC chan 0
+[CRecord:CheckEncCfg] ch=0 pic=15 fs=15,br=819200,cbr=1,qlevel=0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1448][0;39mMP4Sys_EncSetCodecPara CH_0 : bAux = 0, PictureFormat = 15, Bit = 800k, FRate = 15, bCbr = 1, Key = 50, picQ = 0
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1476][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+[0;32m[SysSDK][Hi_Api.cpp MP4Sys_EncSetCodecPara 1497][0;39mpChannelContext->m_UserSetFrameRate[0]=15
+Hi_MPP_SetEncPara, bAux = 0 pParam->bCbr = 1, PictureFormat=15, BitRate=800, FrameRate=15, PicQualityLever=0, KeyFrameInterval=50
+Hi_MPP_SetEncPara, FH_VPSS_SetFramectrl, subChn=0, frame_count=15, frame_time=1 
+FH_VENC_GetAdvParam <0> OK!
+FH_VENC_SetAdvParam <0> OK!
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_SetEncPara 1709][0;39mHi_MPP_SetEncPara channel 0
+Hi_MPP_SetEncPara bitrate=800 ============================================================ 
+[CChannelManager:Init]theCRecord[0]->GetRecStreamIndex() = 0
+mpu_init2_thread 2222222222222 
+====================== SYS_Init ======================== 
+[CChannelManager.cpp 3817]
+[CChannelManager.cpp 3848]
+IsEth0Broken, finnally, eth0_status=1 
+[CChannelManager.cpp 3790]
+[CChannelManager.cpp 3733]
+[AVL][INFO][669]: [Fnx_CheckThread_capture]threadid=669 
+
+Jan  1 00:00:14 [AVL][INFO][669]: [Fnx_CheckThread_capture]threadid=669 
+
+[AVL][INFO][669]: [Fnx_RealStreamSetOSDThread]threadid=669 
+
+Jan  1 00:00:14 [AVL][INFO][669]: [Fnx_RealStreamSetOSDThread]threadid=669 
+
+[AVL][INFO][669]: [Fnx_CheckThread]threadid=669 
+
+Jan  1 00:00:14 [AVL][INFO][669]: [Fnx_CheckThread]threadid=669 
+
+[AVL][INFO][669]: [Fnx_CheckScheduleThread]threadid=669 
+
+Jan  1 00:00:14 [AVL][INFO][669]: [Fnx_CheckScheduleThread]threadid=669 
+
+CRecord::StartRec, m_iRecSchedulType=2 
+PUB[INFO][669]: [CMaintenance.cpp MaintenanceWorkThread 666] begin run thread 669 !
+
+Jan  1 00:00:14 PUB[INFO][669]: [CMaintenance.cpp MaintenanceWorkThread 666] begin run thread 669 !
+
+CTimeSync::ReadSubCfg, get addr=ntp-sz.chl.la, s_szNetAddr=ntp-sz.chl.la
+mpu_init2_thread 3333333333333 
+[CChannelManager:AvReadStream]receive PktSysHeader
+PUB[INFO][669]: [CMaintenance.cpp MaintenanceWorkThread 666] begin run thread 669 !
+
+Jan  1 00:00:14 PUB[INFO][669]: [CMaintenance.cpp MaintenanceWorkThread 666] begin run thread 669 !
+
+!!!! do_time_sync_20161229 !!!! 
+get_ntp_time_20180411 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[NTP][ntp.c:338]tmp=ntp-sz.chl.la
+[NTP][ntp.c:380]ÊÇip
+[NTP][ntp.c:386]finally, szTimeServer:ntp-sz.chl.la
+HieServer_RemoteFileUploadIf_20160401 
+PUB[INFO][669]: [MPU_CIU_Playback.cpp RPB_WorkThread 1364] begin run thread 669 !
+
+Jan  1 00:00:14 PUB[INFO][669]: [MPU_CIU_Playback.cpp RPB_WorkThread 1364] begin run thread 669 !
+
+HieServer_HistoryChannelIfMultiType
+*********************** HieServer_FileQueryIf called
+********************************   CInterfaceSet::SetInterface  1
+********************************   CInterfaceSet::SetInterface  2
+s_bMotorPTZ_FH_Mode = 3 
+service_ptz_init pan_motor=1, tilt_motor=0 !
+init pan ok! ###############################
+service_ptz_init_module
+stepper_init st = 0x40370efc
+open  motor_pwm failed firstly
+PUB[INFO][669]: [MPU_CIU_Picture.cpp Fnx_CreateThread 264] begin run thread 669 !
+
+Jan  1 00:00:14 PUB[INFO][669]: [MPU_CIU_Picture.cpp Fnx_CreateThread 264] begin run thread 669 !
+
+20 71 75 61 64 20 6e 6f 03 00 74 69 6f 6e 2e 20 20 54 68 
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save AUX_SysHead
+72 41 64 6d 69 6e 20 72 03 00 74 40 6c 6f 63 61 6c 68 6f 
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save HD_AUX_SysHead
+00 00 01 c6 4d 50 47 34 03 00 19 00 00 08 00 80 07 38 04 
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Save Main_SysHead
+open  motor_pwm failed secondly
+PWM_MOTOR_Init failed!
+stepper_init_mask=0xf
+PWM_MOTO_ALLOC_GROUP = -1
+stepper_init tilt fail!
+init tilt ok! #################################
+service_ptz_init_module
+stepper_init st = 0x4037103c
+stepper_init tilt fail!
+apl_ptz_init, service_ptz_init 11111111111111111111111111111111111111111111111111111 
+service_ptz_supported, mode=0, valid=1 22222222222222
+service_ptz_supported, mode=1, valid=1 22222222222222
+service_ptz_supported, mode=0, valid=1 22222222222222
+service_ptz_stop STOP
+service_ptz_supported, mode=0, valid=1 22222222222222
+service_ptz_init_move, before 11111111111111111111111111111111111111 
+service_ptz_supported, mode=0, valid=1 22222222222222
+service_ptz_supported, mode=0, valid=1 22222222222222
+service_ptz_init_move, mode: 0 ptz_module[mode].status=3
+ptz_put_msg 111111111111111111 0 
+ptz_module_sema_post,  SERVICE_PTZ_MOVE_INIT 
+ptz_module_sema_post >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+ptz_module_sema_post <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+this is pan !
+PUB[INFO][669]: [MPU_CIU_RemoteCommand.cpp Fnx_CommandCreateThread 3026] begin run thread 669 !
+
+Jan  1 00:00:15 PUB[INFO][669]: [MPU_CIU_RemoteCommand.cpp Fnx_CommandCreateThread 3026] begin run thread 669 !
+
+ptz_module_sema_wait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+ptz_module_sema_wait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+ptz_module_sema_wait <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+service_ptz_proc 1111111111
+ptz_get_msg 2222222222222222222 0 
+service_ptz_proc 1111111111111111122222222222222, msg->mode=0
+service_ptz_proc 222222222222222, msg->mode =0
+service_ptz_proc 3333333333333333333, msg->val =-560
+service_ptz_proc, ######################################## msg->mode 0
+ptz_start[0] oldpos[0] round[-560] delay[2]
+round= 0,add_move = 0
+service_ptz_proc 444444444444444444, msg->val =12, msg->callback=0x40281a5c 
+_apl_ptz_init_cb start !
+service_ptz_supported, mode=1, valid=1 22222222222222
+service_ptz_stop STOP
+service_ptz_supported, mode=1, valid=1 22222222222222
+service_ptz_init_move, before 333333333333333333333333333333333333333 
+service_ptz_supported, mode=1, valid=1 22222222222222
+service_ptz_supported, mode=1, valid=1 22222222222222
+service_ptz_init_move, mode: 1 ptz_module[mode].status=3
+ptz_put_msg 111111111111111111 0 
+ptz_module_sema_post,  SERVICE_PTZ_MOVE_INIT 
+ptz_module_sema_post >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+ptz_module_sema_wait <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+service_ptz_proc 1111111111
+ptz_get_msg 2222222222222222222 0 
+service_ptz_proc 1111111111111111122222222222222, msg->mode=0
+service_ptz_proc 222222222222222, msg->mode =0
+service_ptz_proc 3333333333333333333, msg->val =-175
+service_ptz_proc, ######################################## msg->mode 0
+ptz_start[1] oldpos[0] round[-175] delay[2]
+round= 0,add_move = 0
+service_ptz_proc 444444444444444444, msg->val =0, msg->callback=0x40281a5c 
+_apl_ptz_init_cb start !
+_apl_ptz_init_cb, g_ptz_inited 1
+ptz_module_sema_wait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+ptz_module_sema_post <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+_apl_ptz_init_cb, g_ptz_inited 1
+ptz_module_sema_wait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[MPU][MPU_PTZ_API.cpp-MPU_TPC_GetNetInterface:773]: Get CTransparentManager instance fail!
+[MPU][ASSERT][669]: Assert Failed! [MPU_PTZ_API.cpp-MPU_TPC_GetNetInterface:773]: NULL != pMgr
+Jan  1 00:00:15 [MPU][ASSERT][669]: Assert Failed! [MPU_PTZ_API.cpp-MPU_TPC_GetNetInterface:773]: NULL != pMgr
+[MPU][ASSERT][669]: ***ASSERT FAILED***, Programm Continued! 
+Jan  1 00:00:15 [MPU][ASSERT][669]: ***ASSERT FAILED***, Programm Continued! 
+[MPU][MPU_CIU_TransparentChannel.cpp-CIU_TransparentChanne_Init:36]: call MPU_TPC_GetNetInterface() fail
+HieServer_Start() begin >>>>>>>>
+[NetSDK Server] Protocol_Set.cpp Insert 82 Create CProtocolPrivate
+.
+[NetSDK Server] Protocol_Private.cpp Intialize 78 Failed.
+dlopen failed File not found
+HieServer_Start Insert ProtocolTideMobile
+[NetSDK Server] Protocol_Set.cpp Insert 94 Create CProtocolTideMobile
+.
+[NetSDK Server] Protocol_TideMobile.cpp Intialize 73 Failed.
+dlopen failed File not found
+HieServer_Start Insert ProtocolOnvif
+[NetSDK Server] Protocol_Set.cpp Insert 107 Create CProtocolHYOnvif
+.
+[NetSDK Server] Protocol_HYOnvif.cpp Intialize 83 Failed.
+dlopen failed File not found
+HieServer_Start Insert ProtocolAlarmMonitorSH
+[NetSDK Server] Protocol_Set.cpp Insert 118 Create CProtocolAlarmMonitorSH
+.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp Intialize 82 Failed.
+dlopen libAlarmMonitorSH.so failed File not found
+HieServer_Start Insert ProtocolGB28181
+[NetSDK Server] Protocol_Set.cpp Insert 124 Create CProtocolGB28181
+.
+pFileName:libgb28181.so
+[NetSDK Server] Protocol_gb28181.cpp Intialize 78 Failed.
+dlopen failed File not found
+HieServer_Start Insert ProtocolVSIP
+[NetSDK Server] Protocol_Set.cpp Insert 130 Create CProtocolVSIP
+.
+[NetSDK Server] Protocol_VSIP.cpp Intialize 77 Failed.
+dlopen failed File not found
+HieServer_Start Insert ProtocolGLNK
+[NetSDK Server] Protocol_Set.cpp Insert 136 Create CProtocolGLNK
+.
+check_IRCUT_thread 1111111111111111111111111111 VideoColor=4, s_LightMode=0, s_LightModeMenual=0 
+[INFO]Read sadc get: 0  sadc
+MP4Sys_GetIR_Detect, detect_nvalue = 0, pFlag = 0 
+MP4Sys_SetVideoColor, ColorMode=4, ir_detect_status = 0 (0:day, 1:night)#############################
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+CRecord::StartRec, m_iRecSchedulType=2 
+HieServer_Start Insert ProtocolCGI
+[NetSDK Server] Protocol_Set.cpp Insert 141 Create CProtocolCGI
+.
+[NetSDK Server] Protocol_CGI.cpp Intialize 76 Failed.
+HieServer_Start Insert ProtocolIPVS
+[NetSDK Server] Protocol_Set.cpp Insert 147 Create CProtocolIPVS
+.
+[NetSDK Server] Protocol_IPVS.cpp Intialize 77 Failed.
+dlopen failed File not found
+[NetSDK Server] Protocol_Private.cpp ConfigureIf 143 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp ConfigureIf 130 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp ConfigureIf 121 Track.
+[NetSDK Server] Protocol_HYOnvif.cpp ConfigureIf 130 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp ConfigureIf 111 Track.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp ConfigureIf 120 Failed.
+[NetSDK Server] Protocol_gb28181.cpp ConfigureIf 137 Failed.
+[NetSDK Server] Protocol_VSIP.cpp ConfigureIf 134 Failed.
+[NetSDK Server] Protocol_IPVS.cpp ConfigureIf 134 Failed.
+GLNK_ConfigureIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp ConfigureIf 141 Failed.
+[NetSDK Server] Protocol_Private.cpp UserActionIf 158 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp UserActionIf 145 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp UserActionIf 149 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp UserActionIf 139 Failed.
+[NetSDK Server] Protocol_gb28181.cpp UserActionIf 152 Failed.
+[NetSDK Server] Protocol_VSIP.cpp UserActionIf 149 Failed.
+[NetSDK Server] Protocol_IPVS.cpp UserActionIf 149 Failed.
+GLNK_UserActionIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp UserActionIf 156 Failed.
+[NetSDK Server] Protocol_Private.cpp RefreshEventIf 173 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp RefreshEventIf 160 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp RefreshEventIf 168 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp RefreshEventIf 158 Failed.
+[NetSDK Server] Protocol_gb28181.cpp RefreshEventIf 167 Failed.
+[NetSDK Server] Protocol_VSIP.cpp RefreshEventIf 164 Failed.
+[NetSDK Server] Protocol_IPVS.cpp RefreshEventIf 164 Failed.
+GLNK_RefreshEventIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp RefreshEventIf 171 Failed.
+[NetSDK Server] Protocol_Private.cpp StreamCaptureIf 192 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp StreamCaptureIf 175 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp StreamCaptureIf 187 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp StreamCaptureIf 177 Failed.
+[NetSDK Server] Protocol_gb28181.cpp StreamCaptureIf 183 Failed.
+[NetSDK Server] Protocol_VSIP.cpp StreamCaptureIf 180 Failed.
+[NetSDK Server] Protocol_IPVS.cpp StreamCaptureIf 180 Failed.
+GLNK_StreamCaptureIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp StreamCaptureIf 187 Failed.
+[NetSDK Server] Protocol_Private.cpp VoiceStreamIf 207 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp VoiceStreamIf 190 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp VoiceStreamIf 206 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp VoiceStreamIf 196 Failed.
+[NetSDK Server] Protocol_gb28181.cpp VoiceStreamIf 198 Failed.
+[NetSDK Server] Protocol_VSIP.cpp VoiceStreamIf 195 Failed.
+[NetSDK Server] Protocol_IPVS.cpp VoiceStreamIf 195 Failed.
+GLNK_VoiceStreamIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp VoiceStreamIf 202 Failed.
+[NetSDK Server] Protocol_Private.cpp HistoryQueryIf 222 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp HistoryQueryIf 205 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp HistoryQueryIf 225 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp HistoryQueryIf 215 Failed.
+[NetSDK Server] Protocol_gb28181.cpp HistoryQueryIf 213 Failed.
+[NetSDK Server] Protocol_VSIP.cpp HistoryQueryIf 210 Failed.
+[NetSDK Server] Protocol_IPVS.cpp HistoryQueryIf 210 Failed.
+GLNK_HistoryQueryIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp HistoryQueryIf 217 Failed.
+[NetSDK Server] Protocol_Private.cpp HistoryQueryIf 237 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp HistoryQueryIf 244 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp HistoryQueryIf 234 Failed.
+[NetSDK Server] Protocol_gb28181.cpp HistoryQueryIf 228 Failed.
+[NetSDK Server] Protocol_VSIP.cpp HistoryQueryIf 225 Failed.
+[NetSDK Server] Protocol_IPVS.cpp HistoryQueryIf 225 Failed.
+GLNK_HistoryQueryMultiTypeIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp HistoryQueryIf 232 Failed.
+[NetSDK Server] Protocol_Private.cpp FileQueryIf 252 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp FileQueryIf 220 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp FileQueryIf 263 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp FileQueryIf 253 Failed.
+[NetSDK Server] Protocol_gb28181.cpp FileQueryIf 243 Failed.
+[NetSDK Server] Protocol_VSIP.cpp FileQueryIf 240 Failed.
+[NetSDK Server] Protocol_IPVS.cpp FileQueryIf 240 Failed.
+GLNK_FileQueryIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp FileQueryIf 247 Failed.
+ReadMediaStreamThread, waiting for MP4Sys_SetVideoOrientation, nowtime=27, g_tOrient_initedtime=0, passedtime=27 
+[NetSDK Server] Protocol_Private.cpp LogQueryIf 268 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp LogQueryIf 236 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp LogQueryIf 283 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp LogQueryIf 273 Failed.
+[NetSDK Server] Protocol_gb28181.cpp LogQueryIf 259 Failed.
+[NetSDK Server] Protocol_VSIP.cpp LogQueryIf 256 Failed.
+[NetSDK Server] Protocol_IPVS.cpp LogQueryIf 256 Failed.
+GLNK_LogQueryIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp LogQueryIf 263 Failed.
+[NetSDK Server] Protocol_Private.cpp HistoryChannelIf 283 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp HistoryChannelIf 251 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp HistoryChannelIf 302 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp HistoryChannelIf 292 Failed.
+[NetSDK Server] Protocol_gb28181.cpp HistoryChannelIf 274 Failed.
+[NetSDK Server] Protocol_VSIP.cpp HistoryChannelIf 271 Failed.
+[NetSDK Server] Protocol_IPVS.cpp HistoryChannelIf 271 Failed.
+[NetSDK Server] Protocol_GLNK.cpp HistoryChannelIf 307 Failed.
+[NetSDK Server] Protocol_CGI.cpp HistoryChannelIf 278 Failed.
+[NetSDK Server] Protocol_Private.cpp HistoryChannelIf 298 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp HistoryChannelIf 321 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp HistoryChannelIf 311 Failed.
+[NetSDK Server] Protocol_gb28181.cpp HistoryChannelIf 290 Failed.
+[NetSDK Server] Protocol_VSIP.cpp HistoryChannelIf 287 Failed.
+[NetSDK Server] Protocol_IPVS.cpp HistoryChannelIf 287 Failed.
+GLNK_HistoryChannelMultiTypeIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp HistoryChannelIf 294 Failed.
+[NetSDK Server] Protocol_Private.cpp TransparentChannelIf 313 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp TransparentChannelIf 266 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp TransparentChannelIf 340 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp TransparentChannelIf 330 Failed.
+[NetSDK Server] Protocol_gb28181.cpp TransparentChannelIf 305 Failed.
+[NetSDK Server] Protocol_VSIP.cpp TransparentChannelIf 302 Failed.
+[NetSDK Server] Protocol_IPVS.cpp TransparentChannelIf 302 Failed.
+GLNK_TransparentChannelIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp TransparentChannelIf 309 Failed.
+[NetSDK Server] Protocol_Private.cpp RemoteDownloadIf 328 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp RemoteDownloadIf 281 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp RemoteDownloadIf 359 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp RemoteDownloadIf 349 Failed.
+[NetSDK Server] Protocol_gb28181.cpp RemoteDownloadIf 320 Failed.
+[NetSDK Server] Protocol_VSIP.cpp RemoteDownloadIf 317 Failed.
+[NetSDK Server] Protocol_IPVS.cpp RemoteDownloadIf 317 Failed.
+GLNK_RemoteDownloadIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp RemoteDownloadIf 324 Failed.
+[NetSDK Server] Protocol_Private.cpp RemoteUploadIf 343 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp RemoteUploadIf 296 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp RemoteUploadIf 378 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp RemoteUploadIf 368 Failed.
+[NetSDK Server] Protocol_gb28181.cpp RemoteUploadIf 335 Failed.
+[NetSDK Server] Protocol_VSIP.cpp RemoteUploadIf 332 Failed.
+[NetSDK Server] Protocol_IPVS.cpp RemoteUploadIf 332 Failed.
+GLNK_RemoteUploadIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp RemoteUploadIf 339 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp RemoteFileUploadIf 397 Failed.
+[NetSDK Server] Protocol_Private.cpp OtherFunctionIf 363 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp OtherFunctionIf 317 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp OtherFunctionIf 416 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp OtherFunctionIf 392 Failed.
+[NetSDK Server] Protocol_gb28181.cpp OtherFunctionIf 355 Failed.
+[NetSDK Server] Protocol_VSIP.cpp OtherFunctionIf 353 Failed.
+nWiFiIntensity=0 CRecord::StartRec, m_iRecSchedulType=2 
+[NetSDK Server] Protocol_IPVS.cpp OtherFunctionIf 353 Failed.
+GLNK_OtherFunctionIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp OtherFunctionIf 359 Failed.
+[NetSDK Server] Protocol_Private.cpp RemoteCommandIf 378 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp RemoteCommandIf 332 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp RemoteCommandIf 435 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp RemoteCommandIf 411 Failed.
+[NetSDK Server] Protocol_gb28181.cpp RemoteCommandIf 370 Failed.
+[NetSDK Server] Protocol_VSIP.cpp RemoteCommandIf 368 Failed.
+[NetSDK Server] Protocol_IPVS.cpp RemoteCommandIf 368 Failed.
+GLNK_RemoteCommandIf >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp RemoteCommandIf 374 Failed.
+[NetSDK Server] Protocol_Private.cpp DiskGroupManageIf 393 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp DiskGroupManageIf 347 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp DiskGroupManageIf 454 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp DiskGroupManageIf 430 Failed.
+[NetSDK Server] Protocol_gb28181.cpp DiskGroupManageIf 385 Failed.
+[NetSDK Server] Protocol_VSIP.cpp DiskGroupManageIf 383 Failed.
+[NetSDK Server] Protocol_IPVS.cpp DiskGroupManageIf 383 Failed.
+[NetSDK Server] Protocol_GLNK.cpp DiskGroupManageIf 418 Failed.
+[NetSDK Server] Protocol_CGI.cpp DiskGroupManageIf 389 Failed.
+[NetSDK Server] Protocol_Private.cpp DiskGroupManageIf 408 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp DiskGroupManageIf 473 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp DiskGroupManageIf 449 Failed.
+[NetSDK Server] Protocol_gb28181.cpp DiskGroupManageIf 400 Failed.
+[NetSDK Server] Protocol_VSIP.cpp DiskGroupManageIf 398 Failed.
+[NetSDK Server] Protocol_IPVS.cpp DiskGroupManageIf 398 Failed.
+[NetSDK Server] Protocol_GLNK.cpp DiskGroupManageIf 433 Failed.
+[NetSDK Server] Protocol_CGI.cpp DiskGroupManageIf 404 Failed.
+[NetSDK Server] Protocol_Private.cpp PanelControl 615 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp PanelControl 553 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp PanelControl 749 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp PanelControl 725 Failed.
+[NetSDK Server] Protocol_gb28181.cpp PanelControl 605 Failed.
+[NetSDK Server] Protocol_VSIP.cpp PanelControl 603 Failed.
+[NetSDK Server] Protocol_IPVS.cpp PanelControl 603 Failed.
+GLNK_PanelControl >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp PanelControl 609 Failed.
+[NetSDK Server] Protocol_Private.cpp StreamTransfer 630 Failed.
+[NetSDK Server] Protocol_Private.cpp TransmitHistoryStreamQuery 645 Failed.
+CProtocolSet::Start 0
+CProtocolSet::Start inside 0
+[NetSDK Server] Protocol_Private.cpp Start 418 Failed.
+CProtocolSet::Start 1
+CProtocolSet::Start inside 1
+[NetSDK Server] Protocol_TideMobile.cpp Start 357 Failed.
+CProtocolSet::Start 2
+CProtocolSet::Start 3
+CProtocolSet::Start 4
+CProtocolSet::Start inside 4
+[NetSDK Server] Protocol_HYOnvif.cpp Start 487 Failed.
+CProtocolSet::Start 5
+CProtocolSet::Start inside 5
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp Start 463 Failed.
+CProtocolSet::Start 6
+CProtocolSet::Start inside 6
+[NetSDK Server] Protocol_gb28181.cpp Start 410 Failed.
+CProtocolSet::Start 7
+CProtocolSet::Start inside 7
+[NetSDK Server] Protocol_VSIP.cpp Start 408 Failed.
+CProtocolSet::Start 8
+CProtocolSet::Start inside 8
+[NetSDK Server] Protocol_IPVS.cpp Start 408 Failed.
+CProtocolSet::Start 9
+CProtocolSet::Start inside 9
+[NetSDK GLNK] [GLNK.cpp GLNK_Start 180]:Enter GLNK_Start 
+
+[NetSDK GLNK] [GLNK.cpp GLNK_Start 190]:***glnk start
+11111111111111111111 GetP2PCfg=1 
+GLNK_Start, config setted to enable p2p!!
+ EDVRS_DDT_GetDeviceDescriptionByID, iItemIndex=27, BoardID=49168 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IPC_Generate_Type, SensorType=42, BoardFormat=73 bbbbbbbbb 
+IPC_Generate_Type, platform, m=17 
+IPC_Generate_Type, szTypeName=IPC-17483W 
+ BuildDeviceDescriptionByID_GM  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+
+ UUID = 8044d600
+ glnk_init startIsEth0Broken, finnally, eth0_status=1 
+NET_GetIF, pRet=0x401f6950, wlan0 
+GLNKServer_Start, szNetIF=0x401f6950, szNetIF=wlan0 
+
+ UUID = 8044d600Version is 0x20180330 
+[00:00:17.039829] [709][sCamera] glnk_init:173: [8044d600] COMPANYNAME is 20180330 HUACHUANG
+
+CRecord::StartRec, m_iRecSchedulType=2 
+[00:00:17.725146] [709][sCamera] local port = 30000
+[00:00:17.731392] [836][sCamera] TSI_SetStatus:339: statue  [0] -> [1]   2347
+[00:00:17.731845] [836][sCamera] TSI_SetStatus:339: statue  [1] -> [3]   2409
+[00:00:17.738114] [709][sCamera] glnk_init:438: PushURL = huachuang.push2u.com
+[00:00:17.754098] [709][sCamera] glnk_init end!
+glnk_init return (0)!!!
+[NetSDK GLNK] [GLNK.cpp GLNK_Start 220]:***glnk start success
+StreamStartCapture 00000000 type 1, CH 0 >>>>>>>>>>>>>>> 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=0 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=1 
+StreamStartCapture <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+HieServer StreamStartCapture eMediaCodeMain channel = 0 g_nServerMainStartTime = 1
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=0 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=1 
+StreamStartCapture 00000000 type 2, CH 0 >>>>>>>>>>>>>>> 
+[0;31m[SysSDK] ERROR[Hw_MPP.cpp Hi_MPP_StartENC 1380][0;39mError: FH_SYS_BindVpu2Enc failed with 504
+Hi_MPP_SetEncPara, bAux = 0 pParam->bCbr = 1, PictureFormat=15, BitRate=800, FrameRate=15, PicQualityLever=0, KeyFrameInterval=50
+Hi_MPP_SetEncPara, FH_VPSS_SetFramectrl, subChn=0, frame_count=15, frame_time=1 
+FH_VENC_GetAdvParam <0> OK!
+FH_VENC_SetAdvParam <0> OK!
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_SetEncPara 1709][0;39mHi_MPP_SetEncPara channel 0
+Hi_MPP_SetEncPara bitrate=800 ============================================================ 
+Hi_MPP_SetEncPara, bAux = 1 pParam->bCbr = 1, PictureFormat=0, BitRate=500, FrameRate=15, PicQualityLever=3, KeyFrameInterval=50
+Hi_MPP_SetEncPara, FH_VPSS_SetFramectrl, subChn=1, frame_count=15, frame_time=1 
+FH_VENC_GetAdvParam <1> OK!
+FH_VENC_SetAdvParam <1> OK!
+[0;32m[SysSDK][Hw_MPP.cpp Hi_MPP_SetEncPara 1709][0;39mHi_MPP_SetEncPara channel 1
+Hi_MPP_SetEncPara bitrate=500 ============================================================ 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=0 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=1 
+StreamStartCapture <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+HieServer StreamStartCapture eMediaCodeAssist channel = 0 g_nServerAUXStartTime = 1
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=0 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=1 
+StreamStartCapture 00000000 type 3, CH 0 >>>>>>>>>>>>>>> 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=0 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=1 
+StreamStartCapture <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+HieServer StreamStartCapture eMediaCodeHDAssist channel = 0 g_nServerHDAUXStartTime = 1
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=0 
+Hi_MPP_ForceIFrame >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> subChn=1 
+before Snapshot_SetCapPicCallBack 000000000000000000000 
+Snapshot_SetCapPicCallBack >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+Snapshot_SetCapPicCallBack <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+STR_SetMotionVideoCallBack >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+STR_SetMotionVideoCallBack <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+before Snapshot_SetCapPicCallBack 1111111111111111111111 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+CCoder::HDAuxCoder_GetEncCfg, pInfo->byResolution=7 m_HDCodecParam.PictureFormat=8  ===== 
+ VideoDataFormatInfo, i=15, BoardFormat=73, nResolution=14 
+VideoDataFormatInfo, nWidthMain=1280, nHeightMain=1280, nWidthSub=640, nHeightSub=640 
+MPU_SetCallBack_reget_passwd >>>>>>>>>>>>>>> 
+ CProtocolSet::Start 10
+CProtocolSet::Start inside 10
+[NetSDK Server] Protocol_CGI.cpp Start 414 Failed.
+HieServer_Start() return 11 <<<<<
+[NetSDK Server] Protocol_Private.cpp DeviceProbeStart 590 Failed.
+[NetSDK Server] Protocol_TideMobile.cpp DeviceProbeStart 528 Failed.
+[NetSDK Server] Protocol_HYOnvif.cpp DeviceProbeStart 716 Failed.
+[NetSDK Server] Protocol_AlarmMonitorSH.cpp DeviceProbeStart 692 Failed.
+[NetSDK Server] Protocol_gb28181.cpp DeviceProbeStart 580 Failed.
+[NetSDK Server] Protocol_VSIP.cpp DeviceProbeStart 578 Failed.
+[NetSDK Server] Protocol_IPVS.cpp DeviceProbeStart 578 Failed.
+GLNK_DeviceProbeStart >>>>>>>>>>>>>>>>>>>>> 
+[NetSDK Server] Protocol_CGI.cpp DeviceProbeStart 584 Failed.
+NULL == m_aProtocolLib[nChannel], return 
+PUB[INFO][669]: [MPU_CIU_Init.cpp reset_hieserver_thread 348] begin run thread 669 !
+
+Jan  1 00:00:17 PUB[INFO][669]: [MPU_CIU_Init.cpp reset_hieserver_thread 348] begin run thread 669 !
+
+PUB[INFO][669]: [MPU_CIU_Init.cpp refresh_alarm_thread 923] begin run thread 669 !
+
+Jan  1 00:00:17 PUB[INFO][669]: [MPU_CIU_Init.cpp refresh_alarm_thread 923] begin run thread 669 !
+
+[MPU][MPU_PTZ_API.cpp-MPU_PTZ_SetEletronicProp:461]: PTZ_SetEletronicProp(nValue, nPropIndex, nChannel), nRet = 8
+CProtocolSet::SendRealStreamMedia Channel : [0] Send Main_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Send AUX_SysHead
+CProtocolSet::SendRealStreamMedia Channel : [0] Send HD_AUX_SysHead
+  Fnx_CheckThread 0000000000000000000000 
+INet::CheckAPManage, this function is empty ! 
+WLAN_CheckStatus aaaaaaaaaaaaaaaaaaaaaaaaaaa, m_bWlan_Enable=1 
+==== MP4Sys_SetVideoColor, nValue=2, szSection=ISP_S42
+MP4Sys_SetVideoColor NXP_BOARD_IPC 
+IsDoubleBoard, only s_bIsDoubleBoard = 0 
+MP4Sys_SetVideoOrientation nMirror=1, nFlip=1 
+FH_SetVerticalRotation, mirror=1, flip=1 >>>>>>>>>>>>>>>>>>> 
+FH_SetVerticalRotation2222, mirror=0, flip=1, ret_FH_VENC_SetRotate=0 
+FH_SetVerticalRotation2222, mirror=0, flip=1, ret_FH_VENC_SetRotate=0 
+FH_SetVerticalRotation, g_mirror=1, g_flip=1, nOSDMode=2 <<<<<<<<<<<<<<<<<<<<<
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+/usr/local/etc/isp_gamma.cfg is not exist!
+=================================== all netprotocol init over !! we will see video now !! ==================================
+PUB[INFO][669]: [MPU_init.cpp mpu_init2_thread 1427] end   run thread 669 !
+
+Jan  1 00:00:18 PUB[INFO][669]: [MPU_init.cpp mpu_init2_thread 1427] end   run thread 669 !
+
+Fnx_monitor, hello !! 
+ EDVRS_DDT_GetDeviceDescriptionByID, iItemIndex=27, BoardID=49168 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IPC_Generate_Type, SensorType=42, BoardFormat=73 bbbbbbbbb 
+IPC_Generate_Type, platform, m=17 
+IPC_Generate_Type, szTypeName=IPC-17483W 
+ BuildDeviceDescriptionByID_GM  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+PUB[INFO][669]: [MPU_init.cpp Aux_ctrl_thread 1239] begin run thread 669 !
+
+Jan  1 00:00:18 PUB[INFO][669]: [MPU_init.cpp Aux_ctrl_thread 1239] begin run thread 669 !
+
+Create GroupType = 1
+Create Type = 0
+[STR][CDiskManager.cpp-Init:1388]: ********************³õÊ¼»¯´ÅÅÌ¹ÜÀíÆ÷********************
+PUB[INFO][669]: [disk.c disk_readonly 2867] begin run thread 669 !
+
+Jan  1 00:00:18 PUB[INFO][669]: [disk.c disk_readonly 2867] begin run thread 669 !
+
+PUB[INFO][669]: [fm.cpp heart_beat_test 1398] begin run thread 669 !
+
+Jan  1 00:00:18 PUB[INFO][669]: [fm.cpp heart_beat_test 1398] begin run thread 669 !
+
+[STR][CDiskManager.cpp-Update:690]: nDiskNum = 0
+[DISK][EDVR_HD_GetDiskInfoEx:2506]: EDVR_HD_GetDiskInfoEx, index = -1
+[DISK][ERR][disk.c-EDVR_HD_GetDiskInfoEx:2511]: can't find disk, index = -1
+[STR][CHardDisk.cpp-UpdateDiskStatus:133]: m_status = 2
+PUB[INFO][669]: [disk.c sdcard_hotplug 3719] begin run thread 669 !
+
+Jan  1 00:00:18 PUB[INFO][669]: [disk.c sdcard_hotplug 3719] begin run thread 669 !
+
+PUB[INFO][669]: [CDiskManager.cpp CheckAddHotplug 1123] begin run thread 669 !
+
+Jan  1 00:00:18 PUB[INFO][669]: [CDiskManager.cpp CheckAddHotplug 1123] begin run thread 669 !
+
+PUB[INFO][669]: [CDiskManager.cpp CheckDelHotplug 1147] begin run thread 669 !
+
+Jan  1 00:00:18 PUB[INFO][669]: [CDiskManager.cpp CheckDelHotplug 1147] begin run thread 669 !
+
+[00:00:18.227324] [836][sCamera] LBS_login:3020: SvrIpAddr = 101.200.139.133 port = 48501
+m_iWlan_DHCPFailed 000000000000000 
+INet::WLAN_CheckStatus last_time_is_disconnected_AAAAA, WlanIpDisconnect=1 
+ReadMediaStreamThread, waiting for MP4Sys_SetVideoOrientation, nowtime=29, g_tOrient_initedtime=29, passedtime=0 
+ReadMediaStreamThread, MP4Sys_SetVideoOrientation, now orientation has been initiated !!
+ReadMediaStreamThread, exception occurs, before adjsut: RealTime=1514736018, s_LastRealTime=0; reassign realtime !
+ReadMediaStreamThread, exception occurs, after adjsut: RealTime=1514736018 
+ReadMedia, [0:FH_IR_DAY,1:FH_IR_NIGHT], irCurr=0; bDayNight=0; 
+[DISK][EDVR_HD_GetDiskInfoEx:2506]: EDVR_HD_GetDiskInfoEx, index = -1
+[DISK][ERR][disk.c-EDVR_HD_GetDiskInfoEx:2511]: can't find disk, index = -1
+[STR][CHardDisk.cpp-UpdateDiskStatus:133]: m_status = 2
+CRecord::StartRec, m_iRecSchedulType=2 
+nWiFiIntensity=0 CRecord::InputData, PktIFrames comes, before DR_StartRecordData, m_iRecSchedulType=2, time=1514736018
+[DISK][EDVR_HD_GetDiskInfoEx:2506]: EDVR_HD_GetDiskInfoEx, index = -1
+[DISK][ERR][disk.c-EDVR_HD_GetDiskInfoEx:2511]: can't find disk, index = -1
+[STR][CHardDisk.cpp-UpdateDiskStatus:133]: m_status = 2
+[DISK][EDVR_HD_GetDiskInfoEx:2506]: EDVR_HD_GetDiskInfoEx, index = -1
+[DISK][ERR][disk.c-EDVR_HD_GetDiskInfoEx:2511]: can't find disk, index = -1
+[STR][CHardDisk.cpp-UpdateDiskStatus:133]: m_status = 2
+check_IRCUT_thread 1111111111111111111111111111 VideoColor=4, s_LightMode=0, s_LightModeMenual=0 
+[INFO]Read sadc get: 0  sadc
+MP4Sys_GetIR_Detect, detect_nvalue = 0, pFlag = 0 
+MP4Sys_SetVideoColor, ColorMode=4, ir_detect_status = 0 (0:day, 1:night)#############################
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+[00:00:19.656535, 1514736019] UpdateOSDThread, normal check FH_VENC_GetStream, main: 1, 1, sub: 1, 1
+CRecord::StartRec, m_iRecSchedulType=2 
+create_audio_wifi_thread, wifi_pinnumber: 1234 44 1002 ============================== 
+create_audio_wifi_thread ================================= 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+DetectAudioWiFiProc >>>>>>>>>>>>>>>>>>>>> g_baudiowifi_reconfig=1 
+DetectAudioWiFiProc 11111111111 g_baudiowifi_reconfig=1, bStartAPEnforce=1 
+DetectAudioWiFiProc 2222222222 g_baudiowifi_reconfig=1, bStartAPEnforce=1 
+ut_fwrite_str
+GLNK_SomeoneLogin_CallBack >>>>>>>>>>>>>>>>>  Log_In=0 
+LEDLoginProc,  bSomeOneLogin=0 
+DetectLEDProc,  nP2PStatus=1 
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:52:12 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:52:12 --
+[DISK][EDVR_HD_GetDiskInfoEx:2506]: EDVR_HD_GetDiskInfoEx, index = -1
+[DISK][ERR][disk.c-EDVR_HD_GetDiskInfoEx:2511]: can't find disk, index = -1
+[STR][CHardDisk.cpp-UpdateDiskStatus:133]: m_status = 2
+[DISK][EDVR_HD_GetDiskInfoEx:2506]: EDVR_HD_GetDiskInfoEx, index = -1
+[DISK][ERR][disk.c-EDVR_HD_GetDiskInfoEx:2511]: can't find disk, index = -1
+[STR][CHardDisk.cpp-UpdateDiskStatus:133]: m_status = 2
+CRecord::StartRec, m_iRecSchedulType=2 
+nWiFiIntensity=0 [DISK][EDVR_HD_GetDiskInfoEx:2506]: EDVR_HD_GetDiskInfoEx, index = -1
+[DISK][ERR][disk.c-EDVR_HD_GetDiskInfoEx:2511]: can't find disk, index = -1
+[STR][CHardDisk.cpp-UpdateDiskStatus:133]: m_status = 2
+DetectAudioWiFiProc, ================================= ReEnter BeginDetectListen ===============================================
+start_elian_wificfg >>>>>>>>>>>>>>>>>>>>>>>>> 
+DoDetectListen, wait for 4 secs to prepare >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DoDetectListen, 1111111111111111111111111111111111111111111111111111 
+DoDetectListen, Get_UUID_CharLow, gid=8044d600 
+LT_VoiceWifiConfigStart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[0;32m[SysSDK][Hi_Api.cpp LT_voiceInitRecorder 3927][0;39mLT_voiceInitRecorder  111111111111111111111 
+pvp_realProcess thread start work
+[00:00:21.392432] [836][sCamera] TSI_LBSLogin:552: sret = 0
+Hi_MPP_TalkingChnSetAudioSampleMode, NSrate=44100 
+[DISK][EDVR_HD_GetDiskInfoEx:2506]: EDVR_HD_GetDiskInfoEx, index = -1
+[DISK][ERR][disk.c-EDVR_HD_GetDiskInfoEx:2511]: can't find disk, index = -1
+[STR][CHardDisk.cpp-UpdateDiskStatus:133]: m_status = 2
+LT_voiceStartRecord ok! 0x4082819c
+[2018-01-01 00:00:21.523572] LT_VoiceWifiConfigStart:432: 
+LT_VoiceWifiConfigStart <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+DoDetectListen, 222222222222222222222222222222222222222222222222222 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+DoDetectListen, abs> 30, feed_sound_dog 4444444444444444 >>>>>>>>>>>>>>>>>>>>
+ReadMedia, [0:FH_IR_DAY,1:FH_IR_NIGHT], irCurr=0; bDayNight=0; 
+CRecord::StartRec, m_iRecSchedulType=2 
+do_elian_wificfg >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+elian_enter >>>>>>>>>>>>>>>>>>>>> 
+elian_enter : echo "start id=8044d600" > /proc/elian 
+[   32.620750] [MSC] msc_cmd_handler start id=8044d600 18
+[   32.623021] [MSC] Driver v 1.0.0
+[   32.626318] 
+[   32.626333] 
+[   32.626340] ########################################elian_init cId:8044d600
+[   32.626357] 
+[   32.637508] .5d..fd..dc..15..42..88..1b..7b..95..61..95..97..7a..53..5a..f4.
+[   32.644092] 
+[   32.644101] ########################################elian_reset
+[   32.644116] 
+[   32.662877] !!!sc_plt_enter_monitor_mode start
+[   32.664753] set_mode = Ndis802_11Monitor
+[   32.668354] 
+[   32.668368] !!!state ok
+[   32.672173] 
+[   32.672187] !!!sc_plt_enter_monitor_mode end
+UpdateDiskData:g_nDiskNumSum = 0,g_nDiskNum = 0,g_nErrorDiskNum = 0
+[STR][CDiskManager.cpp-Init:1428]: ********************Íê³É³õÊ¼»¯´ÅÅÌ¹ÜÀíÆ÷********************
+***************STR:jfs 1.0.0 ****************
+	***************Ö§³ÖÆÕÍ¨ÅÌ×é*****************
+PUB[INFO][669]: [CDiskManager.cpp sd_standby 1799] begin run thread 669 !
+
+Jan  1 00:00:22 PUB[INFO][669]: [CDiskManager.cpp sd_standby 1799] begin run thread 669 !
+
+PUB[INFO][669]: [CDiskManager.cpp work_thread 1883] begin run thread 669 !
+
+Jan  1 00:00:22 PUB[INFO][669]: [CDiskManager.cpp work_thread 1883] begin run thread 669 !
+
+CDiskManager::Detect, g_nDiskNumSum = 0,g_nDiskNum = 0,g_nErrorDiskNum = 0
+Create GroupType = 1
+Create Type = 0
+Create GroupType = 1
+Create Type = 0
+ÉèÖÃ´ÅÅÌÅÌ²ÎÊý:0
+ÉèÖÃ´ÅÅÌÅÌ²ÎÊý:0 this = 0x14b070
+CFileManager::EDVR_FM_Set_DiskFullParams, stop_when_all_full=0 
+CFileManager::EDVR_FM_Start_DiskSpace_Check_Task >>>>>>>>>> 
+ÉèÖÃ´ÅÅÌÅÌ²ÎÊý:0
+ÉèÖÃ´ÅÅÌÅÌ²ÎÊý:0 this = 0x14b070
+[STR][CDiskGroupManager.cpp-Init:714]: init over..............
+DetectSDTestMode cannot find /dev/mmcblk0p1 
+FindSDTestMode, Finnally, bIsSDTestMode=0 ############################## 
+PUB[INFO][669]: [fm.cpp start_space_check 2506] begin run thread 669 !
+
+Jan  1 00:00:22 PUB[INFO][669]: [fm.cpp start_space_check 2506] begin run thread 669 !
+
+CFileManager::space_check >>>> g_HeartBeat = 1 
+check_space, not all disks are full, check current disk_full 
+check_space,  CheckIfCurDiskFull 66666666666666666666 
+PUB[INFO][669]: [CDiskGroupManager.cpp work_thread_data 1135] begin run thread 669 !
+
+Jan  1 00:00:22 PUB[INFO][669]: [CDiskGroupManager.cpp work_thread_data 1135] begin run thread 669 !
+
+elian_enter <<<<<<<<<<<<<<<<<<<<< 
+do_elian_wificfg polling ====================================================================elian_poll 
+## Error: "panasonic" not defined
+=========================== GetValue_fromEnv, nvalue=0 
+PTZ[INFO][669]: [CPtzManager.cpp line 520] Í¸Ã÷Í¨µÀ³õÊ¼»¯Ê§°Ü£¬²»¿ÉÓÃ
+
+Jan  1 00:00:22 PTZ[INFO][669]: [CPtzManager.cpp line 520] Í¸Ã÷Í¨µÀ³õÊ¼»¯Ê§°Ü£¬²»¿ÉÓÃ
+
+PTZ[ERROR][669]: [CPtzManager.cpp line 2170] Open Protocol Dir /root/edvr/IntDll Error
+
+Jan  1 00:00:22 PTZ[ERROR][669]: [CPtzManager.cpp line 2170] Open Protocol Dir /root/edvr/IntDll Error
+
+ EDVRS_DDT_GetDeviceDescriptionByID, iItemIndex=27, BoardID=49168 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IPC_Generate_Type, SensorType=42, BoardFormat=73 bbbbbbbbb 
+IPC_Generate_Type, platform, m=17 
+IPC_Generate_Type, szTypeName=IPC-17483W 
+ BuildDeviceDescriptionByID_GM  
+Fnx_CheckNETLOGThread ================================= 
+Fnx_CheckNETLOGThread ============ 192.168.0.11 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+========= nROIQuality=0 
+====!!!!!!! dump_roi, nChn=0, bValid1=1, bValid2=1, nROIQuality=0, bValid=1, bEnableMosaic=0, bValid=0, bEnable=0 nHideAreaTopLeftX=0, nHideAreaTopLeftY=0, nHideAreaBottomRightX=0, nHideAreaBottomRightY=0 EDVRS_DDT_GetDeviceDescriptionByID, iItemIndex=27, BoardID=49168 
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+IPC_Generate_Type, SensorType=42, BoardFormat=73 bbbbbbbbb 
+IPC_Generate_Type, platform, m=17 
+IPC_Generate_Type, szTypeName=IPC-17483W 
+ BuildDeviceDescriptionByID_GM  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+MP4Sys_EncGetChannelInfo, BoardFormat=73, pSysInfo=0x4025e330  
+[ADSL:EDVR_ADSL_Conf_File_Valid] can't open file /etc/ppp/pppoe.conf
+fopen: No such file or directory
+[ADSL:copyfile] can't open file /etc/ppp/pppoe.conf-bak
+fopen: No such file or directory
+
+[libadsl.so] RestoreConfigFile occur FATAL ERROR!!!!!
+[ADSL:EDVR_ADSL_Conf_File_Valid] can't open file /etc/ppp/pppoe.conf
+fopen: No such file or directory
+[libadsl.so]Can't find /etc/ppp/pppoe.conf, Now rebuild it!
+[ADSL:BuildConfigFile] can't open file /etc/ppp/pppoe.conf
+fopen: No such file or directory
+Create File /etc/ppp/pppoe.conf Failed...
+fopenCFileManager::heart_beat_test, count=0, g_HeartBeat=1, nowtime=1514736022 s 
+: No such file or directory
+[NET][INFO][669]: [IPPPoE:PPPoE_CheckStatus]callback Disconnect
+
+Jan  1 00:00:22 [NET][INFO][669]: [IPPPoE:PPPoE_CheckStatus]callback Disconnect
+
+## Error: "shangyide" not defined
+=========================== GetValue_fromEnv, nvalue=0 
+NULL == m_aProtocolLib[nChannel], return 
+[MPU][MPU_PTZ_API.cpp-MPU_PTZ_SetShieldProp:467]: PTZ_SetShieldProp(nValue, nPropIndex, nChannel), nRet = 8
+ Init_Replenish >>>>>>>>>>>>>>>>>>>>>>>>>> 
+ Init_Replenish GetPtzChannelReplenish2 >>>>>>>>>>>>>>>>>>>>>>>>>> 
+GetPtzChannelReplenish2 ===== 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+NULL == m_aProtocolLib[nChannel], return 
+tupeng, GetPtzChannelReplenish2, q=0x0, r=0x0, s=0x0, t=0x0, u=0x8, tu=8 
+GetPtzChannelReplenish2: bValid=1, iFocusMode=8, iHighSensitivity=8, iGain=8, iLum=8, iExpComp=8, iCompass=8, iDenoiseMode=8, iDenoiseIntensity=8, iDenoiseLv=8, iStrongDenoiseParam=8 
+ Init_Replenish SetPtzChannelReplenish2 >>>>>>>>>>>>>>>>>>>>>>>>>> 
+[MPU][MPU_init.cpp-Fnx_MPU_Init2_HalfBotton_Thread:1374]: UPNP_Init(), return 8050
+[MPU][ASSERT][669]: Assert Failed! [MPU_init.cpp-Fnx_MPU_Init2_HalfBotton_Thread:1374]: IDVR_OK == nRet
+Jan  1 00:00:22 [MPU][ASSERT][669]: Assert Failed! [MPU_init.cpp-Fnx_MPU_Init2_HalfBotton_Thread:1374]: IDVR_OK == nRet
+[MPU][ASSERT][669]: ***ASSERT FAILED***, Programm Continued! 
+Jan  1 00:00:22 [MPU][ASSERT][669]: ***ASSERT FAILED***, Programm Continued! 
+CFileManager::space_check >>>> g_HeartBeat = 1 
+check_space, not all disks are full, check current disk_full 
+check_space,  CheckIfCurDiskFull 66666666666666666666 
+sh: can't create /proc/adda308/output_mode: nonexistent directory
+CRecord::StartRec, m_iRecSchedulType=2 
+GLNK_SomeoneLogin_CallBack >>>>>>>>>>>>>>>>>  Log_In=0 
+LEDLoginProc,  bSomeOneLogin=0 
+nWiFiIntensity=0 CRecordFile::StopRecord file 0 is not open 3333333333333333333, something maybe wrong 
+CRecord::InputData, PktIFrames comes, before DR_StartRecordData, m_iRecSchedulType=2, time=1514736022
+do_elian_wificfg polling ====================================================================elian_poll 
+check_IRCUT_thread 1111111111111111111111111111 VideoColor=4, s_LightMode=0, s_LightModeMenual=0 
+[INFO]Read sadc get: 0  sadc
+MP4Sys_GetIR_Detect, detect_nvalue = 0, pFlag = 0 
+MP4Sys_SetVideoColor, ColorMode=4, ir_detect_status = 0 (0:day, 1:night)#############################
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+DoDetectListen, abs> 30, feed_sound_dog 4444444444444444 <<<<<<<<<<<<<<<<<<<<<
+do_elian_wificfg polling ====================================================================elian_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+GetOutConnectStatus, nStatus=0x00000000
+ReadMedia, [0:FH_IR_DAY,1:FH_IR_NIGHT], irCurr=0; bDayNight=0; 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+nWiFiIntensity=0 [00:00:24.987177, 1514736024] UpdateOSDThread, normal check FH_VENC_GetStream, main: 1, 1, sub: 1, 1
+DetectLEDProc,  nP2PStatus=1 
+do_elian_wificfg polling ====================================================================elian_poll 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+ReadMediaStreamThread, exception occurs, before adjsut: RealTime=1514736024, s_LastRealTime=1514736025; reassign realtime !
+ReadMediaStreamThread, exception occurs, after adjsut: RealTime=1514736025 
+CRecord::StartRec, m_iRecSchedulType=2 
+GLNK_SomeoneLogin_CallBack >>>>>>>>>>>>>>>>>  Log_In=0 
+LEDLoginProc,  bSomeOneLogin=0 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+ReadMediaStreamThread, exception occurs, before adjsut: RealTime=1514736025, s_LastRealTime=1514736026; reassign realtime !
+ReadMediaStreamThread, exception occurs, after adjsut: RealTime=1514736026 
+do_elian_wificfg polling ====================================================================elian_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+nWiFiIntensity=0 DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+speaker close! close! close! close! close! close!
+check_IRCUT_thread 1111111111111111111111111111 VideoColor=4, s_LightMode=0, s_LightModeMenual=0 
+[INFO]Read sadc get: 0  sadc
+MP4Sys_GetIR_Detect, detect_nvalue = 0, pFlag = 0 
+MP4Sys_SetVideoColor, ColorMode=4, ir_detect_status = 0 (0:day, 1:night)#############################
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+ReadMedia, [0:FH_IR_DAY,1:FH_IR_NIGHT], irCurr=0; bDayNight=0; 
+CRecord::StartRec, m_iRecSchedulType=2 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+CFileManager::heart_beat_test, count=0, g_HeartBeat=1, nowtime=1514736028 s 
+do_elian_wificfg polling ====================================================================elian_poll 
+INet::WLAN_CheckStatus last_time_disconnected_BBBBBB WlanIpDisconnect=1 
+WLAN_CheckStatus do_callback 000000000000000000000000 WlanIpDisconnect=1 
+======================== ifconfig ra0 up 22222222222222222222 
+wifi_get_conn_cfg, ssid= 
+IsEth0Broken, finnally, eth0_status=1 
+INet::NET_CheckStatus , saveStatus=0x1, m_iNetStatus=0x1
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+======================== ifconfig ra0 up 1111111111111111111111 
+[GUI][ERROR][669]: [gui_callback_sys.c-MainAlarmCallBack:168]: !!!!!!!ALERT_RETICLEDISCONNECT 0000 
+
+Jan  1 00:00:28 [GUI][ERROR][669]: [gui_callback_sys.c-MainAlarmCallBack:168]: !!!!!!!ALERT_RETICLEDISCONNECT 0000 
+
+GLNK_SomeoneLogin_CallBack >>>>>>>>>>>>>>>>>  Log_In=0 
+LEDLoginProc,  bSomeOneLogin=0 
+IsEth0Broken, finnally, eth0_status=1 
+========= Detect network event, Reifconfig Net! bEth0Broken=1 
+INet_set_eth0_status, s_bEth0Broken == bEth0Broken == 1, equal, return! 
+========================== ReifconfigNet =================================
+switch to ra0 route table 1111
+0.Switch_to_router, obtained: wlan0, 192.168.0.11, 255.255.255.0, 192.168.0.0, 24 
+0.Switch_to_router,aa NOT equal : wlan0[], 192.168.0.11[], 255.255.255.0[], 192.168.0.0[], 24[0] 
+2. Switch_to_router, szcmd=ip route del 192.168.0.0/24 
+nWiFiIntensity=0 do_elian_wificfg polling ====================================================================elian_poll 
+ip: RTNETLINK answers: No such process
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+ip: RTNETLINK answers: No such process
+3. Switch_to_router, szcmd=ip route add  192.168.0.0/24 dev wlan0 src 192.168.0.11 
+[   40.144414] 08.42.00.00.01.00.5E.00.00.FB.06.18.D6.E1.E3.E7.00.11.D9.90.D7.49.40.E9.input begin. dMac = 4, sMac = 16 
+3.2 szcmd = route add -net 239.239.238.50 netmask 255.255.255.255  wlan0
+do_elian_wificfg polling ====================================================================elian_poll 
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:52:22 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:52:22 --
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+4. Switch_to_router,444 
+5. Switch_to_router,555, pif=wlan0, gateway=192.168.12.1, ret=0 
+set_default_gw(): route del default dev wlan0
+route: SIOCDELRT: No such process
+set_default_gw(): route add default gw 192.168.12.1 dev wlan0
+[00:00:30.227699, 1514736030] UpdateOSDThread, normal check FH_VENC_GetStream, main: 1, 1, sub: 1, 1
+route: SIOCADDRT: Network is unreachable
+[00:00:30.347528] [836][sCamera] LBS_login:3020: SvrIpAddr = 101.200.83.161 port = 48501
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+ReadMedia, [0:FH_IR_DAY,1:FH_IR_NIGHT], irCurr=0; bDayNight=0; 
+ip = 192.168.0.11,netmask = 255.255.255.0,gateway = 192.168.12.1
+diffrent ad_ip = -1062731765,ad_netmask = -256,ad_gateway = -1062728703
+set_default_gw(): route del default dev wlan0
+CRecord::StartRec, m_iRecSchedulType=2 
+route: SIOCDELRT: No such process
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+set_default_gw(): route add default gw 192.168.0.11 dev wlan0
+DetectLEDProc,  nP2PStatus=1 
+nWiFiIntensity=0 6. Switch_to_router,666 
+do_elian_wificfg polling ====================================================================elian_poll 
+default via 192.168.0.11 dev wlan0 
+default via 192.168.2.1 dev eth0 
+192.168.0.0/24 dev wlan0  src 192.168.0.11 
+192.168.2.0/24 dev eth0  src 192.168.2.11 
+224.0.0.0/3 dev eth0  src 192.168.2.11 
+239.239.238.50 dev wlan0 
+Switch_glnk_addr, pfn_set_infname=0x5492fda0 
+GLINK_set_infname got 
+IsEth0Broken, finnally, eth0_status=1 
+WLAN_GetDNS, strDns0=192.168.12.1, strDns1= 
+INet::WLAN_GetDNS, PrimaryDNS=192.168.12.1, SecondaryDNS=8.8.8.8 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+check_IRCUT_thread 1111111111111111111111111111 VideoColor=4, s_LightMode=0, s_LightModeMenual=0 
+[INFO]Read sadc get: 0  sadc
+MP4Sys_GetIR_Detect, detect_nvalue = 0, pFlag = 0 
+MP4Sys_SetVideoColor, ColorMode=4, ir_detect_status = 0 (0:day, 1:night)#############################
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+CRecord::StartRec, m_iRecSchedulType=2 
+GLNK_SomeoneLogin_CallBack >>>>>>>>>>>>>>>>>  Log_In=0 
+LEDLoginProc,  bSomeOneLogin=0 
+do_elian_wificfg polling ====================================================================elian_poll 
+[ADSL:EDVR_ADSL_Conf_File_Valid] can't open file /etc/ppp/pppoe.conf
+fopen: No such file or directory
+[ADSL:copyfile] can't open file /etc/ppp/pppoe.conf-bak
+fopen: No such file or directory
+
+[libadsl.so] RestoreConfigFile occur FATAL ERROR!!!!!
+[ADSL:EDVR_ADSL_Conf_File_Valid] can't open file /etc/ppp/pppoe.conf
+fopen: No such file or directory
+[libadsl.so]Can't find /etc/ppp/pppoe.conf, Now rebuild it!
+[ADSL:BuildConfigFile] can't open file /etc/ppp/pppoe.conf
+fopen: No such file or directory
+Create File /etc/ppp/pppoe.conf Failed...
+fopen: No such file or directory
+Create File /etc/ppp/pppoe.conf Failed...
+fopen: No such file or directory
+GLINK_set_infname, choose wlan0 
+[00:00:32.040845] [779][sCamera] Change ifname succeed! 192.168.0.11
+NET_RenewDhcp wired 111111111111111111111111111111111111111111 
+IsEth0Broken, finnally, eth0_status=1 
+IsEth0Broken, finnally, eth0_status=1 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+CFileManager::space_check >>>> g_HeartBeat = 1 
+check_space, not all disks are full, check current disk_full 
+check_space,  CheckIfCurDiskFull 66666666666666666666 
+Fnx_CheckNETLOGThread ================================= 
+Fnx_CheckNETLOGThread ============ 192.168.0.11 
+CFileManager::heart_beat_test, count=0, g_HeartBeat=1, nowtime=1514736032 s 
+CFileManager::space_check >>>> g_HeartBeat = 1 
+check_space, not all disks are full, check current disk_full 
+check_space,  CheckIfCurDiskFull 66666666666666666666 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+[00:00:32.998957] [836][sCamera] TSI_LBSLogin:552: sret = 0
+nWiFiIntensity=0 DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+ReadMedia, [0:FH_IR_DAY,1:FH_IR_NIGHT], irCurr=0; bDayNight=0; 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+do_elian_wificfg polling ====================================================================elian_poll 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+IsEth0Broken, finnally, eth0_status=1 
+do_elian_wificfg polling ====================================================================elian_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+GLNK_SomeoneLogin_CallBack >>>>>>>>>>>>>>>>>  Log_In=0 
+LEDLoginProc,  bSomeOneLogin=0 
+nWiFiIntensity=0 [00:00:35.408387, 1514736035] UpdateOSDThread, normal check FH_VENC_GetStream, main: 1, 1, sub: 1, 1
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+check_IRCUT_thread 1111111111111111111111111111 VideoColor=4, s_LightMode=0, s_LightModeMenual=0 
+[INFO]Read sadc get: 0  sadc
+MP4Sys_GetIR_Detect, detect_nvalue = 0, pFlag = 0 
+MP4Sys_SetVideoColor, ColorMode=4, ir_detect_status = 0 (0:day, 1:night)#############################
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+CRecord::StartRec, m_iRecSchedulType=2 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+ReadMedia, [0:FH_IR_DAY,1:FH_IR_NIGHT], irCurr=0; bDayNight=0; 
+CRecord::StartRec, m_iRecSchedulType=2 
+DetectLEDProc,  nP2PStatus=1 
+  Fnx_CheckThread 0000000000000000000000 
+INet::CheckAPManage, this function is empty ! 
+WLAN_CheckStatus aaaaaaaaaaaaaaaaaaaaaaaaaaa, m_bWlan_Enable=1 
+do_elian_wificfg polling ====================================================================elian_poll 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+nWiFiIntensity=0 m_iWlan_DHCPFailed 000000000000000 
+INet::WLAN_CheckStatus last_time_is_disconnected_AAAAA, WlanIpDisconnect=2 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+GLNK_SomeoneLogin_CallBack >>>>>>>>>>>>>>>>>  Log_In=0 
+LEDLoginProc,  bSomeOneLogin=0 
+CFileManager::heart_beat_test, count=0, g_HeartBeat=1, nowtime=1514736038 s 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+CRecord::StartRec, m_iRecSchedulType=2 
+nWiFiIntensity=0 do_elian_wificfg polling ====================================================================elian_poll 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+ReadMedia, [0:FH_IR_DAY,1:FH_IR_NIGHT], irCurr=0; bDayNight=0; 
+check_IRCUT_thread 1111111111111111111111111111 VideoColor=4, s_LightMode=0, s_LightModeMenual=0 
+[INFO]Read sadc get: 0  sadc
+MP4Sys_GetIR_Detect, detect_nvalue = 0, pFlag = 0 
+MP4Sys_SetVideoColor, ColorMode=4, ir_detect_status = 0 (0:day, 1:night)#############################
+switch_to_daymode, sunlight exist, all lights off!! 
+day_light_off ==================================== 
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:52:32 --
+-- 0:ttyUSB0 -- time-stamp -- Jan/13/19 14:52:32 --
+CRecord::StartRec, m_iRecSchedulType=2 
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+[00:00:40.479019] [836][sCamera] LBS_login:3020: SvrIpAddr = 123.56.235.35 port = 48501
+DoDetectListen, LT_VoiceWifiConfigPoll .........................................................audio_poll 
+do_elian_wificfg polling ====================================================================elian_poll 
+[00:00:40.710073, 1514736040] UpdateOSDThread, normal check FH_VENC_GetStream, main: 1, 1, sub: 1, 1
+CRecord::StartRec, m_iRecSchedulType=2 

@@ -1,0 +1,97 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-01-13 18:45 EST
+Stats: 0:00:00 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 3.01% done; ETC: 18:46 (0:00:32 remaining)
+Nmap scan report for IPCAM.lan (192.168.8.207)
+Host is up (0.021s latency).
+Not shown: 65531 closed ports
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       Mongoose httpd
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=index.html
+|_http-title: Login
+554/tcp  open  rtsp
+| fingerprint-strings: 
+|   FourOhFourRequest, GenericLines, GetRequest: 
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Server: Hipcam RealServer/V1.0
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Server: Hipcam RealServer/V1.0
+|   HTTPOptions, RTSPRequest: 
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Server: Hipcam RealServer/V1.0
+|   SIPOptions: 
+|     RTSP/1.0 200 OK
+|     CSeq: 42
+|     Server: Hipcam RealServer/V1.0
+|_    Public: OPTIONS,DESCRIBE,SETUP,TEARDOWN,PLAY,SET_PARAMETER,GET_PARAMETER
+|_rtsp-methods: OPTIONS,DESCRIBE,SETUP,TEARDOWN,PLAY,SET_PARAMETER,GET_PARAMETER
+1935/tcp open  tcpwrapped
+8080/tcp open  http-proxy
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: (null)
+|     Content-Length: 1347
+|     Connection: close
+|_    <?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:e="http://www.w3.org/2003/05/soap-encoding" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:tns1="http://www.onvif.org/ver10/topics" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xop="http://www.w3.org/2004/08/xop/include" xmlns:tt="http://www.onvif.org/ver10/schema" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2" xmlns:wstop="http://docs.oasis-open.org/wsn/t-1" xmlns:tds="http://www.onvif.org/ver10/device/wsdl" xmlns:tan="http://www.onvif.org/ver20/analytics/wsdl" xmlns:trt="http://www.onvif.org/ver10/media/wsdl" xmlns:tev="http://www.onvif.org/ver10/events/wsdl" xmlns:tptz="http://
+|_http-title: Site doesn't have a title ((null)).
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.60%I=7%D=1/13%Time=5C3BCDCA%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,8A,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nServer:
+SF:\x20Hipcam\x20RealServer/V1\.0\r\n\r\nRTSP/1\.0\x20400\x20Bad\x20Reques
+SF:t\r\nCSeq:\x200\r\nServer:\x20Hipcam\x20RealServer/V1\.0\r\n\r\n")%r(RT
+SF:SPRequest,45,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nServe
+SF:r:\x20Hipcam\x20RealServer/V1\.0\r\n\r\n")%r(GenericLines,8A,"RTSP/1\.0
+SF:\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nServer:\x20Hipcam\x20RealSer
+SF:ver/V1\.0\r\n\r\nRTSP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nSe
+SF:rver:\x20Hipcam\x20RealServer/V1\.0\r\n\r\n")%r(HTTPOptions,45,"RTSP/1\
+SF:.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nServer:\x20Hipcam\x20RealS
+SF:erver/V1\.0\r\n\r\n")%r(FourOhFourRequest,8A,"RTSP/1\.0\x20400\x20Bad\x
+SF:20Request\r\nCSeq:\x200\r\nServer:\x20Hipcam\x20RealServer/V1\.0\r\n\r\
+SF:nRTSP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nServer:\x20Hipcam\
+SF:x20RealServer/V1\.0\r\n\r\n")%r(SIPOptions,87,"RTSP/1\.0\x20200\x20OK\r
+SF:\nCSeq:\x2042\r\nServer:\x20Hipcam\x20RealServer/V1\.0\r\nPublic:\x20OP
+SF:TIONS,DESCRIBE,SETUP,TEARDOWN,PLAY,SET_PARAMETER,GET_PARAMETER\r\n\r\n"
+SF:);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.60%I=7%D=1/13%Time=5C3BCDC5%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,59E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20\(
+SF:null\)\r\nContent-Length:\x201347\r\nConnection:\x20close\r\n\r\n<\?xml
+SF:\x20version=\"1\.0\"\x20encoding=\"UTF-8\"\?><s:Envelope\x20xmlns:s=\"h
+SF:ttp://www\.w3\.org/2003/05/soap-envelope\"\x20xmlns:e=\"http://www\.w3\
+SF:.org/2003/05/soap-encoding\"\x20xmlns:xsi=\"http://www\.w3\.org/2001/XM
+SF:LSchema-instance\"\x20xmlns:wsa=\"http://www\.w3\.org/2005/08/addressin
+SF:g\"\x20xmlns:xmime=\"http://www\.w3\.org/2005/05/xmlmime\"\x20xmlns:tns
+SF:1=\"http://www\.onvif\.org/ver10/topics\"\x20xmlns:xs=\"http://www\.w3\
+SF:.org/2001/XMLSchema\"\x20xmlns:xop=\"http://www\.w3\.org/2004/08/xop/in
+SF:clude\"\x20xmlns:tt=\"http://www\.onvif\.org/ver10/schema\"\x20xmlns:ws
+SF:nt=\"http://docs\.oasis-open\.org/wsn/b-2\"\x20xmlns:wstop=\"http://doc
+SF:s\.oasis-open\.org/wsn/t-1\"\x20xmlns:tds=\"http://www\.onvif\.org/ver1
+SF:0/device/wsdl\"\x20xmlns:tan=\"http://www\.onvif\.org/ver20/analytics/w
+SF:sdl\"\x20xmlns:trt=\"http://www\.onvif\.org/ver10/media/wsdl\"\x20xmlns
+SF::tev=\"http://www\.onvif\.org/ver10/events/wsdl\"\x20xmlns:tptz=\"http:
+SF://")%r(FourOhFourRequest,59E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
+SF:tent-Type:\x20\(null\)\r\nContent-Length:\x201347\r\nConnection:\x20clo
+SF:se\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"UTF-8\"\?><s:Envelop
+SF:e\x20xmlns:s=\"http://www\.w3\.org/2003/05/soap-envelope\"\x20xmlns:e=\
+SF:"http://www\.w3\.org/2003/05/soap-encoding\"\x20xmlns:xsi=\"http://www\
+SF:.w3\.org/2001/XMLSchema-instance\"\x20xmlns:wsa=\"http://www\.w3\.org/2
+SF:005/08/addressing\"\x20xmlns:xmime=\"http://www\.w3\.org/2005/05/xmlmim
+SF:e\"\x20xmlns:tns1=\"http://www\.onvif\.org/ver10/topics\"\x20xmlns:xs=\
+SF:"http://www\.w3\.org/2001/XMLSchema\"\x20xmlns:xop=\"http://www\.w3\.or
+SF:g/2004/08/xop/include\"\x20xmlns:tt=\"http://www\.onvif\.org/ver10/sche
+SF:ma\"\x20xmlns:wsnt=\"http://docs\.oasis-open\.org/wsn/b-2\"\x20xmlns:ws
+SF:top=\"http://docs\.oasis-open\.org/wsn/t-1\"\x20xmlns:tds=\"http://www\
+SF:.onvif\.org/ver10/device/wsdl\"\x20xmlns:tan=\"http://www\.onvif\.org/v
+SF:er20/analytics/wsdl\"\x20xmlns:trt=\"http://www\.onvif\.org/ver10/media
+SF:/wsdl\"\x20xmlns:tev=\"http://www\.onvif\.org/ver10/events/wsdl\"\x20xm
+SF:lns:tptz=\"http://");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 72.59 seconds

@@ -1,0 +1,35 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-01-13 17:36 EST
+Nmap scan report for Camera1.lan (192.168.8.105)
+Host is up (0.010s latency).
+Not shown: 65527 closed ports
+PORT      STATE SERVICE     VERSION
+80/tcp    open  http        nginx 1.6.2
+|_http-server-header: nginx/1.6.2
+|_http-title: Reolink
+443/tcp   open  ssl/http    nginx 1.6.2
+|_http-server-header: nginx/1.6.2
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+| ssl-cert: Subject: commonName=reo-link/organizationName=reo-link/stateOrProvinceName=GD/countryName=CN
+| Not valid before: 2016-01-08T07:54:35
+|_Not valid after:  2026-01-05T07:54:35
+|_ssl-date: TLS randomness does not represent time
+| tls-nextprotoneg: 
+|_  http/1.1
+554/tcp   open  rtsp        D-Link DCS-2130 or Pelco IDE10DN webcam rtspd
+|_rtsp-methods: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, GET_PARAMETER, SET_PARAMETER
+1935/tcp  open  rtmp?
+6001/tcp  open  rtsp        D-Link DCS-2130 or Pelco IDE10DN webcam rtspd
+|_rtsp-methods: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, GET_PARAMETER, SET_PARAMETER
+8000/tcp  open  tcpwrapped
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: gSOAP/2.8
+|_http-title: Site doesn't have a title (text/xml; charset=utf-8).
+9000/tcp  open  cslistener?
+17823/tcp open  http        nginx 1.6.2
+|_http-server-header: nginx/1.6.2
+|_http-title: Reolink
+Service Info: Device: webcam; CPE: cpe:/h:pelco:ide10dn
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 172.76 seconds

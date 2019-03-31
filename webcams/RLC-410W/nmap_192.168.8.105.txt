@@ -1,0 +1,15 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-01-13 17:30 EST
+Nmap scan report for Camera1.lan (192.168.8.105)
+Host is up (0.13s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+554/tcp  open  rtsp
+1935/tcp open  rtmp
+6001/tcp open  X11:1
+8000/tcp open  http-alt
+9000/tcp open  cslistener
+
+Nmap done: 1 IP address (1 host up) scanned in 1.28 seconds

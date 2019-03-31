@@ -1,0 +1,11 @@
+------------------------------------------------------------
+Client connecting to dir-825b1_18.04, TCP port 5001
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.250.13 port 55880 connected with 192.168.250.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  13.2 MBytes  11.1 Mbits/sec
+
+ -51 / -95 dBm
+54.0 Mbit/s, 20MHz
+54.0 Mbit/s, 20MHz

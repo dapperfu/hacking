@@ -1,0 +1,14 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-01-13 12:28 EST
+Nmap scan report for console.gl-inet.com (192.168.8.1)
+Host is up (0.00064s latency).
+Not shown: 994 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+53/tcp  open  domain
+80/tcp  open  http
+83/tcp  open  mit-ml-dev
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+
+Nmap done: 1 IP address (1 host up) scanned in 38.18 seconds

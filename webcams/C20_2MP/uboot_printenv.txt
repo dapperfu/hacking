@@ -1,0 +1,21 @@
+bootargs=console=ttyS0,115200 root=/dev/mtdblock2 rootfstype=squashfs init=/squashfs_init mem=33M mtdparts=spi_flash:320K@0x0(uboot),0x1F0000@0x50000(kernel),0x420000@0x240000(rootfs),0x1a0000@0x660000(config),8M@0x0(all)
+bootcmd=sf probe 0; sf read 0xA1000000 50000 0x200000; bootm
+bootdelay=3
+baudrate=115200
+ipaddr=192.168.2.167
+serverip=192.168.2.160
+phymode=RMII
+auto_up_block=1
+uver=.fh63AW
+kver=.fh63AW
+logover=.fh63AW
+fver=.fh63AW
+ethact=FH EMAC
+softversion=1.1.5-20180801
+stdin=serial
+stdout=serial
+stderr=serial
+ethaddr=00:24:b9:xx:xx:xx
+
+Environment size: 548/65532 bytes
+
