@@ -1,0 +1,13 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-01-22 20:38 EST
+Nmap scan report for _gateway (192.168.255.249)
+Host is up (0.011s latency).
+Not shown: 65530 closed ports
+PORT      STATE SERVICE
+8008/tcp  open  http
+8009/tcp  open  ajp13
+9000/tcp  open  cslistener
+10001/tcp open  scp-config
+42336/tcp open  unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 16.63 seconds

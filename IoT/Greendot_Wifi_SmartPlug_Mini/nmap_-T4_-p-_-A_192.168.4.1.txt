@@ -1,0 +1,8 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-03-31 18:03 EDT
+Nmap scan report for 192.168.4.1
+Host is up (0.0055s latency).
+All 65535 scanned ports on 192.168.4.1 are closed
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 71.47 seconds
