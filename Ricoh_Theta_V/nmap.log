@@ -1,0 +1,23 @@
+$ nmap -p- -A -T4 172.16.11.163
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-05-12 21:58 EDT
+Nmap scan report for 172.16.11.163
+Host is up (0.036s latency).
+Not shown: 65524 closed ports
+PORT      STATE    SERVICE  VERSION
+80/tcp    open     http     Pebble Time developer connection
+|_http-title: Site doesn't have a title (text/html).
+7018/tcp  filtered fisa-svc
+13225/tcp filtered unknown
+13270/tcp filtered unknown
+15319/tcp filtered unknown
+15467/tcp filtered unknown
+16293/tcp filtered unknown
+21680/tcp filtered unknown
+48824/tcp filtered unknown
+58126/tcp filtered unknown
+62557/tcp filtered unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 34.41 seconds
+
