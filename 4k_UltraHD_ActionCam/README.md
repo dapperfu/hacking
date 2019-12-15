@@ -5,6 +5,36 @@ Bought at Menards for ~$30
 https://www.menards.com/main/electrical/home-electronics/small-electronics/4k-wifi-action-camera/170721-ag-sc25/p-1526538562352.htm
 https://www.menards.com/main/electrical/home-electronics/small-electronics/4k-ultra-hd-digital-wi-fi-action-camera/dv9000a/p-1493187939356.htm
 
+## PC Mode
+
+Shows up as a ```/dev/video#``` device on linux.
+
+ffprobe:
+
+        Stream #0:0: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown),
+        1280x720, 30 fps, 30 tbr, 1000k tbn, 1000k tbc
+
+uvcdynctrl:
+
+        $ uvcdynctrl --formats /dev/video3 
+        Listing available frame formats for device video0:
+        Pixel format: YUYV (YUYV 4:2:2; MIME type: video/x-raw-yuv)
+          Frame size: 640x480
+            Frame rates: 30, 20, 15, 10, 5
+          Frame size: 352x288
+            Frame rates: 30, 20, 15, 10, 5
+          Frame size: 320x240
+            Frame rates: 30, 20, 15, 10, 5
+          Frame size: 176x144
+            Frame rates: 30, 20, 15, 10, 5
+          Frame size: 160x120
+            Frame rates: 30, 20, 15, 10, 5
+          Frame size: 1280x720
+            Frame rates: 10, 5
+        Pixel format: MJPG (Motion-JPEG; MIME type: image/jpeg)
+          Frame size: 1280x720
+            Frame rates: 30, 20, 15, 10, 5
+
 ## Firmware Information
 
         - Model: 
